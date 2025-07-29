@@ -1,0 +1,39 @@
+/* --------------------------------------------------------------
+swiper
+-------------------------------------------------------------- */
+/* main
+========================================================= */
+.main-swiper {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+
+  .swiper-wrapper {
+    .swiper-slide {
+      height: 700px !important;
+
+      .img {
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+/* topics
+========================================================= */
+.topics-swiper {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+
+  .swiper-wrapper {
+    .swiper-slide {
+      height: 250px !important;
+      width: 400px;
+
+      .img {
+        border-radius: 30px;
+      }
+    }
+  }
+}

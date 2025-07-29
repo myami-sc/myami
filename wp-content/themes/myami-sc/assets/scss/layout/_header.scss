@@ -1,0 +1,76 @@
+.l-header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 8px;
+  }
+
+  &-logo {
+    width: 150px;
+    margin: 0 15px;
+  }
+
+  &__menu {
+    margin-right: 100px;
+
+    .l-header-nav {
+      &__list {
+        display: flex;
+        align-items: center;
+      }
+
+      &__item {
+        padding: 5px 15px;
+      }
+
+      &__link {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 30px;
+          height: 30px;
+        }
+
+        &.--event {
+          &::after {
+            background-image: url(assets/images/icon/i_event.png);
+            background-position: center;
+            background-size: cover;
+          }
+        }
+        &.--floor {
+          &::after {
+            background-image: url(assets/images/icon/i_floor.png);
+            background-position: center;
+            background-size: cover;
+          }
+        }
+        &.--shop {
+          &::after {
+            background-image: url(assets/images/icon/i_shop.png);
+            background-position: center;
+            background-size: cover;
+          }
+        }
+        &.--access {
+          &::after {
+            background-image: url(assets/images/icon/i_access.png);
+            background-position: center;
+            background-size: cover;
+          }
+        }
+      }
+
+      &__text {
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+  }
+}

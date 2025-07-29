@@ -1,61 +1,529 @@
-/*
-Theme Name: myami-sc
-Theme URI: https://wordpress.org/themes/myami-sc/
-Author: the WordPress team
-Author URI: https://wordpress.org
-Description: myami-sc emphasizes simplicity and adaptability. It offers flexible design options, supported by a variety of patterns for different page types, such as services and landing pages, making it ideal for building personal blogs, professional portfolios, online magazines, or business websites. Its templates cater to various blog styles, from text-focused to image-heavy layouts. Additionally, it supports international typography and diverse color palettes, ensuring accessibility and customization for users worldwide.
-Requires at least: 6.7
-Tested up to: 6.8
-Requires PHP: 7.2
-Version: 1.2
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: myami-sc
-Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
-*/
+/* --------------------------------------------------------------
+config
+-------------------------------------------------------------- */
+/*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+/* Reset box-model and set borders */
+/* ============================================ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+  min-width: 0;
+}
 
-/*
- * Link styles
- * https://github.com/WordPress/gutenberg/issues/42319
+/* Document */
+/* ============================================ */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Remove gray overlay on links for iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-tap-highlight-color: transparent;
+  /* 3*/
+}
+
+/* Sections */
+/* ============================================ */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/* Vertical rhythm */
+/* ============================================ */
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+
+/* Headings */
+/* ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* Lists (enumeration) */
+/* ============================================ */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Lists (definition) */
+/* ============================================ */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Grouping content */
+/* ============================================ */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: inherit;
+  /* 2 */
+}
+
+address {
+  font-style: inherit;
+}
+
+/* Text-level semantics */
+/* ============================================ */
+/**
+ * Remove the gray background on active links in IE 10.
  */
 a {
-	text-decoration-thickness: 1px !important;
-	text-underline-offset: .1em;
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
 }
 
-/* Focus styles */
-:where(.wp-site-blocks *:focus) {
-	outline-width: 2px;
-	outline-style: solid;
-}
-
-/* Increase the bottom margin on submenus, so that the outline is visible. */
-.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation-item:not(:last-child) {
-	margin-bottom: 3px;
-}
-
-/* Increase the outline offset on the parent menu items, so that the outline does not touch the text. */
-.wp-block-navigation .wp-block-navigation-item .wp-block-navigation-item__content {
-	outline-offset: 4px;
-}
-
-/* Remove outline offset from the submenus, otherwise the outline is visible outside the submenu container. */
-.wp-block-navigation .wp-block-navigation-item ul.wp-block-navigation__submenu-container .wp-block-navigation-item__content {
-	outline-offset: 0;
-}
-
-/*
- * Progressive enhancement to reduce widows and orphans
- * https://github.com/WordPress/gutenberg/issues/55190
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
-h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
-	text-wrap: pretty;
+abbr[title] {
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: inherit;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Replaced content */
+/* ============================================ */
+/**
+ * Prevent vertical alignment issues.
+ */
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+
+/* Forms */
+/* ============================================ */
+/**
+ * Reset form fields to make them styleable.
+ * 1. Make form elements stylable across systems iOS especially.
+ * 2. Inherit text-transform from parent.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none;
+  /* 1 */
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit;
+  /* 2 */
+}
+
+/**
+ * Correct cursors for clickable elements.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled {
+  cursor: default;
+}
+
+/**
+ * Improve outlines for Firefox and unify style with input elements & buttons.
+ */
+:-moz-focusring {
+  outline: auto;
+}
+
+select:disabled {
+  opacity: inherit;
+}
+
+/**
+ * Remove padding
+ */
+option {
+  padding: 0;
+}
+
+/**
+ * Reset to invisible
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Correct the outline style in Safari.
+ */
+[type=search] {
+  outline-offset: -2px;
+  /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Fix font inheritance.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/**
+ * Fix appearance for Firefox
+ */
+[type=number] {
+  -moz-appearance: textfield;
+}
+
+/**
+ * Clickable labels
+ */
+label[for] {
+  cursor: pointer;
+}
+
+/* Interactive */
+/* ============================================ */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
 }
 
 /*
- * Change the position of the more block on the front, by making it a block level element.
- * https://github.com/WordPress/gutenberg/issues/65934
-*/
-.more-link {
-	display: block;
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
 }
+
+/*
+ * Remove outline for editable content.
+ */
+[contenteditable]:focus {
+  outline: auto;
+}
+
+/* Tables */
+/* ============================================ */
+/**
+1. Correct table border color inheritance in all Chrome and Safari.
+*/
+table {
+  border-color: inherit;
+  /* 1 */
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+}
+
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "KikaiChokoku";
+  src: url("../../fonts/KikaiChokokuJIS-Md.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* --------------------------------------------------------------
+common
+-------------------------------------------------------------- */
+.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* button
+========================================================= */
+/* --------------------------------------------------------------
+component
+-------------------------------------------------------------- */
+.s-inner {
+  padding: 20px;
+}
+
+.inner {
+  padding: 20px;
+}
+
+.s-title {
+  font-size: xx-large;
+  text-align: center;
+  margin: 50px auto;
+}
+
+/* swiper
+========================================================= */
+/* --------------------------------------------------------------
+swiper
+-------------------------------------------------------------- */
+/* main
+========================================================= */
+.main-swiper {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.main-swiper .swiper-wrapper .swiper-slide {
+  height: 700px !important;
+}
+.main-swiper .swiper-wrapper .swiper-slide .img {
+  border-radius: 30px;
+}
+
+/* topics
+========================================================= */
+.topics-swiper {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.topics-swiper .swiper-wrapper .swiper-slide {
+  height: 250px !important;
+  width: 400px;
+}
+.topics-swiper .swiper-wrapper .swiper-slide .img {
+  border-radius: 30px;
+}
+
+/* --------------------------------------------------------------
+layout
+-------------------------------------------------------------- */
+/* header
+========================================================= */
+.l-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 8px;
+}
+.l-header-logo {
+  width: 150px;
+  margin: 0 15px;
+}
+.l-header__menu {
+  margin-right: 100px;
+}
+.l-header__menu .l-header-nav__list {
+  display: flex;
+  align-items: center;
+}
+.l-header__menu .l-header-nav__item {
+  padding: 5px 15px;
+}
+.l-header__menu .l-header-nav__link {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.l-header__menu .l-header-nav__link::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+.l-header__menu .l-header-nav__link.--event::after {
+  background-image: url(assets/images/icon/i_event.png);
+  background-position: center;
+  background-size: cover;
+}
+.l-header__menu .l-header-nav__link.--floor::after {
+  background-image: url(assets/images/icon/i_floor.png);
+  background-position: center;
+  background-size: cover;
+}
+.l-header__menu .l-header-nav__link.--shop::after {
+  background-image: url(assets/images/icon/i_shop.png);
+  background-position: center;
+  background-size: cover;
+}
+.l-header__menu .l-header-nav__link.--access::after {
+  background-image: url(assets/images/icon/i_access.png);
+  background-position: center;
+  background-size: cover;
+}
+.l-header__menu .l-header-nav__text {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* footer
+========================================================= */
+/* top-page
+========================================================= */
