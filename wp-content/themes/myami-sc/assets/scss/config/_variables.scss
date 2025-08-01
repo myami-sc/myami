@@ -1,0 +1,23 @@
+@use "fonts" as *;
+
+//////////////////////* font *//////////////////////
+
+// base font
+
+// main slider font
+$slider-icon: "KikaiChokoku";
+
+//////////////////////* color *//////////////////////
+
+// color
+$black: #333;
+$white: #fff;
+$myami-g: #00c295;
+$myami-p: #ff7385;
+
+// base font color
+$base-font-color: $black;
+
+// base link color
+$base-link-color: $black;
+$base-link-color-hover: $white;
