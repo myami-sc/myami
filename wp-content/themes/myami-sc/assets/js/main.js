@@ -13,12 +13,14 @@ const mainSwiper = new Swiper(".main-swiper", {
 });
 
 const topicsSwiper = new Swiper(".topics-swiper", {
-  slidesPerView: 3.5,
-  loop: true,
-  speed: 8000,
+  slidesPerView: "auto",
   spaceBetween: "50px",
-  autoplay: {
-    delay: 0,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
   },
 });
 

@@ -38,28 +38,28 @@
 
         &.--event {
           &::after {
-            background-image: url(assets/images/icon/i_event.png);
+            background-image: url(assets/images/icon/i_event_p.png);
             background-position: center;
             background-size: cover;
           }
         }
         &.--floor {
           &::after {
-            background-image: url(assets/images/icon/i_floor.png);
+            background-image: url(assets/images/icon/i_floor_p.png);
             background-position: center;
             background-size: cover;
           }
         }
         &.--shop {
           &::after {
-            background-image: url(assets/images/icon/i_shop.png);
+            background-image: url(assets/images/icon/i_shop_p.png);
             background-position: center;
             background-size: cover;
           }
         }
         &.--access {
           &::after {
-            background-image: url(assets/images/icon/i_access.png);
+            background-image: url(assets/images/icon/i_access_p.png);
             background-position: center;
             background-size: cover;
           }
@@ -70,6 +70,7 @@
         margin-top: 10px;
         font-size: 14px;
         font-weight: 700;
+        color: #00c295;
       }
     }
   }
