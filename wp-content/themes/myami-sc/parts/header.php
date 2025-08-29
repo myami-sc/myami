@@ -9,7 +9,7 @@
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.3/dist/lenis.css">
     <?php wp_head(); ?>
 </head>
 
@@ -40,6 +40,45 @@
                         </li>
                     </ul>
                 </nav>
+                <div class="hamburger --open" id="js-hamburger">
+                    <nav class="hamburger-nav" onwheel="event.stopPropagation()">
+                        <div class="hamburger-nav__menu">
+                            <div class="menu-container">
+                                <div class="head">
+                                    <img src="<?php echo esc_url(get_theme_file_uri('assets/images/logo.png')); ?>" class="logo img" alt="マイアミショッピングセンターロゴ">
+                                </div>
+                                <div class="body">
+                                    <div class="m-inner">
+                                        <h3 class="subheading">こだわりを探す</h3>
+                                        <div class="box">
+                                            <div class="box__item"><a href="">ファッションに<br />こだわる</a></div>
+                                            <div class="box__item"><a href="">食べ物に<br />こだわる</a></div>
+                                            <div class="box__item"><a href="">使い方に<br />こだわる</a></div>
+                                            <div class="box__item"><a href="">遊びに<br />こだわる</a></div>
+                                        </div>
+                                        <h3 class="subheading">サイトマップ</h3>
+                                        <ul class="list">
+                                            <li><a href="#">Text</a></li>
+                                            <li><a href="#">Text</a></li>
+                                            <li><a href="#">Text</a></li>
+                                            <li><a href="#">Text</a></li>
+                                            <li><a href="#">Text</a></li>
+                                            <li><a href="#">Text</a></li>
+                                            <li><a href="#">Text</a></li>
+                                            <li><a href="#">Text</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="toggle-btn">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="mask"></div>
+                    <div class="hamburger-text"><span>MENU</span><span>CLOSE</span></div>
+                </div>
             </div>
         </div>
     </header>

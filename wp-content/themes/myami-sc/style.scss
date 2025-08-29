@@ -21,9 +21,10 @@ component
 @use "assets/scss/component/inner" as *;
 @use "assets/scss/component/title" as *;
 
-/* swiper
+/* plugin
 ========================================================= */
 @use "assets/scss/component/swiper" as *;
+@use "assets/scss/component/scroll-trigger" as *;
 
 /* --------------------------------------------------------------
 layout
