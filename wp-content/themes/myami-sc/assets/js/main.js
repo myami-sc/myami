@@ -44,6 +44,27 @@ jQuery(function () {
 });
 
 const modal = document.querySelector("#cc-main");
-modal.addEventListener("wheel", (e) => {
-  e.stopPropagation();
+
+if (modal) {
+  modal.addEventListener("wheel", (e) => {
+    e.stopPropagation();
+  });
+}
+
+jQuery(function () {
+  let pos = 0;
+  let nav = jQuery("#js-h-nav");
+  let icon = jQuery("#js-fixed-icon");
+
+  jQuery(window).on("scroll", function () {
+    if (jQuery(this).scrollTop() < pos) {
+      nav.slideDown();
+      icon.slideDown("slow");
+    } else {
+      nav.slideUp();
+      icon.slideUp("slow");
+    }
+
+    pos = jQuery(this).scrollTop();
+  });
 });

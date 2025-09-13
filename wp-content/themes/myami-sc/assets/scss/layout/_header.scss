@@ -17,11 +17,15 @@
 
   &__menu {
     display: flex;
+    width: 100%;
 
     .l-header-nav {
+      width: 100%;
+
       &__list {
         display: flex;
         align-items: center;
+        justify-content: center;
       }
 
       &__item {
@@ -80,6 +84,7 @@
 
     .hamburger {
       padding: 15px;
+      margin-left: auto;
 
       &-nav {
         display: block;
@@ -92,7 +97,7 @@
         overflow-x: hidden;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        transition: all 0.8s;
+        transition: all 0.5s;
         z-index: 3;
         opacity: 0;
 
@@ -110,27 +115,38 @@
 
             .body {
               .subheading {
-                text-align: center;
-                font-size: 20px;
-                font-weight: 700;
-                padding: 20px;
-                border-top: solid 1px #333;
-                border-bottom: solid 1px #333;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                font-weight: 600;
+
+                span {
+                  line-height: 1;
+                  color: #333;
+                }
+
+                &::after {
+                  content: "";
+                  flex: 1 1 auto;
+                  height: 1px;
+                  background-color: #d9d5d5;
+                }
               }
 
               .box {
                 margin: 50px 0;
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-                gap: 5px;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
 
                 &__item {
                   text-align: center;
                   border-radius: 10px;
 
                   a {
-                    display: inline-block;
-                    padding: 10px 15px;
+                    display: block;
+                    padding: 40px 15px;
+                    font-size: 22px;
                   }
 
                   &:nth-of-type(1) {
@@ -152,18 +168,71 @@
 
           .list {
             li {
-              border-bottom: 1px solid #333;
+              padding: 50px 0;
+              border-bottom: 1px solid #d9d5d5;
+
               a {
                 display: block;
-                color: #333;
-                font-size: 18px;
-                padding: 50px 0;
+                overflow: hidden;
+                color: transparent;
+                text-shadow: 0 -1.5em 0 #000, 0 0 0 #000;
+                transition: text-shadow 0.3s;
+                font-size: 30px;
                 transition-duration: 0.2s;
 
                 &:hover {
-                  background: #e4e4e4;
+                  text-shadow: 0 0 0 #000, 0 1.5em 0 #000;
                 }
               }
+            }
+
+            &-sub {
+              display: flex;
+              margin: 50px;
+              justify-content: center;
+
+              &__link {
+                display: flex;
+                align-items: center;
+                margin: 0 15px;
+
+                .i-insta {
+                  width: 18px;
+                  height: 18px;
+                  margin-right: 5px;
+
+                  &__text {
+                    line-height: 1.7;
+                  }
+                }
+              }
+            }
+          }
+
+          .bnr {
+            margin: 50px 0;
+
+            &__item {
+              height: 150px;
+              margin-bottom: 20px;
+
+              img {
+                border-radius: 10px;
+                object-fit: cover;
+              }
+            }
+          }
+
+          .contact {
+            width: 250px;
+            margin: 20px auto 0;
+            border: solid 1px #333;
+            border-radius: 50px;
+
+            a {
+              display: block;
+              padding: 15px;
+              text-align: center;
             }
           }
         }

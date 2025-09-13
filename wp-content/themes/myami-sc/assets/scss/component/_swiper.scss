@@ -9,7 +9,7 @@ swiper
 
   .swiper-wrapper {
     .swiper-slide {
-      height: 700px !important;
+      height: calc(100vh - 160px) !important;
 
       .img {
         border: solid 2px#00c295;
