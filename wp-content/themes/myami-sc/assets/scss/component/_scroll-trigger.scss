@@ -1,0 +1,27 @@
+.js-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s;
+
+  &.--show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.js-stretch-in {
+  aspect-ratio: 1/1;
+  --clip-1: 50%;
+  --clip-2: 50%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(
+    var(--clip-1) var(--clip-1),
+    var(--clip-2) var(--clip-1),
+    var(--clip-2) var(--clip-2),
+    var(--clip-1) var(--clip-2)
+  );
+}
+
+.js-fade-in {
+  opacity: 0;
+}

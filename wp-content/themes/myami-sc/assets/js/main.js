@@ -1,29 +1,3 @@
-/* swiper
-========================================================= */
-const mainSwiper = new Swiper(".main-swiper", {
-  loop: true,
-  speed: 8000,
-  autoplay: {
-    delay: 0,
-  },
-  effect: "fade",
-  fadeEffect: {
-    crossFade: true,
-  },
-});
-
-const topicsSwiper = new Swiper(".topics-swiper", {
-  slidesPerView: "auto",
-  spaceBetween: "50px",
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
-
 /* tab
 ========================================================= */
 document.addEventListener("DOMContentLoaded", () => {
@@ -46,5 +20,51 @@ document.addEventListener("DOMContentLoaded", () => {
       tab.classList.add("active");
       contents[index].classList.add("active");
     });
+  });
+});
+
+jQuery(function () {
+  let hbg = jQuery("#js-hamburger");
+  let btn = jQuery(".toggle-btn");
+  let mask = jQuery(".mask");
+  let open = "--open";
+  btn.on("click", function () {
+    if (!hbg.hasClass(open)) {
+      hbg.addClass(open);
+      lenis.stop();
+    } else {
+      hbg.removeClass(open);
+      lenis.start();
+    }
+  });
+  mask.on("click", function () {
+    hbg.removeClass(open);
+    lenis.start();
+  });
+});
+
+const modal = document.querySelector("#cc-main");
+
+if (modal) {
+  modal.addEventListener("wheel", (e) => {
+    e.stopPropagation();
+  });
+}
+
+jQuery(function () {
+  let pos = 0;
+  let nav = jQuery("#js-h-nav");
+  let icon = jQuery("#js-fixed-icon");
+
+  jQuery(window).on("scroll", function () {
+    if (jQuery(this).scrollTop() < pos) {
+      nav.slideDown();
+      icon.slideDown("slow");
+    } else {
+      nav.slideUp();
+      icon.slideUp("slow");
+    }
+
+    pos = jQuery(this).scrollTop();
   });
 });

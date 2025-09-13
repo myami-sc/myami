@@ -1,0 +1,10 @@
+#scroll-top-content input.pixels {
+  width: 40px;
+}
+#scroll-top-content input.seconds {
+  width: 40px;
+}
+#scroll-top-content input.page-url {
+  width: 100%;
+  max-width: 650px;
+}

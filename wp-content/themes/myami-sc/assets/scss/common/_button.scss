@@ -1,0 +1,88 @@
+.btn {
+  margin-top: auto;
+
+  a {
+    width: 180px;
+    height: 50px;
+    border: solid 1px #00c295;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// menu btn
+.toggle-btn {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 3;
+
+  span {
+    display: block;
+    position: absolute;
+    left: 0;
+    transition: all 0.5s;
+    height: 1px;
+    background-color: #333;
+    border-radius: 4px;
+
+    &:nth-child(1) {
+      top: 1px;
+      width: 30px;
+    }
+    &:nth-child(2) {
+      top: 11px;
+      width: 25px;
+    }
+  }
+
+  &:hover {
+    span {
+      &:nth-child(1) {
+        top: 4px;
+      }
+      &:nth-child(2) {
+        top: 10px;
+      }
+    }
+  }
+}
+
+.hamburger {
+  &.--open {
+    .toggle-btn {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+
+      span {
+        background-color: #fff;
+
+        &:nth-child(1) {
+          -webkit-transform: translateY(5px) rotate(-45deg);
+          transform: translateY(5px) rotate(-45deg);
+        }
+        &:nth-child(2) {
+          -webkit-transform: translateY(-5px) rotate(45deg);
+          transform: translateY(-5px) rotate(45deg);
+          width: 30px;
+        }
+      }
+
+      &:hover {
+        span {
+          &:nth-child(1) {
+            top: 1px;
+          }
+          &:nth-child(2) {
+            top: 11px;
+          }
+        }
+      }
+    }
+  }
+}
