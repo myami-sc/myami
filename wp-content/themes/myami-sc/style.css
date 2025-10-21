@@ -502,10 +502,26 @@ component
   padding: 50px;
 }
 
+.p-inner {
+  padding: 150px 90px;
+}
+
 .s-title {
   font-size: xx-large;
   text-align: center;
   margin: 50px auto;
+}
+
+.p-title {
+  font-size: xx-large;
+  text-align: center;
+  margin: 30px auto;
+}
+
+.p-subtitle {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 50px;
 }
 
 /* plugin
@@ -698,7 +714,7 @@ layout
   display: block;
   position: fixed;
   top: 0;
-  left: -50%;
+  left: -60%;
   bottom: 0;
   width: 60%;
   background: #ffffff;
@@ -748,18 +764,28 @@ layout
   display: block;
   padding: 40px 15px;
   font-size: 22px;
+  color: #ffffff;
+  text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
 }
 .l-header__menu .hamburger-nav__menu .menu-container .body .box__item:nth-of-type(1) {
-  background-color: #00c295;
+  background-image: url(assets/images/slider/slider_img_08.jpg);
+  background-position: center;
+  background-size: cover;
 }
 .l-header__menu .hamburger-nav__menu .menu-container .body .box__item:nth-of-type(2) {
-  background-color: #333;
+  background-image: url(assets/images/slider/slider_img_03.jpg);
+  background-position: center;
+  background-size: cover;
 }
 .l-header__menu .hamburger-nav__menu .menu-container .body .box__item:nth-of-type(3) {
-  background-color: #8faf43;
+  background-image: url(assets/images/slider/slider_img_09.jpg);
+  background-position: center;
+  background-size: cover;
 }
 .l-header__menu .hamburger-nav__menu .menu-container .body .box__item:nth-of-type(4) {
-  background-color: #c04a4a;
+  background-image: url(assets/images/slider/slider_img_10.jpg);
+  background-position: center;
+  background-size: cover;
 }
 .l-header__menu .hamburger-nav__menu .list li {
   padding: 50px 0;
@@ -862,9 +888,6 @@ layout
 
 /* footer
 ========================================================= */
-.l-footer {
-  margin-top: 80px;
-}
 .l-footer__contact {
   position: relative;
 }
@@ -944,13 +967,6 @@ layout
 .main .kv {
   position: relative;
 }
-.main .kv .icon-fixed {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  z-index: 2;
-  max-width: 200px;
-}
 
 .section.--overlap {
   position: relative;
@@ -996,8 +1012,8 @@ layout
   margin-top: 0;
 }
 .section .s-item.--news .news-wrap .n-list-item {
-  padding-bottom: 40px;
-  margin-bottom: 40px;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
   border-bottom: solid 1px gray;
 }
 .section .s-item .sns-grid {
@@ -1005,6 +1021,7 @@ layout
   grid-template-columns: 30% 1fr;
   gap: 10px;
   align-items: flex-start;
+  margin-bottom: 60px;
 }
 .section .s-item .sns-grid__box:first-child {
   position: sticky;
@@ -1022,6 +1039,7 @@ layout
 }
 .section .s-item .sns-grid .sns-belt {
   max-width: 300px;
+  padding-bottom: 20px;
 }
 .section .s-item .sns-grid .sns-belt a {
   background-color: #67beaa;
@@ -1117,4 +1135,164 @@ layout
 }
 .section .parallax-box .simpleParallax {
   height: 1000px;
+}
+
+/* event-page
+========================================================= */
+/* floor-page
+========================================================= */
+.figure {
+  max-width: 900px;
+  padding: 80px;
+  margin: 0 auto 80px;
+  background-color: #e4eff9;
+}
+
+/* shop page
+========================================================= */
+.shop__upper {
+  background-color: #00c295;
+  border-radius: 40px 40px 0 0;
+  padding-top: 80px;
+}
+.shop__content {
+  padding-top: 50px;
+}
+
+/* shop-list-page
+========================================================= */
+.shop-list {
+  padding-top: 300px;
+  display: flex;
+  align-items: flex-start;
+}
+.shop-list .tab {
+  max-width: 300px;
+}
+.shop-list .tab-contena {
+  border-top: solid 1px #333;
+}
+.shop-list .tab-elem {
+  display: block;
+  padding: 2rem 2rem 2rem 3em;
+  color: #999;
+  position: relative;
+  border-bottom: solid 1px #333;
+}
+.shop-list .tab-elem.active {
+  color: #333;
+}
+.shop-list .tab-elem.active::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #f13f79;
+}
+.shop-list .tab-elem:hover {
+  cursor: pointer;
+}
+.shop-list .tabbody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.shop-list .tabbody-elem {
+  flex-grow: 1;
+  max-width: 100%;
+}
+.shop-list__left {
+  position: sticky;
+  top: 85px;
+  left: 0;
+  padding: 0 6rem 0 3rem;
+  width: 27%;
+}
+.shop-list__title {
+  font-size: xx-large;
+  margin-bottom: 80px;
+}
+.shop-list__body {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.shop-list__item {
+  position: relative;
+  width: 33.3333%;
+  padding-right: 30px;
+  margin-bottom: 80px;
+  float: left;
+}
+.shop-list__link {
+  filter: grayscale(0) blur(0);
+  transition: 0.3s ease-in-out;
+}
+.shop-list__link:hover {
+  filter: grayscale(85%) blur(1px);
+}
+.shop-list__img {
+  position: relative;
+  height: 21.222123vw;
+  max-height: 250px;
+  overflow: hidden;
+}
+.shop-list__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: inherit !important;
+  -o-object-fit: contain !important;
+  object-fit: contain !important;
+  -o-object-position: center;
+  object-position: center;
+}
+.shop-list__content {
+  position: relative;
+  padding-top: 20px;
+}
+.shop-list__content .subheading {
+  margin-bottom: 20px;
+}
+.shop-list__content .category {
+  margin-bottom: 20px;
+}
+.shop-list__content .location {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  border: solid 1px #7a7474;
+  color: #7a7474;
+  padding: 3px 8px;
+}
+.shop-list__content .detail {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.shop-list__content .detail .icon {
+  margin-left: 10px;
+}
+.shop-list__content .detail::after {
+  background-color: #333;
+  bottom: -4px;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform 0.3s;
+  width: 100%;
+}
+.shop-list__content .detail:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
 }

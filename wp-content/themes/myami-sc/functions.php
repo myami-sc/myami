@@ -16,6 +16,7 @@ function theme_name_files()
     wp_enqueue_script('main', get_theme_file_uri('/assets/js/main.js'), array('jquery'), '', true);
     wp_enqueue_script('swiper', get_theme_file_uri('/assets/js/swiper.js'), array('swiperBundle'), '', true);
     wp_enqueue_script('parallax', get_theme_file_uri('/assets/js/parallax.js'), array('simpleParallax'), '', true);
+    wp_enqueue_script('colorbox', get_theme_file_uri('/assets/js/jquery.colorbox-min.js'), array(), '', true);
 }
 add_action('wp_enqueue_scripts', 'theme_name_files');
 

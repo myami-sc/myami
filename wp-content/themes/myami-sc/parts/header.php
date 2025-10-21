@@ -8,8 +8,11 @@
             wp_title('|', true, 'left'); ?></title>
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo get_template_directory_uri(); ?>/assets/css/colorbox.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.3/dist/lenis.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
     <?php wp_head(); ?>
 </head>
 
@@ -33,7 +36,7 @@
                             <a href="<?php echo esc_url(home_url('floor')); ?>" class="l-header-nav__link --floor"><span class="l-header-nav__text">フロアガイド</span></a>
                         </li>
                         <li class="l-header-nav__item">
-                            <a href="<?php echo esc_url(home_url('shop')); ?>" class="l-header-nav__link --shop"><span class="l-header-nav__text">ショップガイド</span></a>
+                            <a href="<?php echo esc_url(home_url('shop')); ?>" class="l-header-nav__link --shop"><span class="l-header-nav__text">ショップリスト</span></a>
                         </li>
                         <li class="l-header-nav__item">
                             <a href="<?php echo esc_url(home_url('access')); ?>" class="l-header-nav__link --access"><span class="l-header-nav__text">アクセス</span></a>

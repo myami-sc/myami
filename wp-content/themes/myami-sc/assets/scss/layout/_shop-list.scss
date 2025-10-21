@@ -1,0 +1,159 @@
+.shop-list {
+  padding-top: 300px;
+  display: flex;
+  align-items: flex-start;
+
+  .tab {
+    max-width: 300px;
+
+    &-contena {
+      border-top: solid 1px #333;
+    }
+
+    &-elem {
+      display: block;
+      padding: 2rem 2rem 2rem 3em;
+      color: #999;
+      position: relative;
+      border-bottom: solid 1px #333;
+
+      &.active {
+        color: #333;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 1px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          background-color: #f13f79;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .tabbody {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    &-elem {
+      flex-grow: 1;
+      max-width: 100%;
+    }
+  }
+
+  &__left {
+    position: sticky;
+    top: 85px;
+    left: 0;
+    padding: 0 6rem 0 3rem;
+    width: 27%;
+  }
+
+  &__title {
+    font-size: xx-large;
+    margin-bottom: 80px;
+  }
+
+  &__body {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  &__item {
+    position: relative;
+    width: 33.3333%;
+    padding-right: 30px;
+    margin-bottom: 80px;
+    float: left;
+  }
+
+  &__link {
+    filter: grayscale(0) blur(0);
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      filter: grayscale(85%) blur(1px);
+    }
+  }
+
+  &__img {
+    position: relative;
+    height: 21.222123vw;
+    max-height: 250px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: inherit !important;
+      -o-object-fit: contain !important;
+      object-fit: contain !important;
+      -o-object-position: center;
+      object-position: center;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding-top: 20px;
+
+    .subheading {
+      margin-bottom: 20px;
+    }
+
+    .category {
+      margin-bottom: 20px;
+    }
+
+    .location {
+      display: inline-block;
+      width: 50px;
+      text-align: center;
+      border: solid 1px #7a7474;
+      color: #7a7474;
+      padding: 3px 8px;
+    }
+
+    .detail {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      .icon {
+        margin-left: 10px;
+      }
+
+      &::after {
+        background-color: #333;
+        bottom: -4px;
+        content: "";
+        height: 1px;
+        left: 0;
+        position: absolute;
+        transform: scale(0, 1);
+        transform-origin: right top;
+        transition: transform 0.3s;
+        width: 100%;
+      }
+
+      &:hover::after {
+        transform-origin: left top;
+        transform: scale(1, 1);
+      }
+    }
+  }
+}

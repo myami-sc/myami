@@ -1,0 +1,170 @@
+# Translation of Plugins - WPFront Scroll Top - Stable (latest release) in Chinese (China)
+# This file is distributed under the same license as the Plugins - WPFront Scroll Top - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-08-15 06:52:55+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: zh_CN\n"
+"Project-Id-Version: Plugins - WPFront Scroll Top - Stable (latest release)\n"
+
+#: includes/settings/class-settings-view-model.php:142
+#: includes/settings/class-settings-view.php:71
+msgid "WPFront Scroll Top Settings"
+msgstr "WPFront Scroll Top设置"
+
+#. Plugin Name of the plugin
+#: wpfront-scroll-top.php
+msgid "WPFront Scroll Top"
+msgstr "WPFront Scroll Top"
+
+#: includes/settings/class-settings-view-model.php:559
+msgid "Top Right"
+msgstr "右上角"
+
+#: includes/settings/class-settings-view-model.php:560
+msgid "Top Left"
+msgstr "左上角"
+
+#: includes/settings/class-settings-view-model.php:441
+msgid "Text Color"
+msgstr "文本颜色"
+
+#: includes/settings/class-settings-view-model.php:532
+msgid "Text Button"
+msgstr "按钮文本"
+
+#: includes/settings/class-settings-view-model.php:440
+msgid "Text"
+msgstr "文本"
+
+#: includes/settings/class-settings-view-model.php:429
+msgid "Small Window Max Width"
+msgstr "小窗口最大宽度"
+
+#: includes/settings/class-settings-view-model.php:221
+msgid "Settings"
+msgstr "设置"
+
+#: includes/settings/class-settings-view-model.php:143
+msgid "Scroll Top"
+msgstr "滚动到顶部"
+
+#: includes/settings/class-settings-view-model.php:421
+msgid "Scroll Offset"
+msgstr "滚动偏移"
+
+#: includes/settings/class-settings-view-model.php:425
+msgid "Scroll Duration"
+msgstr "滚动的持续时间"
+
+#: includes/settings/class-settings-view.php:128
+msgid "Save Changes"
+msgstr "保存修改"
+
+#: includes/settings/class-settings-view-model.php:436
+msgid "Margin Y"
+msgstr "Y轴边界"
+
+#: includes/settings/class-settings-view-model.php:435
+msgid "Margin X"
+msgstr "X轴边界"
+
+#: includes/settings/class-settings-view-model.php:434
+#: includes/settings/class-settings-view.php:54
+msgid "Location"
+msgstr "位置"
+
+#: includes/settings/class-settings-view-model.php:438
+msgid "Image ALT"
+msgstr "图片alt属性"
+
+#. Plugin URI of the plugin
+#: wpfront-scroll-top.php
+msgid "http://wpfront.com/scroll-top-plugin/"
+msgstr "http://wpfront.com/scroll-top-plugin/"
+
+#. Author URI of the plugin
+#: wpfront-scroll-top.php
+msgid "http://wpfront.com"
+msgstr "http://wpfront.com"
+
+#: includes/settings/class-settings-view-model.php:430
+msgid "Hide on WP-ADMIN"
+msgstr "有WP-ADMIN里隐藏"
+
+#: includes/settings/class-settings-view-model.php:428
+msgid "Hide on Small Window"
+msgstr "在小窗口上隐藏"
+
+#: includes/settings/class-settings-view-model.php:431
+msgid "Hide on iframes"
+msgstr "在内嵌框架(iframes)里隐藏"
+
+#: includes/settings/class-settings-view.php:55
+msgid "Filter"
+msgstr "筛选"
+
+#: includes/settings/class-settings-view-model.php:419
+msgid "Enabled"
+msgstr "启用"
+
+#: includes/settings/class-settings-view-model.php:455
+msgid "Display on Pages"
+msgstr "显示页面"
+
+#: includes/settings/class-settings-view.php:53
+msgid "Display"
+msgstr "显示"
+
+#: includes/settings/class-settings-view-model.php:437
+msgid "Custom URL"
+msgstr "自定义链接"
+
+#: includes/settings/class-settings-view-model.php:444
+#: includes/settings/class-settings-view-model.php:449
+msgid "Custom CSS"
+msgstr "自定义CSS"
+
+#: includes/settings/class-settings-view.php:150
+msgid "Buy me a Beer or Coffee"
+msgstr "给我买啤酒或咖啡"
+
+#: includes/settings/class-settings-view-model.php:432
+msgid "Button Style"
+msgstr "按钮样式 "
+
+#: includes/settings/class-settings-view-model.php:422
+msgid "Button Size"
+msgstr "按钮大小"
+
+#: includes/settings/class-settings-view-model.php:423
+msgid "Button Opacity"
+msgstr "按钮不透明度"
+
+#: includes/settings/class-settings-view-model.php:424
+msgid "Button Fade Duration"
+msgstr "按钮消失时间"
+
+#: includes/settings/class-settings-view-model.php:557
+msgid "Bottom Right"
+msgstr "右下角"
+
+#: includes/settings/class-settings-view-model.php:558
+msgid "Bottom Left"
+msgstr "左下角"
+
+#: includes/settings/class-settings-view-model.php:442
+msgid "Background Color"
+msgstr "背景颜色"
+
+#: includes/settings/class-settings-view-model.php:427
+msgid "Auto Hide After"
+msgstr "自动隐藏之后"
+
+#: includes/settings/class-settings-view-model.php:426
+msgid "Auto Hide"
+msgstr "自动隐藏"

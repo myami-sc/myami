@@ -1,22 +1,16 @@
-/* tab
+/* home tab
 ========================================================= */
 document.addEventListener("DOMContentLoaded", () => {
-  // タブボタンを全て取得
   const tabs = document.querySelectorAll(".l-header-nav__item");
 
-  // タブコンテンツを全て取得
   const contents = document.querySelectorAll(".content");
 
-  // 各タブボタンにクリックイベントを設定
   tabs.forEach((tab, index) => {
     tab.addEventListener("click", () => {
-      // 全てのタブからactiveクラスを削除
       tabs.forEach((tab) => tab.classList.remove("active"));
 
-      // 全てのコンテンツからactiveクラスを削除
       contents.forEach((content) => content.classList.remove("active"));
 
-      // クリックされたタブとそれに対応するコンテンツにactiveクラスを付与
       tab.classList.add("active");
       contents[index].classList.add("active");
     });
@@ -54,17 +48,61 @@ if (modal) {
 jQuery(function () {
   let pos = 0;
   let nav = jQuery("#js-h-nav");
-  let icon = jQuery("#js-fixed-icon");
 
   jQuery(window).on("scroll", function () {
     if (jQuery(this).scrollTop() < pos) {
       nav.slideDown();
-      icon.slideDown("slow");
     } else {
       nav.slideUp();
-      icon.slideUp("slow");
     }
 
     pos = jQuery(this).scrollTop();
+  });
+});
+
+/* shop list tab
+========================================================= */
+if (document.querySelector("#tab")) {
+  let tavsV = document.getElementById("tab").getElementsByClassName("tab-elem");
+  let pagesV = document
+    .getElementById("tabbody")
+    .getElementsByClassName("tabbody-elem");
+
+  function changeTabV() {
+    let targetIdV = this.dataset.tabid;
+
+    for (let i = 0; i < pagesV.length; i++) {
+      if (pagesV[i].id != targetIdV) {
+        pagesV[i].style.display = "none";
+      } else {
+        pagesV[i].style.display = "block";
+      }
+    }
+
+    for (let i = 0; i < tavsV.length; i++) {
+      tavsV[i].classList.remove("active");
+    }
+    this.classList.add("active");
+  }
+
+  for (let i = 0; i < tavsV.length; i++) {
+    tavsV[i].onclick = changeTabV;
+  }
+
+  tavsV[0].onclick();
+}
+
+/* colorbox
+========================================================= */
+jQuery(document).ready(function () {
+  jQuery(".colorbox-img").on("click", function () {
+    console.log();
+    jQuery.colorbox({
+      href: this.src,
+      open: true,
+      maxWidth: "90%",
+      maxHeight: "90%",
+    });
+    return false;
   });
 });

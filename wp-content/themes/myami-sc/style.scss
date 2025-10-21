@@ -40,3 +40,19 @@ layout
 /* top-page
 ========================================================= */
 @use "assets/scss/layout/top" as *;
+
+/* event-page
+========================================================= */
+@use "assets/scss/layout/event" as *;
+
+/* floor-page
+========================================================= */
+@use "assets/scss/layout/floor" as *;
+
+/* shop page
+========================================================= */
+@use "assets/scss/layout/shop" as *;
+
+/* shop-list-page
+========================================================= */
+@use "assets/scss/layout/shop-list" as *;

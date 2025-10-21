@@ -6,9 +6,6 @@
 			<div class="inner">
 				<div class="kv">
 					<?php get_template_part(slug: "parts/swiper/main-swiper"); ?>
-					<div class="icon-fixed" id="js-fixed-icon">
-						<img src="<?php echo esc_url(get_theme_file_uri('assets/images/sc_mascot.png')); ?>" class="img" alt="">
-					</div>
 				</div>
 			</div>
 			<section class="section">
