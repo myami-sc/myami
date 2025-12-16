@@ -3,44 +3,74 @@
     position: relative;
 
     .l-footer-info {
-      position: relative;
-      max-width: 350px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100%;
+      max-width: 500px;
       z-index: 1;
       height: 100%;
 
       &__box {
         padding: 50px 0;
         height: 100%;
-        background: rgba(250, 252, 251, 0.8);
+        color: #fff;
 
         .logo {
           width: 150px;
-          margin: 0 auto 20px;
-        }
-        .address {
-          text-align: center;
-          margin-bottom: 10px;
+          margin: 0 auto 30px;
         }
         .name {
           text-align: center;
-          margin-bottom: 10px;
+          margin-bottom: 20px;
+          font-size: 30px;
+          font-weight: 700;
+        }
+        .address {
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: 0.2em;
+          text-align: center;
+          margin-bottom: 20px;
+
+          .post {
+            display: block;
+            margin-bottom: 10px;
+          }
         }
         .open {
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: 0.2em;
           text-align: center;
           margin-bottom: 10px;
-        }
-        .tel {
-          text-align: center;
         }
       }
     }
 
-    .l-footer-map {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    .l-footer-gallery {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(163, 143, 115, 0.35);
+      }
+
+      &__box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      &__item {
+        height: 300px;
+      }
     }
   }
 

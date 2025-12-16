@@ -7,6 +7,9 @@
 				<div class="kv">
 					<?php get_template_part(slug: "parts/swiper/main-swiper"); ?>
 				</div>
+				<div class="scroll">
+					<span>Scroll</span>
+				</div>
 			</div>
 			<section class="section">
 				<div class="s-slider-inner">
@@ -31,9 +34,10 @@
 										</div>
 									</div>
 								</a>
+								<div class="btn"><a href="<?php echo esc_url(home_url('news-list')); ?>"><span>一覧を見る</span></a></div>
 							</div>
 							<div class="news-wrap">
-								<h3 class="subheading">NEWS</h3>
+								<h3 class="subheading">NEWS　最新のお知らせ</h3>
 								<ul class="n-list">
 									<li class="n-list-item"><a href="" class="n-list-link"><span class="date">25.7.30</span>譲渡会猛暑休みのお知らせ</a></li>
 									<li class="n-list-item"><a href="" class="n-list-link"><span class="date">25.8.1</span>多目的な空きスペース利用者募集</a></li>

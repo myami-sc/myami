@@ -1,0 +1,68 @@
+.shop {
+  &__upper {
+    background-color: #00c295;
+    border-radius: 40px 40px 0 0;
+    padding-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  &__content {
+  }
+
+  &__bottom {
+    margin-top: 80px;
+
+    .subheading {
+      font-size: xx-large;
+      margin-bottom: 1rem;
+
+      &-jp {
+        font-size: medium;
+        font-weight: 700;
+        color: #00c295;
+      }
+    }
+
+    .table {
+      width: 100%;
+      max-width: 750px;
+      margin: 80px auto;
+
+      tbody {
+        border-top: solid 1px #b3adad;
+      }
+
+      tr {
+        border-bottom: solid 1px #b3adad;
+      }
+
+      th,
+      td {
+        padding: 20px 10px;
+        font-size: small;
+      }
+
+      td {
+        display: flex;
+        align-items: center;
+
+        a {
+          &:hover {
+            color: #3daed4;
+          }
+        }
+      }
+
+      .icon {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+
+        &.right {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

@@ -31,19 +31,3 @@ add_action('init', function () {
         'footerNav' => 'フッターナビゲーション',
     ]);
 });
-
-// add_action('init', function () {
-//     register_post_type('music', [
-//         'label' => '音楽',
-//         'supports' => ['title', 'editor', 'thumbnail', 'page-attributes'],
-//         'public' => true,
-//         'has_archive' => true,
-//         'hierarchical' => true,
-//     ]);
-// });
-
-// register_taxonomy('genre', 'music', [
-//     'label' => '音楽ジャンル',
-//     'hierarchical' => true,
-//     'show_in_rest' => true,
-// ]);

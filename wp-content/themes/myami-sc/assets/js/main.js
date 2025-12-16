@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+/* hamburger menu
+========================================================= */
 jQuery(function () {
   let hbg = jQuery("#js-hamburger");
   let btn = jQuery(".toggle-btn");
@@ -36,6 +38,9 @@ jQuery(function () {
     lenis.start();
   });
 });
+
+/* modal
+========================================================= */
 
 const modal = document.querySelector("#cc-main");
 
@@ -104,5 +109,17 @@ jQuery(document).ready(function () {
       maxHeight: "90%",
     });
     return false;
+  });
+});
+
+/* news list tab
+========================================================= */
+jQuery(function () {
+  let tabs = jQuery("news-list__tab-item");
+  jQuery("news-list__tab-item").on("click", function () {
+    jQuery(".active").removeClass("active");
+    jQuery(this).addClass("active");
+    const index = tabs.index(this);
+    jQuery(".content").removeClass("show").eq(index).addClass("show");
   });
 });

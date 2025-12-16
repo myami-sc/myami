@@ -31,4 +31,5 @@
             <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_04.jpg')); ?>" class="img" alt="">
         </div>
     </div>
+    <div class="swiper-pagination"></div>
 </div>

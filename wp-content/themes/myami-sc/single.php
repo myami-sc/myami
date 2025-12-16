@@ -1,18 +1,20 @@
 <?php
 
 /**
- * Template Name: shop page
+ * Template Name: news single page
  */
 ?>
 
 <?php get_template_part(slug: "parts/header"); ?>
 
 
-<div class="page">
+<div class="page news-single">
     <?php if (have_posts()): while (have_posts()): the_post(); ?>
-            <div class="page-body">
+            <div class="page-body news-single__body">
                 <div class="p-inner">
-                    news
+                    <div class="news-single__container">
+                        <div class="news-single__content"><?php the_content(); ?></div>
+                    </div>
                 </div>
             </div>
     <?php endwhile;

@@ -25,7 +25,6 @@
                     <img src="<?php echo esc_url(get_theme_file_uri('assets/images/logo.png')); ?>" class="l-header-logo__img img" alt="マイアミショッピングセンターロゴ">
                 </a>
             </<?php echo $html_tag; ?>>
-
             <div class="l-header__menu">
                 <nav class="l-header-nav" id="js-h-nav">
                     <ul class="l-header-nav__list">
