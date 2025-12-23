@@ -16,6 +16,7 @@ function theme_name_files()
     wp_enqueue_script('main', get_theme_file_uri('/assets/js/main.js'), array('jquery'), '', true);
     wp_enqueue_script('swiper', get_theme_file_uri('/assets/js/swiper.js'), array('swiperBundle'), '', true);
     wp_enqueue_script('parallax', get_theme_file_uri('/assets/js/parallax.js'), array('simpleParallax'), '', true);
+    wp_enqueue_script('colorbox', get_theme_file_uri('/assets/js/jquery.colorbox-min.js'), array(), '', true);
 }
 add_action('wp_enqueue_scripts', 'theme_name_files');
 
@@ -30,19 +31,3 @@ add_action('init', function () {
         'footerNav' => 'フッターナビゲーション',
     ]);
 });
-
-// add_action('init', function () {
-//     register_post_type('music', [
-//         'label' => '音楽',
-//         'supports' => ['title', 'editor', 'thumbnail', 'page-attributes'],
-//         'public' => true,
-//         'has_archive' => true,
-//         'hierarchical' => true,
-//     ]);
-// });
-
-// register_taxonomy('genre', 'music', [
-//     'label' => '音楽ジャンル',
-//     'hierarchical' => true,
-//     'show_in_rest' => true,
-// ]);

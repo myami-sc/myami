@@ -1,0 +1,42 @@
+.news-single {
+  &__container {
+  }
+
+  &__upper {
+    border-bottom: solid 1px #d9d9d9;
+
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      .date {
+        line-height: 1.5;
+        letter-spacing: 0.2em;
+      }
+
+      .cate {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 600;
+        background-color: #ff7385;
+        color: #eee;
+        padding: 8px 10px;
+        border-radius: 15px;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 5rem;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+}

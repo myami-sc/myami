@@ -90,7 +90,7 @@
         display: block;
         position: fixed;
         top: 0;
-        left: -50%;
+        left: -60%;
         bottom: 0;
         width: 60%;
         background: #ffffff;
@@ -147,19 +147,29 @@
                     display: block;
                     padding: 40px 15px;
                     font-size: 22px;
+                    color: #ffffff;
+                    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
                   }
 
                   &:nth-of-type(1) {
-                    background-color: #00c295;
+                    background-image: url(assets/images/slider/slider_img_08.jpg);
+                    background-position: center;
+                    background-size: cover;
                   }
                   &:nth-of-type(2) {
-                    background-color: #333;
+                    background-image: url(assets/images/slider/slider_img_03.jpg);
+                    background-position: center;
+                    background-size: cover;
                   }
                   &:nth-of-type(3) {
-                    background-color: #8faf43;
+                    background-image: url(assets/images/slider/slider_img_09.jpg);
+                    background-position: center;
+                    background-size: cover;
                   }
                   &:nth-of-type(4) {
-                    background-color: #c04a4a;
+                    background-image: url(assets/images/slider/slider_img_10.jpg);
+                    background-position: center;
+                    background-size: cover;
                   }
                 }
               }
