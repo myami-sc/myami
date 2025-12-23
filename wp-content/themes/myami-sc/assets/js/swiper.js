@@ -70,7 +70,55 @@ const topicsSwiper = new Swiper(".topics-swiper", {
     prevEl: ".swiper-button-prev",
   },
   scrollbar: {
-    el: ".swiper-scrollbar",
+    el: ".swiper-scrollbar-topics",
+    hide: false,
+  },
+});
+const topicsSwiperFashion = new Swiper(".topics-swiper-fashion", {
+  slidesPerView: "auto",
+  spaceBetween: "50px",
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar-fashion",
+    hide: false,
+  },
+});
+const topicsSwiperFood = new Swiper(".topics-swiper-food", {
+  slidesPerView: "auto",
+  spaceBetween: "50px",
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar-food",
+    hide: false,
+  },
+});
+const topicsSwiperEnjoy = new Swiper(".topics-swiper-enjoy", {
+  slidesPerView: "auto",
+  spaceBetween: "50px",
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar-enjoy",
+    hide: false,
+  },
+});
+const topicsSwiperLifestyle = new Swiper(".topics-swiper-lifestyle", {
+  slidesPerView: "auto",
+  spaceBetween: "50px",
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar-lifestyle",
     hide: false,
   },
 });

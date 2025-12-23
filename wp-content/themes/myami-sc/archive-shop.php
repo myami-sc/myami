@@ -194,7 +194,7 @@
                         array(
                             'taxonomy' => 'shop_cate',
                             'field' => 'slug',
-                            'terms' => 'usage',
+                            'terms' => 'lifestyle',
                             'operator' => 'IN'
                         ),
                     )

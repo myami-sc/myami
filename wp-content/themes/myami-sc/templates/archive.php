@@ -30,7 +30,7 @@
 
                     <div class="news-list__item">
                         <a class="link" href="<?php the_permalink(); ?>">
-                            <div class="img">
+                            <div class="thumbnail">
                                 <?php if (has_post_thumbnail()) {
                                     the_post_thumbnail('thumbnail', array('class' => 'img'));
                                 } else {

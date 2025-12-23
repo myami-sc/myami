@@ -49,6 +49,10 @@ layout
 ========================================================= */
 @use "assets/scss/layout/floor" as *;
 
+/* access-page
+========================================================= */
+@use "assets/scss/layout/access" as *;
+
 /* shop page
 ========================================================= */
 @use "assets/scss/layout/shop" as *;

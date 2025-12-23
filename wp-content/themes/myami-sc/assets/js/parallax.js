@@ -1,3 +1,7 @@
+gsap.config({
+  nullTargetWarn: false,
+});
+
 /* parallax
 ========================================================= */
 const image = document.getElementsByClassName("js-parallax");
