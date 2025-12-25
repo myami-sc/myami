@@ -44,7 +44,7 @@
 											echo '<img src="' . esc_url(get_theme_file_uri('assets/images/logo.png')) . '" class="img" alt="画像">';
 										}
 
-										echo '<div class="description"><p class="title">' . get_the_title() . '</p></div></div></a>';
+										echo '<div class="description"><p class="title">' . get_the_title() . '</p><p class="date">' . get_the_date('Y.n.j') . '</p></div></div></a>';
 									endwhile;
 									echo '</ul>';
 									wp_reset_postdata();
@@ -82,7 +82,7 @@
 			</section>
 			<section class="section">
 				<div class="parallax-box">
-					<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_04.jpg')); ?>" class="js-parallax-2 img" alt="">
+					<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_04.jpg')); ?>" class="js-parallax img" alt="">
 				</div>
 			</section>
 			<section class="section --overlap">
@@ -133,7 +133,7 @@
 			</section>
 			<section class="section">
 				<div class="parallax-box">
-					<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="js-parallax img" alt="">
+					<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="js-parallax-2 img" alt="">
 				</div>
 			</section>
 			<section class="section --overlap">
@@ -182,7 +182,7 @@
 			</section>
 			<section class="section">
 				<div class="parallax-box">
-					<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_04.jpg')); ?>" class="js-parallax-2 img" alt="">
+					<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_04.jpg')); ?>" class="js-parallax-3 img" alt="">
 				</div>
 			</section>
 			<section class="section --overlap">

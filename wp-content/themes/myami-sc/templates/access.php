@@ -10,11 +10,11 @@
 
 <div class="page">
     <?php if (have_posts()): while (have_posts()): the_post(); ?>
-            <div class="page-body">
-                <div class="p-inner">
-                    <h2 class="p-title">Access Guide</h2>
-                    <p class="p-subtitle">アクセスガイド</p>
-                </div>
+            <div class="a-bg">
+            </div>
+            <div class="a-main">
+                <h2 class="p-title">Access</h2>
+                <p class="p-subtitle">交通アクセス</p>
             </div>
     <?php endwhile;
     endif; ?>

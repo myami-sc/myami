@@ -6,13 +6,20 @@ gsap.config({
 ========================================================= */
 const image = document.getElementsByClassName("js-parallax");
 new SimpleParallax(image, {
-  delay: 2.3,
+  delay: 3,
   orientation: "down",
   scale: 1.5,
 });
 
 const image2 = document.getElementsByClassName("js-parallax-2");
 new SimpleParallax(image2, {
+  delay: 2.3,
+  orientation: "down",
+  scale: 1.5,
+});
+
+const image3 = document.getElementsByClassName("js-parallax-3");
+new SimpleParallax(image3, {
   delay: 2.3,
   orientation: "down",
   scale: 1.5,

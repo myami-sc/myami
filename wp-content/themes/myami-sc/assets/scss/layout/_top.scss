@@ -105,12 +105,18 @@
           padding: 30px 20px;
 
           .description {
-            padding-top: 20px;
+            padding-top: 30px;
             text-align: center;
 
             .title {
               font-size: 18px;
               font-weight: 600;
+              letter-spacing: 0.2rem;
+              margin-bottom: 15px;
+            }
+
+            .date {
+              font-size: 14px;
               letter-spacing: 0.2rem;
             }
           }

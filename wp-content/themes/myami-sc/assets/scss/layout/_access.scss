@@ -1,6 +1,14 @@
-.figure {
-  max-width: 900px;
-  padding: 80px;
-  margin: 0 auto 80px;
-  background-color: #e4eff9;
+.page {
+  position: relative;
+
+  .a-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("assets/images/background/a-bgv2.jpg");
+    background-size: cover;
+    opacity: 0.15;
+  }
 }

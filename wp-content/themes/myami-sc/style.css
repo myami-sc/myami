@@ -1197,12 +1197,17 @@ layout
   padding: 30px 20px;
 }
 .section .s-item.--news .news-pickup .n-p-card .description {
-  padding-top: 20px;
+  padding-top: 30px;
   text-align: center;
 }
 .section .s-item.--news .news-pickup .n-p-card .description .title {
   font-size: 18px;
   font-weight: 600;
+  letter-spacing: 0.2rem;
+  margin-bottom: 15px;
+}
+.section .s-item.--news .news-pickup .n-p-card .description .date {
+  font-size: 14px;
   letter-spacing: 0.2rem;
 }
 .section .s-item.--news .news-pickup .btn {
@@ -1367,11 +1372,18 @@ layout
 
 /* access-page
 ========================================================= */
-.figure {
-  max-width: 900px;
-  padding: 80px;
-  margin: 0 auto 80px;
-  background-color: #e4eff9;
+.page {
+  position: relative;
+}
+.page .a-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("assets/images/background/a-bgv2.jpg");
+  background-size: cover;
+  opacity: 0.15;
 }
 
 /* shop page
