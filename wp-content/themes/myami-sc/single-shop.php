@@ -8,13 +8,13 @@
 <?php get_template_part(slug: "parts/header"); ?>
 
 
-<div class="page shop">
+<div class="page shop-single">
     <?php if (have_posts()): while (have_posts()): the_post(); ?>
-            <div class="page-body shop__body">
+            <div class="page-body shop-single__body">
                 <div class="p-inner">
-                    <div class="shop__container">
-                        <div class="shop__content"><?php the_content(); ?></div>
-                        <div class="shop__bottom">
+                    <div class="shop-single__container">
+                        <div class="shop-single__content"><?php the_content(); ?></div>
+                        <div class="shop-single__bottom">
                             <h3 class="subheading">SHOP INFO</h3>
                             <p class="subheading-jp">店舗情報</p>
                             <table class="table">

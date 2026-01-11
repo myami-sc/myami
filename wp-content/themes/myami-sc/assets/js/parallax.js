@@ -25,6 +25,12 @@ new SimpleParallax(image3, {
   scale: 1.5,
 });
 
+const image4 = document.getElementsByClassName("js-parallax-4");
+new SimpleParallax(image4, {
+  delay: 1,
+  transition: "cubic-bezier(0,0,0,.1)",
+});
+
 /* scroll
 ========================================================= */
 const lenis = new Lenis();
