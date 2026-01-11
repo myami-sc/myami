@@ -1846,14 +1846,14 @@ layout
   left: -560px;
   bottom: 0;
 }
-.page-access .a-info .item-inner .detail .parking p {
+.page-access .a-info .item-inner .detail .wrap p {
   padding: 20px;
   font-size: 1.125em;
   font-weight: 500;
   background: #eee;
   letter-spacing: 0.2rem;
 }
-.page-access .a-info .item-inner .detail .parking dl {
+.page-access .a-info .item-inner .detail .wrap dl {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1863,12 +1863,12 @@ layout
   border: solid 1px #eee;
   letter-spacing: 0.2rem;
 }
-.page-access .a-info .item-inner .detail .parking dt {
+.page-access .a-info .item-inner .detail .wrap dt {
   text-align: left;
   padding-right: 20px;
   font-weight: initial;
 }
-.page-access .a-info .item-inner .detail .parking dt .icon {
+.page-access .a-info .item-inner .detail .wrap dt .icon {
   display: inline-block;
   margin-right: 0.3em;
   background: #00a8c6;
@@ -1878,14 +1878,14 @@ layout
   width: 25px;
   height: 25px;
 }
-.page-access .a-info .item-inner .detail .parking dd {
+.page-access .a-info .item-inner .detail .wrap dd {
   border-left: solid 1px #dee5de;
   padding-left: 20px;
 }
-.page-access .a-info .item-inner .detail .parking dd:first-of-type {
+.page-access .a-info .item-inner .detail .wrap dd:first-of-type {
   padding-right: 20px;
 }
-.page-access .a-info .item-inner .detail .parking dd .decoration {
+.page-access .a-info .item-inner .detail .wrap dd .decoration {
   background: #f8acac;
   font-size: 0.875em;
   color: #fff;
@@ -1895,6 +1895,9 @@ layout
 }
 .page-access .parallax-box {
   position: relative;
+}
+.page-access .parallax-box .simpleParallax {
+  height: 150vh;
 }
 .page-access .parallax-box p {
   position: absolute;

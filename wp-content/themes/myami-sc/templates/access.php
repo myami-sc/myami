@@ -79,12 +79,22 @@
                             </figure>
                             <figcaption>車でお越しの場合</figcaption>
                             <div class="detail">
-                                <div class="parking">
+                                <div class="wrap">
                                     <p>駐車のご案内</p>
                                     <dl>
                                         <dt><span class="icon">P</span>お客様用駐車場</dt>
                                         <dd>年中</dd>
                                         <dd><span class="decoration">終日無料</span></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Ａ入口</dt>
+                                        <dd>収容台数</dd>
+                                        <dd><span class="decoration">３５０台</span></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Ｂ入口</dt>
+                                        <dd>収容台数</dd>
+                                        <dd><span class="decoration">３５０台</span></dd>
                                     </dl>
                                 </div>
                             </div>
@@ -97,12 +107,15 @@
                             </figure>
                             <figcaption>電車でお越し場合</figcaption>
                             <div class="detail">
-                                <div class="parking">
-                                    <p>駐車のご案内</p>
+                                <div class="wrap">
+                                    <p>最寄り駅のご案内</p>
                                     <dl>
-                                        <dt><span class="icon">P</span>お客様用駐車場</dt>
-                                        <dd>年中</dd>
-                                        <dd><span class="free">終日無料</span></dd>
+                                        <dt>荒川沖駅</dt>
+                                        <dd><span class="decoration">１０分</span></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>土浦駅</dt>
+                                        <dd><span class="decoration">１５分</span></dd>
                                     </dl>
                                 </div>
                             </div>
@@ -115,12 +128,12 @@
                             </figure>
                             <figcaption>バスでお越しの場合</figcaption>
                             <div class="detail">
-                                <div class="parking">
-                                    <p>駐車のご案内</p>
+                                <div class="wrap">
+                                    <p>最寄りバス停のご案内</p>
                                     <dl>
-                                        <dt><span class="icon">P</span>お客様用駐車場</dt>
-                                        <dd>年中</dd>
-                                        <dd><span class="free">終日無料</span></dd>
+                                        <dt>バス停名</dt>
+                                        <dd>徒歩</dd>
+                                        <dd><span class="decoration">１０分</span></dd>
                                     </dl>
                                 </div>
                             </div>
@@ -130,7 +143,7 @@
             </section>
             <section>
                 <div class="parallax-box">
-                    <img class="js-parallax-4 img" src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_03.jpg')); ?>" autoplay muted loop playsinline></img>
+                    <img class="js-parallax-4 img" src="<?php echo esc_url(get_theme_file_uri('assets/images/background/a-bgi02.JPG')); ?>" autoplay muted loop playsinline></img>
                     <p>みなさまのお越しを<br />心よりお待ちしております。<br />気をつけてお越しくださいませ。</p>
                 </div>
             </section>

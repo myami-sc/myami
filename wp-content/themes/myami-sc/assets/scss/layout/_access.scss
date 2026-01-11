@@ -292,7 +292,7 @@
           left: -560px;
           bottom: 0;
 
-          .parking {
+          .wrap {
             // display: flex;
 
             p {
@@ -356,6 +356,10 @@
 
   .parallax-box {
     position: relative;
+
+    .simpleParallax {
+      height: 150vh;
+    }
 
     p {
       position: absolute;
