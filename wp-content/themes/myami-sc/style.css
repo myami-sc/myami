@@ -1596,6 +1596,190 @@ layout
   background-color: #e4eff9;
 }
 
+/* about-page
+========================================================= */
+.page-about {
+  position: relative;
+}
+.page-about .parallax-box {
+  position: relative;
+}
+.page-about .parallax-box .simpleParallax {
+  height: 100vh;
+}
+.page-about .parallax-box .p-inner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+}
+.page-about .ab-main {
+  display: flex;
+  align-items: flex-start;
+  padding: 80px 50px;
+}
+.page-about .ab-main__left {
+  position: sticky;
+  top: 30%;
+  left: 0;
+  width: 50%;
+  background-color: #fff;
+}
+.page-about .ab-main__left .parallax-box {
+  height: 350px;
+}
+.page-about .ab-main__left .parallax-box .simpleParallax {
+  height: 100%;
+}
+.page-about .ab-main__right {
+  width: 70%;
+}
+.page-about .ab-main__right ul {
+  padding-left: 80px;
+}
+.page-about .ab-main__right ul li {
+  padding: 50px 0;
+  border-bottom: dashed 1px #333;
+}
+.page-about .ab-main__right ul li:first-child {
+  padding-top: 0;
+}
+.page-about .ab-main__right ul li .subheading {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+.page-about .ab-main__right ul li .text {
+  font-size: 1.3rem;
+}
+.page-about .ab-main__right ul li dl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.page-about .ab-main__right ul li dl:last-child {
+  margin-bottom: 0;
+}
+.page-about .ab-main__right ul li dl dt {
+  width: 30%;
+  font-size: 1.3rem;
+  margin-right: 20px;
+  font-weight: initial;
+}
+.page-about .ab-main__right ul li dl dd {
+  width: 70%;
+  font-size: 1.3rem;
+}
+.page-about .ab-lower .guide-area {
+  background-color: #eee;
+}
+.page-about .ab-lower .guide-area a {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 150px 80px 0;
+  z-index: 1;
+  transition: 0.3s;
+}
+.page-about .ab-lower .guide-area a:last-child {
+  padding-bottom: 150px;
+}
+.page-about .ab-lower .guide-area a:hover .guide-area__title {
+  transform: scale(1.1);
+}
+.page-about .ab-lower .guide-area__wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.page-about .ab-lower .guide-area__left {
+  position: relative;
+  width: 50%;
+}
+.page-about .ab-lower .guide-area__right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+.page-about .ab-lower .guide-area__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 380px;
+  background-color: #fff;
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+.page-about .ab-lower .guide-area__description {
+  position: absolute;
+  right: -450px;
+  bottom: 35px;
+  width: 500px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+}
+.page-about .ab-lower .guide-area__text {
+  letter-spacing: 0.035em;
+  line-height: 1.6;
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+.page-about .flowing-ttl {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.page-about .flowing-ttl__item {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  padding: 0 15px;
+  font-size: 10vw;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.page-about .flowing-ttl__item:nth-child(odd) {
+  animation: loop 40s linear -20s infinite;
+  color: #00c295;
+}
+.page-about .flowing-ttl__item:nth-child(even) {
+  animation: loop2 40s linear infinite;
+}
+.page-about .flowing-ttl.reverse .flowing-ttl__item:nth-child(odd) {
+  animation: loop 40s linear -20s infinite reverse;
+  color: #333;
+}
+.page-about .flowing-ttl.reverse .flowing-ttl__item:nth-child(even) {
+  animation: loop2 40s linear infinite reverse;
+  color: #00c295;
+}
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes loop2 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
 /* access-page
 ========================================================= */
 .page-access {
@@ -1794,7 +1978,7 @@ layout
 }
 .page-access .a-info .list {
   display: flex;
-  justify-content: end;
+  justify-content: center;
 }
 .page-access .a-info .item {
   position: relative;

@@ -23,18 +23,18 @@ jQuery(function () {
   let hbg = jQuery("#js-hamburger");
   let btn = jQuery(".toggle-btn");
   let mask = jQuery(".mask");
-  let current = "--current";
+  let open = "--open";
   btn.on("click", function () {
-    if (!hbg.hasClass(current)) {
-      hbg.addClass(current);
+    if (!hbg.hasClass(open)) {
+      hbg.addClass(open);
       lenis.stop();
     } else {
-      hbg.removeClass(current);
+      hbg.removeClass(open);
       lenis.start();
     }
   });
   mask.on("click", function () {
-    hbg.removeClass(current);
+    hbg.removeClass(open);
     lenis.start();
   });
 });

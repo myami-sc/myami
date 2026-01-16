@@ -231,7 +231,7 @@
 
     .list {
       display: flex;
-      justify-content: end;
+      justify-content: center;
     }
 
     .item {
@@ -293,8 +293,6 @@
           bottom: 0;
 
           .wrap {
-            // display: flex;
-
             p {
               padding: 20px;
               font-size: 1.125em;

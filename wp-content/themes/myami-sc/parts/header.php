@@ -42,7 +42,7 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="hamburger" id="js-hamburger">
+                <div class="hamburger --current" id="js-hamburger">
                     <nav class="hamburger-nav" onwheel="event.stopPropagation()">
                         <div class="hamburger-nav__menu">
                             <div class="menu-container">
