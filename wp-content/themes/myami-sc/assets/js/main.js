@@ -104,7 +104,7 @@ jQuery(document).ready(function () {
     console.log();
     jQuery.colorbox({
       href: this.src,
-      open: true,
+      current: true,
       maxWidth: "90%",
       maxHeight: "90%",
     });
@@ -121,5 +121,14 @@ jQuery(function () {
     jQuery(this).addClass("active");
     const index = tabs.index(this);
     jQuery(".content").removeClass("show").eq(index).addClass("show");
+  });
+});
+
+/* access hover item
+========================================================= */
+jQuery(function () {
+  jQuery(".js-hover-item").hover(function () {
+    jQuery(".js-hover-item").removeClass("--current");
+    jQuery(this).addClass("--current");
   });
 });

@@ -6,7 +6,7 @@ gsap.config({
 ========================================================= */
 const image = document.getElementsByClassName("js-parallax");
 new SimpleParallax(image, {
-  delay: 2.3,
+  delay: 3,
   orientation: "down",
   scale: 1.5,
 });
@@ -16,6 +16,19 @@ new SimpleParallax(image2, {
   delay: 2.3,
   orientation: "down",
   scale: 1.5,
+});
+
+const image3 = document.getElementsByClassName("js-parallax-3");
+new SimpleParallax(image3, {
+  delay: 2.3,
+  orientation: "down",
+  scale: 1.5,
+});
+
+const image4 = document.getElementsByClassName("js-parallax-4");
+new SimpleParallax(image4, {
+  delay: 1,
+  transition: "cubic-bezier(0,0,0,.1)",
 });
 
 /* scroll

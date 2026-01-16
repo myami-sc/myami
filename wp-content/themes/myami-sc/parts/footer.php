@@ -28,22 +28,22 @@
                 <nav class="l-footer-nav">
                     <ul class="l-footer-nav__list">
                         <li class="l-footer-nav__item">
-                            <a href="<?php echo esc_url(home_url('event')); ?>" class="l-footer-nav__link --event"><span class="l-footer-nav__text">会社概要</span></a>
+                            <a href="<?php echo esc_url(home_url('about')); ?>" class="l-footer-nav__link"><span class="l-footer-nav__text">会社概要</span></a>
                         </li>
                         <li class="l-footer-nav__item">
-                            <a href="<?php echo esc_url(home_url('floor')); ?>" class="l-footer-nav__link --floor"><span class="l-footer-nav__text">プライバシーポリシー</span></a>
+                            <a href="<?php echo esc_url(home_url('privacy')); ?>" class="l-footer-nav__link"><span class="l-footer-nav__text">プライバシーポリシー</span></a>
                         </li>
                         <li class="l-footer-nav__item">
-                            <a href="<?php echo esc_url(home_url('access')); ?>" class="l-footer-nav__link --access"><span class="l-footer-nav__text">サイト利用規約</span></a>
+                            <a href="<?php echo esc_url(home_url('terms')); ?>" class="l-footer-nav__link"><span class="l-footer-nav__text">サイト利用規約</span></a>
                         </li>
                         <li class="l-footer-nav__item">
-                            <a href="<?php echo esc_url(home_url('shop')); ?>" class="l-footer-nav__link --shop"><span class="l-footer-nav__text">採用情報</span></a>
+                            <a href="<?php echo esc_url(home_url('recruit')); ?>" class="l-footer-nav__link"><span class="l-footer-nav__text">採用情報</span></a>
                         </li>
                         <li class="l-footer-nav__item">
-                            <a href="<?php echo esc_url(home_url('shop')); ?>" class="l-footer-nav__link --shop"><span class="l-footer-nav__text">イベント募集</span></a>
+                            <a href="<?php echo esc_url(home_url('event-recruitment')); ?>" class="l-footer-nav__link"><span class="l-footer-nav__text">イベント募集</span></a>
                         </li>
                         <li class="l-footer-nav__item">
-                            <a href="<?php echo esc_url(home_url('shop')); ?>" class="l-footer-nav__link --shop"><span class="l-footer-nav__text">お問い合わせ</span></a>
+                            <a href="<?php echo esc_url(home_url('contact')); ?>" class="l-footer-nav__link"><span class="l-footer-nav__text">お問い合わせ</span></a>
                         </li>
                     </ul>
                 </nav>

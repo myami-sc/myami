@@ -3,15 +3,17 @@
 <div id="smooth-wrapper">
 	<div id="smooth-content">
 		<main class="main">
-			<div class="inner">
-				<div class="kv">
-					<?php get_template_part(slug: "parts/swiper/main-swiper"); ?>
+			<section class="t-kv">
+				<div class="inner">
+					<div class="kv">
+						<?php get_template_part(slug: "parts/swiper/main-swiper"); ?>
+					</div>
+					<div class="scroll">
+						<span>Scroll</span>
+					</div>
 				</div>
-				<div class="scroll">
-					<span>Scroll</span>
-				</div>
-			</div>
-			<section class="section">
+			</section>
+			<section class="section --overlap">
 				<div class="s-slider-inner">
 					<h2 class="s-title">Topics</h2>
 					<div class="s-contents">
@@ -36,7 +38,7 @@
 								if ($the_query->have_posts()) :
 									echo '<a href="" class="n-p-link">';
 									while ($the_query->have_posts()) : $the_query->the_post();
-										echo '<div class="n-p-card js-fade-in">';
+										echo '<div class="n-p-card js-fade-in"><div class="thumbnail">';
 
 										if (has_post_thumbnail()) {
 											the_post_thumbnail('thumbnail', array('class' => 'img'));
@@ -44,7 +46,7 @@
 											echo '<img src="' . esc_url(get_theme_file_uri('assets/images/logo.png')) . '" class="img" alt="画像">';
 										}
 
-										echo '<div class="description"><p class="title">' . get_the_title() . '</p></div></div></a>';
+										echo '</div><div class="description"><p class="title">' . get_the_title() . '</p><p class="date">' . get_the_date('Y.n.j') . '</p></div></div></a>';
 									endwhile;
 									echo '</ul>';
 									wp_reset_postdata();
@@ -67,7 +69,7 @@
 								if ($the_query->have_posts()) :
 									echo '<ul class="n-list">';
 									while ($the_query->have_posts()) : $the_query->the_post();
-										echo '<li class="n-list-item"><a href="' . get_permalink() . '" class="n-list-link"><span class="date">' . get_the_date('Y.n.j') . '</span>' . get_the_title() . '</a></li>';
+										echo '<li class="n-list-item"><span class="date">' . get_the_date('Y.n.j') . '</span><a href="' . get_permalink() . '" class="n-list-link">' . get_the_title() . '</a></li>';
 									endwhile;
 									echo '</ul>';
 									wp_reset_postdata();
@@ -82,7 +84,7 @@
 			</section>
 			<section class="section">
 				<div class="parallax-box">
-					<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_04.jpg')); ?>" class="js-parallax-2 img" alt="">
+					<video class="js-parallax img" src="<?php echo esc_url(get_theme_file_uri('assets/images/video/tbgv03.mp4')); ?>" autoplay muted loop playsinline></video>
 				</div>
 			</section>
 			<section class="section --overlap">
@@ -90,13 +92,30 @@
 					<div class="s-contents">
 						<div class="main-visual">
 							<div class="m-v-img js-fade-up">
-								<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+								<a href="">
+									<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+									<div class="wrap">
+										<div class="subheading"><span>衣・着るものにこだわる（動画を流す）</span></div>
+									</div>
+								</a>
 							</div>
-							<div class="m-v-content">
-								<h3 class="m-v-title --jp"><span>おしゃれ</span>をこだわる</h3>
-								<p class="m-v-title --en">Particular<span>Meal</span></p>
+							<div class="m-v-img">
+								<a href="">
+									<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+									<div class="wrap">
+										<div class="subheading"><span>食・食べ物にこだわる（静止画）</span></div>
+									</div>
+								</a>
 							</div>
-							<div class="btn"><a href=""><span>詳しく見る</span></a></div>
+							<div class="m-v-img">
+								<a href="">
+									<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+									<div class="wrap">
+										<div class="subheading"><span>事・使い方にこだわる（静止画）</span></div>
+									</div>
+								</a>
+							</div>
+
 						</div>
 					</div>
 				</div>
@@ -113,13 +132,29 @@
 					<div class="s-contents">
 						<div class="main-visual">
 							<div class="m-v-img js-fade-up">
-								<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+								<a href="">
+									<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+									<div class="wrap">
+										<div class="subheading"><span>食・食べ物にこだわる</span></div>
+									</div>
+								</a>
 							</div>
-							<div class="m-v-content">
-								<h3 class="m-v-title --jp"><span>食べ物</span>をこだわる</h3>
-								<p class="m-v-title --en">Particular<span>Meal</span></p>
+							<div class="m-v-img">
+								<a href="">
+									<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+									<div class="wrap">
+										<div class="subheading"><span>事・使い方にこだわる</span></div>
+									</div>
+								</a>
 							</div>
-							<div class="btn"><a href=""><span>詳しく見る</span></a></div>
+							<div class="m-v-img">
+								<a href="">
+									<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+									<div class="wrap">
+										<div class="subheading"><span>遊・遊び方にこだわる</span></div>
+									</div>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -133,7 +168,7 @@
 			</section>
 			<section class="section">
 				<div class="parallax-box">
-					<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="js-parallax img" alt="">
+					<video class="js-parallax-2 img" src="<?php echo esc_url(get_theme_file_uri('assets/images/video/tbgv02.mp4')); ?>" autoplay muted loop playsinline></video>
 				</div>
 			</section>
 			<section class="section --overlap">
@@ -141,11 +176,28 @@
 					<div class="s-contents">
 						<div class="main-visual">
 							<div class="m-v-img js-fade-up">
-								<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+								<a href="">
+									<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+									<div class="wrap">
+										<div class="subheading"><span>事・使い方にこだわる食べ物にこだわる</span></div>
+									</div>
+								</a>
 							</div>
-							<div class="m-v-content">
-								<h3 class="m-v-title --jp"><span>遊び</span>をこだわる</h3>
-								<p class="m-v-title --en">Particular<span>wear</span></p>
+							<div class="m-v-img">
+								<a href="">
+									<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+									<div class="wrap">
+										<div class="subheading"><span>遊・遊び方にこだわる</span></div>
+									</div>
+								</a>
+							</div>
+							<div class="m-v-img">
+								<a href="">
+									<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+									<div class="wrap">
+										<div class="subheading"><span>衣・着るものにこだわる</span></div>
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -158,16 +210,33 @@
 					</div>
 				</div>
 			</section>
-			<section class="section">
+			<section class="section --overlap">
 				<div class="s-inner">
 					<div class="s-contents">
 						<div class="main-visual">
 							<div class="m-v-img js-fade-up">
-								<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+								<a href="">
+									<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+									<div class="wrap">
+										<div class="subheading"><span>遊・遊び方にこだわる</span></div>
+									</div>
+								</a>
 							</div>
-							<div class="m-v-content">
-								<h3 class="m-v-title --jp"><span>使い方</span>をこだわる</h3>
-								<p class="m-v-title --en">Particular<span>wear</span></p>
+							<div class="m-v-img">
+								<a href="">
+									<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+									<div class="wrap">
+										<div class="subheading"><span>衣・着るものにこだわる</span></div>
+									</div>
+								</a>
+							</div>
+							<div class="m-v-img">
+								<a href="">
+									<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+									<div class="wrap">
+										<div class="subheading"><span>食・食べ物にこだわる</span></div>
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -182,7 +251,7 @@
 			</section>
 			<section class="section">
 				<div class="parallax-box">
-					<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_04.jpg')); ?>" class="js-parallax-2 img" alt="">
+					<video class="js-parallax-3 img" src="<?php echo esc_url(get_theme_file_uri('assets/images/video/tbgv01.mp4')); ?>" autoplay muted loop playsinline></video>
 				</div>
 			</section>
 			<section class="section --overlap">
@@ -201,8 +270,6 @@
 										<a href="">
 											<span>FOLLOW ME</span>
 											<span>THANK YOU !!</span>
-											<img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_cursor_w.png')); ?>" class="img" alt="">
-											<img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_check_w.png')); ?>" class="img" alt="">
 										</a>
 									</div>
 								</div>
@@ -212,6 +279,36 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</section>
+			<section class="section">
+				<div class="guide-area --bg-color">
+					<a href="">
+						<div class="guide-area__wrap">
+							<div class="guide-area__left">
+								<h2 class="guide-area__title">Recruit</h2>
+								<p class="guide-area__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+							</div>
+							<div class="button">
+								<span>recruit</span>
+							</div>
+						</div>
+					</a>
+				</div>
+			</section>
+			<section class="section">
+				<div class="guide-area">
+					<a href="">
+						<div class="guide-area__wrap">
+							<div class="guide-area__left">
+								<h2 class="guide-area__title">Event Contact</h2>
+								<p class="guide-area__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+							</div>
+							<div class="button">
+								<span>event</span>
+							</div>
+						</div>
+					</a>
 				</div>
 			</section>
 		</main>
