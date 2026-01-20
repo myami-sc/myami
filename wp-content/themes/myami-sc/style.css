@@ -412,6 +412,80 @@ body {
   object-fit: cover;
 }
 
+.grid-column-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+.grid-column-list a {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  position: relative;
+  border: 1px solid #333;
+  gap: 25px;
+  padding: 15px 70px 15px 15px;
+}
+.grid-column-list a::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #00c295;
+  transform-origin: 50% 0%;
+  transform: scaleY(0);
+  transition: transform ease 0.3s;
+}
+.grid-column-list a figure {
+  overflow: hidden;
+  height: 120px;
+}
+.grid-column-list a figure img {
+  transition: 0.3s;
+}
+.grid-column-list a h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+.grid-column-list a .arrow {
+  width: 46px;
+  height: 46px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  border-radius: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(51, 51, 51);
+}
+.grid-column-list a .arrow::before {
+  content: "";
+  background-color: rgb(51, 51, 51);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mask: url("assets/images/icon/i_arrow.png") center center/contain no-repeat;
+}
+.grid-column-list a:hover {
+  color: #fff;
+}
+.grid-column-list a:hover::before {
+  transform-origin: 50% 100%;
+  transform: scaleY(1);
+}
+.grid-column-list a:hover img {
+  transform: scale(1.1);
+}
+
 /* button
 ========================================================= */
 .btn {
@@ -1213,12 +1287,16 @@ layout
 }
 .main-visual .m-v-img {
   position: relative;
+  overflow: hidden;
 }
 .main-visual .m-v-img:nth-of-type(1) {
   grid-area: 1/1/3/3;
 }
 .main-visual .m-v-img a {
   position: relative;
+}
+.main-visual .m-v-img a img {
+  transition: 0.3s;
 }
 .main-visual .m-v-img a .wrap {
   position: absolute;
@@ -1253,6 +1331,9 @@ layout
 }
 .main-visual .m-v-img a:hover {
   color: #fff;
+}
+.main-visual .m-v-img a:hover img {
+  transform: scale(1.1);
 }
 .main-visual .m-v-img a:hover .subheading::before {
   transform-origin: 50% 100%;
@@ -1621,10 +1702,15 @@ layout
 }
 .page-about .ab-main__left {
   position: sticky;
-  top: 30%;
+  top: 0;
   left: 0;
   width: 50%;
   background-color: #fff;
+}
+.page-about .ab-main__left .p-inner {
+  padding: 0;
+  margin-top: 150px;
+  margin-bottom: 80px;
 }
 .page-about .ab-main__left .parallax-box {
   height: 350px;
@@ -1679,15 +1765,19 @@ layout
   position: relative;
   display: block;
   width: 100%;
-  padding: 150px 80px 0;
+  padding: 150px 80px;
   z-index: 1;
   transition: 0.3s;
 }
 .page-about .ab-lower .guide-area a:last-child {
-  padding-bottom: 150px;
+  border-top: dashed 1px #333;
 }
 .page-about .ab-lower .guide-area a:hover .guide-area__title {
   transform: scale(1.1);
+}
+.page-about .ab-lower .guide-area a:hover .marker::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
 }
 .page-about .ab-lower .guide-area__wrap {
   display: flex;
@@ -1734,6 +1824,32 @@ layout
   font-size: 1.375rem;
   font-weight: 600;
   letter-spacing: 0.2rem;
+}
+.page-about .ab-lower .guide-area__text.marker {
+  position: relative;
+  z-index: 1;
+  padding: 0 10px;
+}
+.page-about .ab-lower .guide-area__text.marker::before {
+  background: #fff;
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform 0.3s;
+  z-index: -1;
+}
+.page-about .common-area {
+  padding: 80px 50px 150px;
+}
+.page-about .common-area .p-inner {
+  padding: 0;
+  margin-bottom: 80px;
 }
 .page-about .flowing-ttl {
   display: flex;
@@ -2480,4 +2596,39 @@ layout
 .news-list-page .dots {
   background: transparent;
   border: none;
+}
+
+/* history-page
+========================================================= */
+.page-history .h-container dl {
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.page-history .h-container dl dt {
+  text-align: right;
+  padding-right: 50px;
+}
+.page-history .h-container dl dt .ad {
+  font-size: 3rem;
+  color: #00c295;
+}
+.page-history .h-container dl dd {
+  padding: 20px 20px 20px 50px;
+  border-left: solid 1px #00c295;
+}
+.page-history .h-container dl dd p {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.page-history .h-container dl dd p:last-child {
+  margin-bottom: 0;
+}
+.page-history .h-container dl dd .month {
+  width: 65px;
+  padding-right: 15px;
+  font-weight: 600;
 }

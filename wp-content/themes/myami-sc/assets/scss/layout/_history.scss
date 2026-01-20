@@ -1,0 +1,42 @@
+.page-history {
+  .h-container {
+    dl {
+      display: grid;
+      grid-template-columns: 35% 1fr;
+      align-items: center;
+      margin-bottom: 50px;
+
+      dt {
+        text-align: right;
+        padding-right: 50px;
+
+        .ad {
+          font-size: 3rem;
+          color: #00c295;
+        }
+      }
+
+      dd {
+        padding: 20px 20px 20px 50px;
+        border-left: solid 1px #00c295;
+
+        p {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 10px;
+          line-height: 1.5;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        .month {
+          width: 65px;
+          padding-right: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
