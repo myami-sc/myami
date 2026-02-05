@@ -9,9 +9,9 @@
 
 
 <div class="shop-list-page">
-    <h2 class="shop-list-page__title">ショップリスト</h2>
     <div class="shop-list">
         <div class="shop-list__left">
+            <h2 class="title">ショップリスト</h2>
             <div class="tab" id="tab">
                 <ul class="tab-wrap">
                     <li class="tab-elem" data-tabid="tab-page1">すべて</li>

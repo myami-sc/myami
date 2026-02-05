@@ -1,15 +1,14 @@
 .shop-list-page {
   padding-top: 300px;
 
-  &__title {
-    font-size: xx-large;
-    margin-bottom: 80px;
-    margin-left: 3rem;
-  }
-
   .shop-list {
     display: flex;
     align-items: flex-start;
+
+    .title {
+      font-size: xx-large;
+      margin-bottom: 80px;
+    }
 
     .tab {
       max-width: 300px;
@@ -60,7 +59,7 @@
 
     &__left {
       position: sticky;
-      top: 150px;
+      top: 200px;
       left: 0;
       padding: 0 6rem 0 3rem;
       width: 27%;

@@ -29,16 +29,16 @@
                 <nav class="l-header-nav" id="js-h-nav">
                     <ul class="l-header-nav__list">
                         <li class="l-header-nav__item">
-                            <a href="<?php echo esc_url(home_url('event')); ?>" class="l-header-nav__link --event"><span class="l-header-nav__text">イベント</span></a>
+                            <a href="<?php echo esc_url(home_url('events')); ?>" class="l-header-nav__link --event"><span class="text">イベント情報</span></a>
                         </li>
                         <li class="l-header-nav__item">
-                            <a href="<?php echo esc_url(home_url('floor')); ?>" class="l-header-nav__link --floor"><span class="l-header-nav__text">フロアガイド</span></a>
+                            <a href="<?php echo esc_url(home_url('floor')); ?>" class="l-header-nav__link --floor"><span class="text">フロアガイド</span></a>
                         </li>
                         <li class="l-header-nav__item">
-                            <a href="<?php echo esc_url(home_url('shop')); ?>" class="l-header-nav__link --shop"><span class="l-header-nav__text">ショップリスト</span></a>
+                            <a href="<?php echo esc_url(home_url('shop')); ?>" class="l-header-nav__link --shop"><span class="text">ショップリスト</span></a>
                         </li>
                         <li class="l-header-nav__item">
-                            <a href="<?php echo esc_url(home_url('access')); ?>" class="l-header-nav__link --access"><span class="l-header-nav__text">アクセス</span></a>
+                            <a href="<?php echo esc_url(home_url('access')); ?>" class="l-header-nav__link --access"><span class="text">アクセス</span></a>
                         </li>
                     </ul>
                 </nav>
@@ -85,6 +85,10 @@
                                             </div>
                                         </div>
                                         <div class="contact"><a href="#">お問合せ</a></div>
+                                        <div class="">
+                                            <p>営業時間</p>
+                                            <p>9:00～21：00</p>
+                                        </div>
                                         <ul class="list-sub">
                                             <li class="list-sub__item">
                                                 <a href="http://" class="list-sub__link">

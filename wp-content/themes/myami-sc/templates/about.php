@@ -15,8 +15,8 @@
                     <div class="parallax-box">
                         <img class="js-parallax-4 img" src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_05.jpg')); ?>" autoplay muted loop playsinline></img>
                         <div class="p-inner">
-                            <h2 class="p-title">ABOUT US</h2>
-                            <p class="p-subtitle">会社情報</p>
+                            <h2 class="p-title js-fade-title">ABOUT US</h2>
+                            <p class="p-subtitle js-fade-text">会社情報</p>
                         </div>
                     </div>
                 </section>
@@ -33,7 +33,7 @@
                     <div class="ab-main__right">
                         <ul>
                             <li>
-                                <h3 class="subheading">社名</h3>
+                                <h3 class="subheading">商号</h3>
                                 <p class="text">株式会社 阿見商業開発</p>
                             </li>
                             <li>
@@ -43,14 +43,6 @@
                             <li>
                                 <h3 class="subheading">所在地</h3>
                                 <p class="text">茨城県稲敷郡阿見町阿見2958</p>
-                            </li>
-                            <li>
-                                <h3 class="subheading">TEL</h3>
-                                <p class="text">029-888-2525</p>
-                            </li>
-                            <li>
-                                <h3 class="subheading">FAX</h3>
-                                <p class="text">029-888-8319</p>
                             </li>
                             <li>
                                 <h3 class="subheading">設立</h3>
@@ -72,11 +64,11 @@
                                 </dl>
                                 <dl>
                                     <dt>取締役</dt>
-                                    <dd>山口 健太郎</dd>
+                                    <dd>鳥羽 良太朗</dd>
                                 </dl>
                                 <dl>
                                     <dt>取締役</dt>
-                                    <dd>鳥羽 良太朗</dd>
+                                    <dd>山口 健太郎</dd>
                                 </dl>
                                 <dl>
                                     <dt>監査役</dt>

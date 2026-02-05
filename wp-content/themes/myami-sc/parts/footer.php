@@ -40,7 +40,7 @@
                             <a href="<?php echo esc_url(home_url('recruit')); ?>" class="l-footer-nav__link"><span class="l-footer-nav__text">採用情報</span></a>
                         </li>
                         <li class="l-footer-nav__item">
-                            <a href="<?php echo esc_url(home_url('event-recruitment')); ?>" class="l-footer-nav__link"><span class="l-footer-nav__text">イベント募集</span></a>
+                            <a href="<?php echo esc_url(home_url('events/reception')); ?>" class="l-footer-nav__link"><span class="l-footer-nav__text">イベント募集</span></a>
                         </li>
                         <li class="l-footer-nav__item">
                             <a href="<?php echo esc_url(home_url('contact')); ?>" class="l-footer-nav__link"><span class="l-footer-nav__text">お問い合わせ</span></a>

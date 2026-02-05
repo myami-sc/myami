@@ -72,13 +72,35 @@
             background-size: cover;
           }
         }
-      }
 
-      &__text {
-        margin-top: 10px;
-        font-size: 17px;
-        font-weight: 700;
-        color: #00c295;
+        .text {
+          margin-top: 10px;
+          font-size: 17px;
+          font-weight: 700;
+          color: #00c295;
+
+          &::after {
+            background-color: #333;
+            bottom: -4px;
+            content: "";
+            height: 2px;
+            left: 0;
+            position: absolute;
+            transform: scale(0, 1);
+            transform-origin: left top;
+            transition: transform 0.3s;
+            width: 100%;
+          }
+        }
+
+        &:hover {
+          .l-header-nav__text {
+            &::after {
+              transform-origin: right top;
+              transform: scale(1, 1);
+            }
+          }
+        }
       }
     }
 
@@ -185,13 +207,17 @@
                 display: block;
                 overflow: hidden;
                 color: transparent;
-                text-shadow: 0 -1.5em 0 #000, 0 0 0 #000;
+                text-shadow:
+                  0 -1.5em 0 #000,
+                  0 0 0 #000;
                 transition: text-shadow 0.3s;
                 font-size: 30px;
                 transition-duration: 0.2s;
 
                 &:hover {
-                  text-shadow: 0 0 0 #000, 0 1.5em 0 #000;
+                  text-shadow:
+                    0 0 0 #000,
+                    0 1.5em 0 #000;
                 }
               }
             }

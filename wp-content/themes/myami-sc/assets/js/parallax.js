@@ -65,3 +65,26 @@ document.querySelectorAll(".js-fade-up").forEach((el) => {
     toggleClass: { targets: el, className: "--show" },
   });
 });
+
+// load
+gsap.from(".js-fade-title", {
+  duration: 1,
+  y: 50,
+  opacity: 0,
+  ease: "power2.out",
+});
+
+gsap.from(".js-fade-text", {
+  duration: 1,
+  y: 30,
+  opacity: 0,
+  delay: 0.2,
+});
+
+gsap.from(".js-fade-card", {
+  duration: 1,
+  y: 50,
+  opacity: 0,
+  stagger: 0.2,
+  delay: 0.4,
+});

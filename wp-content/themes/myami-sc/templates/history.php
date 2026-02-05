@@ -22,6 +22,10 @@
                             </dt>
                             <dd>
                                 <p>
+                                    <span class="month">1月</span>
+                                    <span class="text">阿見町商工会にSC建設委員会設置</span>
+                                </p>
+                                <p>
                                     <span class="month">2月</span>
                                     <span class="text">核店舗候補「いせや」との話し合いを開始</span>
                                 </p>
@@ -147,11 +151,11 @@
                                 </p>
                                 <p>
                                     <span class="month">7月</span>
-                                    <span class="text">内装工事C1着工<br />開発行為の申請認可<br />「ふるさと融資」で財団打ち合わせ開始<br />「SC愛称名」一般公募開始</span>
+                                    <span class="text">内装工事C1着工</span>
                                 </p>
                                 <p>
                                     <span class="month">8月</span>
-                                    <span class="text">「中小企業商工政策誘導融資制度」の認定決定<br />建設工事業者指名・入札・仮契約締結（三平建設・松浦建設ＪＶ）<br />起工式（地鎮祭）開催<br />「中小企業商工政策誘導融資制度」の申請</span>
+                                    <span class="text">「中小企業商工政策誘導融資制度」の認定決定</span>
                                 </p>
                                 <p>
                                     <span class="month">9月</span>

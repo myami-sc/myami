@@ -283,11 +283,11 @@
 			</section>
 			<section class="section">
 				<div class="guide-area --bg-color">
-					<a href="">
+					<a href="<?php echo esc_url(home_url('recruit')); ?>">
 						<div class="guide-area__wrap">
 							<div class="guide-area__left">
 								<h2 class="guide-area__title">Recruit</h2>
-								<p class="guide-area__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+								<p class="guide-area__description">求人情報についてはこちら</p>
 							</div>
 							<div class="button">
 								<span>recruit</span>
@@ -298,14 +298,14 @@
 			</section>
 			<section class="section">
 				<div class="guide-area">
-					<a href="">
+					<a href="<?php echo esc_url(home_url('events/entry')); ?>">
 						<div class="guide-area__wrap">
 							<div class="guide-area__left">
-								<h2 class="guide-area__title">Event Contact</h2>
-								<p class="guide-area__description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+								<h2 class="guide-area__title">Event Entry</h2>
+								<p class="guide-area__description">イベント出店についての受付やお問い合わせはこちら</p>
 							</div>
 							<div class="button">
-								<span>event</span>
+								<span>entry</span>
 							</div>
 						</div>
 					</a>
