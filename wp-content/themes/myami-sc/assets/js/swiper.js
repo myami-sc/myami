@@ -64,61 +64,66 @@ const mainSwiper = new Swiper(".main-swiper", {
 ========================================================= */
 const topicsSwiper = new Swiper(".topics-swiper", {
   slidesPerView: "auto",
-  spaceBetween: "50px",
+  spaceBetween: 50,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".topics-next",
+    prevEl: ".topics-prev",
   },
   scrollbar: {
     el: ".swiper-scrollbar-topics",
     hide: false,
+    draggable: true,
   },
 });
 const topicsSwiperFashion = new Swiper(".topics-swiper-fashion", {
   slidesPerView: "auto",
-  spaceBetween: "50px",
+  spaceBetween: 50,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".topics-fashion-next",
+    prevEl: ".topics-fashion-prev",
   },
   scrollbar: {
     el: ".swiper-scrollbar-fashion",
     hide: false,
+    draggable: true,
   },
 });
 const topicsSwiperFood = new Swiper(".topics-swiper-food", {
   slidesPerView: "auto",
-  spaceBetween: "50px",
+  spaceBetween: 50,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".topics-food-next",
+    prevEl: ".topics-food-prev",
   },
   scrollbar: {
     el: ".swiper-scrollbar-food",
     hide: false,
+    draggable: true,
   },
 });
 const topicsSwiperEnjoy = new Swiper(".topics-swiper-enjoy", {
   slidesPerView: "auto",
-  spaceBetween: "50px",
+  spaceBetween: 50,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".topics-enjoy-next",
+    prevEl: ".topics-enjoy-prev",
   },
   scrollbar: {
     el: ".swiper-scrollbar-enjoy",
     hide: false,
+    draggable: true,
   },
 });
 const topicsSwiperLifestyle = new Swiper(".topics-swiper-lifestyle", {
   slidesPerView: "auto",
-  spaceBetween: "50px",
+  spaceBetween: 50,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".topics-lifestyle-next",
+    prevEl: ".topics-lifestyle-prev",
   },
   scrollbar: {
     el: ".swiper-scrollbar-lifestyle",
     hide: false,
+    draggable: true,
   },
 });

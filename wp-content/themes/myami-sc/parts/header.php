@@ -53,19 +53,20 @@
                                     <div class="m-inner">
                                         <h3 class="subheading"><span>こだわりを探す</span></h3>
                                         <div class="box">
-                                            <div class="box__item"><a href="">ファッションにこだわる</a></div>
-                                            <div class="box__item"><a href="">食べ物にこだわる</a></div>
-                                            <div class="box__item"><a href="">使い方にこだわる</a></div>
-                                            <div class="box__item"><a href="">遊びにこだわる</a></div>
+                                            <div class="box__item"><a href="<?php echo esc_url(home_url('access')); ?>">ファッションにこだわる</a></div>
+                                            <div class="box__item"><a href="<?php echo esc_url(home_url('access')); ?>">食べ物にこだわる</a></div>
+                                            <div class="box__item"><a href="<?php echo esc_url(home_url('access')); ?>">使い方にこだわる</a></div>
+                                            <div class="box__item"><a href="<?php echo esc_url(home_url('access')); ?>">遊びにこだわる</a></div>
                                         </div>
                                         <h3 class="subheading">MENU</h3>
                                         <ul class="list">
-                                            <li><a href="#">ホーム</a></li>
-                                            <li><a href="#">イベント</a></li>
-                                            <li><a href="#">ショップガイド</a></li>
-                                            <li><a href="#">フロアガイド</a></li>
-                                            <li><a href="#">アクセス</a></li>
-                                            <li><a href="#">営業時間</a></li>
+                                            <li><a href="/">ホーム</a></li>
+                                            <li><a href="<?php echo esc_url(home_url('news-list')); ?>">ニュース</a></li>
+                                            <li><a href="<?php echo esc_url(home_url('events')); ?>">イベント</a></li>
+                                            <li><a href="<?php echo esc_url(home_url('shop')); ?>">ショップガイド</a></li>
+                                            <li><a href="<?php echo esc_url(home_url('floor')); ?>">フロアガイド</a></li>
+                                            <li><a href="<?php echo esc_url(home_url('access')); ?>">アクセス</a></li>
+                                            <li><a href="<?php echo esc_url(home_url('access')); ?>">営業時間</a></li>
                                         </ul>
                                         <div class="bnr">
                                             <div class="bnr__item">
@@ -91,7 +92,7 @@
                                         </div>
                                         <ul class="list-sub">
                                             <li class="list-sub__item">
-                                                <a href="http://" class="list-sub__link">
+                                                <a href="https://www.instagram.com/myami__sc/" class="list-sub__link">
                                                     <div class="i-insta">
                                                         <img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_sns_in.png')); ?>" class="img" alt="">
                                                     </div>
@@ -99,13 +100,13 @@
                                                 </a>
                                             </li>
                                             <li class="list-sub__item">
-                                                <a href="http://" class="list-sub__link">
+                                                <a href="<?php echo esc_url(home_url('privacy')); ?>" class="list-sub__link">
                                                     <span class="list-sub__text">privacypolicy</span>
                                                 </a>
                                             </li>
                                             <li class="list-sub__item">
-                                                <a href="http://" class="list-sub__link">
-                                                    <span class="list-sub__text">company</span>
+                                                <a href="<?php echo esc_url(home_url('about')); ?>" class="list-sub__link">
+                                                    <span class="list-sub__text">会社概要</span>
                                                 </a>
                                             </li>
                                         </ul>

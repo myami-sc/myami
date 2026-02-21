@@ -33,7 +33,9 @@
             display: inline-block;
             overflow: hidden;
             color: transparent;
-            text-shadow: 0 -1.5em 0 #000, 0 0 0 #000;
+            text-shadow:
+              0 -1.5em 0 #000,
+              0 0 0 #000;
             transition: text-shadow 0.3s;
             letter-spacing: 0.2em;
             line-height: 1.5;
@@ -41,7 +43,9 @@
             border-bottom: solid 1px #333;
 
             &:hover {
-              text-shadow: 0 0 0 #000, 0 1.5em 0 #000;
+              text-shadow:
+                0 0 0 #000,
+                0 1.5em 0 #000;
             }
           }
         }
@@ -356,7 +360,7 @@
     position: relative;
 
     .simpleParallax {
-      height: 150vh;
+      height: 100vh;
     }
 
     p {

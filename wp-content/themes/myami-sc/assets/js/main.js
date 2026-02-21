@@ -101,7 +101,6 @@ if (document.querySelector("#tab")) {
 ========================================================= */
 jQuery(document).ready(function () {
   jQuery(".colorbox-img").on("click", function () {
-    console.log();
     jQuery.colorbox({
       href: this.src,
       current: true,
@@ -131,4 +130,61 @@ jQuery(function () {
     jQuery(".js-hover-item").removeClass("--current");
     jQuery(this).addClass("--current");
   });
+});
+
+/* scroll action
+========================================================= */
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.create({
+  trigger: ".area1",
+  start: "top center",
+  end: "bottom top",
+  onEnter: () => {
+    document.querySelector(".s1").classList.add("is-active");
+  },
+  onLeave: () => {
+    document.querySelector(".s1").classList.remove("is-active");
+  },
+  onEnterBack: () => {
+    document.querySelector(".s1").classList.add("is-active");
+  },
+  onLeaveBack: () => {
+    document.querySelector(".s1").classList.remove("is-active");
+  },
+  // markers: true, // デバッグ用
+});
+ScrollTrigger.create({
+  trigger: ".area2",
+  start: "top center",
+  end: "bottom top",
+  onEnter: () => {
+    document.querySelector(".s2").classList.add("is-active");
+  },
+  onLeave: () => {
+    document.querySelector(".s2").classList.remove("is-active");
+  },
+  onEnterBack: () => {
+    document.querySelector(".s2").classList.add("is-active");
+  },
+  onLeaveBack: () => {
+    document.querySelector(".s2").classList.remove("is-active");
+  },
+});
+ScrollTrigger.create({
+  trigger: ".area3",
+  start: "top center",
+  end: "bottom top",
+  onEnter: () => {
+    document.querySelector(".s3").classList.add("is-active");
+  },
+  onLeave: () => {
+    document.querySelector(".s3").classList.remove("is-active");
+  },
+  onEnterBack: () => {
+    document.querySelector(".s3").classList.add("is-active");
+  },
+  onLeaveBack: () => {
+    document.querySelector(".s3").classList.remove("is-active");
+  },
 });

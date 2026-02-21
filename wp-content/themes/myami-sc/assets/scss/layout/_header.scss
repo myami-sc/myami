@@ -46,28 +46,28 @@
 
         &.--event {
           &::after {
-            background-image: url(assets/images/icon/i_event_p.png);
+            background-image: url(assets/images/icon/i_calendar02.png);
             background-position: center;
             background-size: cover;
           }
         }
         &.--floor {
           &::after {
-            background-image: url(assets/images/icon/i_floor_p.png);
+            background-image: url(assets/images/icon/i_map02.png);
             background-position: center;
             background-size: cover;
           }
         }
         &.--shop {
           &::after {
-            background-image: url(assets/images/icon/i_shop_p.png);
+            background-image: url(assets/images/icon/i_shop02.png);
             background-position: center;
             background-size: cover;
           }
         }
         &.--access {
           &::after {
-            background-image: url(assets/images/icon/i_access_p.png);
+            background-image: url(assets/images/icon/i_car02.png);
             background-position: center;
             background-size: cover;
           }

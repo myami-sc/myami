@@ -53,6 +53,14 @@ layout
 ========================================================= */
 @use "assets/scss/layout/entry" as *;
 
+/* guide-page
+========================================================= */
+@use "assets/scss/layout/guide" as *;
+
+/* space-page
+========================================================= */
+@use "assets/scss/layout/space" as *;
+
 /* floor-page
 ========================================================= */
 @use "assets/scss/layout/floor" as *;

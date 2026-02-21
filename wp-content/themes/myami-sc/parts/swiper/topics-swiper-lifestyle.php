@@ -59,6 +59,6 @@
         </div>
     </div>
     <div class="swiper-scrollbar swiper-scrollbar-lifestyle"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev topics-lifestyle-prev"></div>
+    <div class="swiper-button-next topics-lifestyle-next"></div>
 </div>

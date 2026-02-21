@@ -137,7 +137,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="">
+                        <a href="<?php echo esc_url(home_url('space#store')); ?>">
                             <div class="guide-area__wrap">
                                 <div class="guide-area__left">
                                     <h2 class="guide-area__title">Opening a Store</h2>

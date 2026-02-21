@@ -18,9 +18,9 @@
                     <p class="p-subtitle">交通アクセス</p>
 
                     <ul class="anchor-link">
-                        <li><a href="#google" onclick="lenis.scrollTo('#google'); return false;">GoogleMap</a></li>
-                        <li><a href="#gallery" onclick="lenis.scrollTo('#gallery'); return false;">周辺イメージ</a></li>
-                        <li><a href="#others" onclick="lenis.scrollTo('#others'); return false;">電車・バス</a></li>
+                        <li><a onclick="lenis.scrollTo('#google'); return false;">GoogleMap</a></li>
+                        <li><a onclick="lenis.scrollTo('#gallery'); return false;">周辺イメージ</a></li>
+                        <li><a onclick="lenis.scrollTo('#others'); return false;">電車・バス</a></li>
                     </ul>
                 </div>
                 <div class="a-main__right">

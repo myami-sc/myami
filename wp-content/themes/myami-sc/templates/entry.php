@@ -12,12 +12,26 @@
     <?php if (have_posts()): while (have_posts()): the_post(); ?>
             <div class="page-body">
                 <div class="p-inner">
-                    <section>
-                        <h2 class="r-title">イベントに関する</h2>
-
+                    <section class="entry-upper">
+                        <div class="left">
+                            <h2 class="entry-title"><span class="sub">催事・イベントに関するお問い合わせ</span>ENTRY</h2>
+                            <p class="text">イベントのお問い合わせは、メールにて承っております。<br />
+                                <a href="<?php echo esc_url(home_url('events/guide')); ?>"><span>お問い合わせ方法</span></a>を必ずお読みいただいてから、お問い合わせください。<br />
+                                3営業日以内（土日祝日を除く）に、担当者よりメールにて返信させていただきます。<br />
+                                ※ご提供いただきましたお客様の個人情報は、お問い合わせの目的のみで利用します。
+                            </p>
+                            <div class="link-area">
+                                <button><a href="<?php echo esc_url(home_url('events/guide')); ?>"><span>お問い合わせ方法</span></a></button>
+                                <button><a href="<?php echo esc_url(home_url('events/space')); ?>"><span>募集スペース</span></a></button>
+                                <button><a href="<?php echo esc_url(home_url('events/file')); ?>"><span>申請書類</span></a></button>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_e_contact.png')); ?>" class="img fluffy" alt="">
+                        </div>
                     </section>
-                    <section>
-                        <h2 class="r-title">出店に関する</h2>
+                    <section class="entry-lower">
+                        <?php the_content() ?>
 
                     </section>
                 </div>

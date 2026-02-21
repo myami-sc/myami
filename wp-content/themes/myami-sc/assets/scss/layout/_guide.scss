@@ -1,0 +1,200 @@
+.page-guide {
+  .sticky-element {
+    position: sticky;
+    top: 200px;
+    left: 30px;
+    width: 50%;
+    z-index: 100;
+
+    .step-item {
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .step-link {
+      display: inline-block;
+      opacity: 0.3;
+      transition: 0.3s ease; /* スムーズな遷移 */
+      border-left: 5px solid #ccc;
+      line-height: 1.7;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      padding-left: 10px;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .step-link.is-active {
+      display: flex;
+      align-items: center;
+      opacity: 1;
+    }
+  }
+
+  .guide-area {
+    width: 1050px;
+    margin: 0 auto;
+
+    .p-title {
+      font-size: 50px;
+      padding: 4rem 0;
+    }
+
+    .area-content {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 4rem 0;
+
+      &.--reverse {
+        flex-direction: row-reverse;
+      }
+
+      &.--grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .content-box {
+        width: 40%;
+
+        &.--line {
+          width: 100%;
+          padding: 2rem;
+          border: solid 1px #ccc;
+        }
+
+        .figure {
+          width: 180px;
+          height: 150px;
+          margin: 0 auto 80px;
+
+          img {
+            object-fit: contain;
+          }
+        }
+
+        .num {
+          font-size: 80px;
+          font-weight: 700;
+          line-height: 1;
+          margin-bottom: 50px;
+        }
+
+        .title {
+          font-size: 20px;
+          font-weight: 700;
+          margin-top: 30px;
+          margin-bottom: 40px;
+        }
+
+        .text {
+          font-size: 15px;
+          line-height: 2.2;
+        }
+
+        .list {
+          li {
+            padding-bottom: 30px;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 30px;
+            line-height: 1.5;
+          }
+        }
+
+        .btn {
+          margin-top: 50px;
+          width: 300px;
+          border-radius: 15px;
+
+          a {
+            border-radius: 15px;
+            font-weight: 500;
+            font-size: 15px;
+
+            &::before {
+              border-radius: 15px;
+            }
+          }
+        }
+      }
+
+      .content-img {
+        height: 400px;
+        width: 50%;
+      }
+    }
+
+    .new-application {
+      display: flex;
+      padding: 4rem 0;
+
+      .left {
+        width: 50%;
+
+        .title {
+          font-size: 30px;
+          margin-bottom: 20px;
+        }
+
+        .text {
+          margin-bottom: 50px;
+        }
+      }
+
+      .right {
+        width: 50%;
+        max-width: 600px;
+
+        dt {
+          position: relative;
+          font-size: 20px;
+          margin-bottom: 10px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            transform: translateY(-50%);
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-image: url(assets/images/icon/i_file.png);
+            background-position: center;
+            background-size: cover;
+          }
+        }
+
+        dd {
+          padding-bottom: 30px;
+          border-bottom: 1px solid #ccc;
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    .btn {
+      display: block;
+      width: 300px;
+      border-radius: 15px;
+      margin: 0 auto;
+
+      a {
+        border-radius: 15px;
+        font-weight: 500;
+        font-size: 15px;
+
+        &::before {
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+}

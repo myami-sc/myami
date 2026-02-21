@@ -59,6 +59,6 @@
         </div>
     </div>
     <div class="swiper-scrollbar swiper-scrollbar-enjoy"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev topics-enjoy-prev"></div>
+    <div class="swiper-button-next topics-enjoy-next"></div>
 </div>

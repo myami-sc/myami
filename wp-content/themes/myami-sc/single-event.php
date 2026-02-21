@@ -42,7 +42,16 @@
                                 <dl>
                                     <dt>日付：</dt>
                                     <dd>
-                                        <?php echo eo_get_the_start('Y . m . d') . ' - ' . eo_get_the_end('Y . m . d'); ?>
+                                        <?php
+                                        $start = eo_get_the_start('Ymd');
+                                        $end   = eo_get_the_end('Ymd');
+
+                                        if ($start === $end) {
+                                            echo eo_get_the_start('Y . n . j (D)');
+                                        } else {
+                                            echo eo_get_the_start('Y . n . j (D)') . ' - ' . eo_get_the_end('Y . n . j (D)');
+                                        }
+                                        ?>
                                     </dd>
                                 </dl>
                                 <dl>
