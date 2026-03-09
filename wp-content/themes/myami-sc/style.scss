@@ -92,3 +92,19 @@ layout
 /* history-page
 ========================================================= */
 @use "assets/scss/layout/history" as *;
+
+/* recruit-page
+========================================================= */
+@use "assets/scss/layout/recruit" as *;
+
+/* essentials-page
+========================================================= */
+@use "assets/scss/layout/essentials" as *;
+
+/* contact-page
+========================================================= */
+@use "assets/scss/layout/contact" as *;
+
+/* form-page
+========================================================= */
+@use "assets/scss/layout/form" as *;

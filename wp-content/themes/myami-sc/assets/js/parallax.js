@@ -88,3 +88,17 @@ gsap.from(".js-fade-card", {
   stagger: 0.2,
   delay: 0.4,
 });
+
+/* loop
+========================================================= */
+const track = document.querySelector(".marquee__track");
+track.innerHTML += track.innerHTML;
+
+const itemsWidth = track.scrollWidth / 2;
+
+gsap.to(track, {
+  x: -itemsWidth,
+  duration: 7,
+  ease: "none",
+  repeat: -1,
+});

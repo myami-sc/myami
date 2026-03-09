@@ -1,4 +1,25 @@
 .page-entry {
+  .entry-info {
+    .subheading {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .marquee {
+      width: 320px;
+
+      &__track {
+        border-bottom: solid 1px #333;
+      }
+
+      &__item {
+        font-size: 13px;
+        font-weight: 400;
+      }
+    }
+  }
+
   .entry-upper {
     display: flex;
     align-items: flex-end;
@@ -52,12 +73,24 @@
 
         button {
           width: 200px;
-          border: solid 1px #ccc;
-          color: #179342;
           margin-right: 20px;
-          border-radius: 10px;
-          padding: 10px;
           text-align: center;
+          border: solid 1px #ccc;
+          border-radius: 30px;
+
+          a {
+            padding: 15px;
+            display: inline-block;
+            transition: 0.3s;
+            color: #179342;
+            line-height: 1.5;
+
+            &:hover {
+              letter-spacing: 0.12em;
+              text-indent: 0.12em;
+              color: #0bdb54;
+            }
+          }
         }
       }
     }
@@ -113,6 +146,12 @@
           margin-bottom: 10px;
         }
       }
+    }
+  }
+
+  .regulation-check {
+    .smf-placeholder {
+      text-align: center;
     }
   }
 }

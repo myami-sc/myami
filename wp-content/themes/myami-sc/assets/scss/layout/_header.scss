@@ -3,6 +3,10 @@
   width: 100%;
   z-index: 3;
 
+  &.--top {
+    background: transparent;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -11,8 +15,29 @@
   }
 
   &-logo {
-    width: 700px;
-    margin: 0 15px;
+    max-width: 500px;
+    margin: 0 30px;
+  }
+
+  &__news {
+    .subheading {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .marquee {
+      width: 320px;
+
+      &__track {
+        border-bottom: solid 1px #333;
+      }
+
+      &__item {
+        font-size: 13px;
+        font-weight: 400;
+      }
+    }
   }
 
   &__menu {
@@ -20,12 +45,22 @@
     width: 100%;
 
     .l-header-nav {
+      transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
       width: 100%;
+
+      &.is-hide {
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+      }
 
       &__list {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: end;
+        margin-right: 30px;
       }
 
       &__item {
@@ -74,8 +109,9 @@
         }
 
         .text {
+          position: relative;
           margin-top: 10px;
-          font-size: 17px;
+          font-size: 14px;
           font-weight: 700;
           color: #00c295;
 
@@ -94,7 +130,7 @@
         }
 
         &:hover {
-          .l-header-nav__text {
+          .text {
             &::after {
               transform-origin: right top;
               transform: scale(1, 1);
@@ -171,6 +207,12 @@
                     font-size: 22px;
                     color: #ffffff;
                     text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
+                    filter: grayscale(0) blur(0);
+                    transition: 0.3s ease-in-out;
+
+                    &:hover {
+                      filter: grayscale(85%) blur(1px);
+                    }
                   }
 
                   &:nth-of-type(1) {
@@ -224,15 +266,35 @@
 
             &-sub {
               display: flex;
-              margin: 50px;
               justify-content: center;
+              align-items: center;
+              margin: 50px 0;
 
               &__link {
+                position: relative;
                 display: flex;
                 align-items: center;
                 margin: 0 15px;
 
-                .i-insta {
+                &::after {
+                  background-color: #333;
+                  bottom: -4px;
+                  content: "";
+                  height: 1px;
+                  left: 0;
+                  position: absolute;
+                  transform: scale(0, 1);
+                  transform-origin: right top;
+                  transition: transform 0.3s;
+                  width: 100%;
+                }
+
+                &:hover::after {
+                  transform-origin: left top;
+                  transform: scale(1, 1);
+                }
+
+                .i-link {
                   width: 18px;
                   height: 18px;
                   margin-right: 5px;
@@ -241,6 +303,10 @@
                     line-height: 1.7;
                   }
                 }
+              }
+
+              &__text {
+                line-height: 1.7;
               }
             }
           }
@@ -257,18 +323,42 @@
                 object-fit: cover;
               }
             }
+
+            &__link {
+              filter: grayscale(0) blur(0);
+              transition: 0.3s ease-in-out;
+
+              &:hover {
+                filter: grayscale(85%) blur(1px);
+              }
+            }
           }
 
-          .contact {
-            width: 250px;
-            margin: 20px auto 0;
-            border: solid 1px #333;
-            border-radius: 50px;
+          .hours {
+            text-align: center;
+            padding: 80px 0 30px;
 
-            a {
-              display: block;
-              padding: 15px;
-              text-align: center;
+            .h-ttl {
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              font-size: 30px;
+              margin-bottom: 30px;
+              letter-spacing: 0.2em;
+
+              &::before,
+              &::after {
+                content: "";
+                flex: 1 1 auto;
+                height: 1px;
+                background-color: #d9d5d5;
+              }
+            }
+
+            .h-txt {
+              font-size: 40px;
+              letter-spacing: 0.3em;
+              font-weight: 800;
             }
           }
         }

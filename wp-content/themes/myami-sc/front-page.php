@@ -36,7 +36,7 @@
 								);
 								$the_query = new WP_Query($args);
 								if ($the_query->have_posts()) :
-									echo '<a href="" class="n-p-link">';
+									echo '<a href="' . get_permalink() . '" class="n-p-link">';
 									while ($the_query->have_posts()) : $the_query->the_post();
 										echo '<div class="n-p-card js-fade-in"><div class="thumbnail">';
 
@@ -302,7 +302,7 @@
 						<div class="guide-area__wrap">
 							<div class="guide-area__left">
 								<h2 class="guide-area__title">Event Entry</h2>
-								<p class="guide-area__description">イベント出店についての受付やお問い合わせはこちら</p>
+								<p class="guide-area__description">イベント出店や受付についてのお問い合わせはこちら</p>
 							</div>
 							<div class="button">
 								<span>entry</span>

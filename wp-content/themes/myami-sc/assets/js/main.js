@@ -50,15 +50,30 @@ if (modal) {
   });
 }
 
+// jQuery(function () {
+//   let pos = 0;
+//   let nav = jQuery("#js-h-nav");
+
+//   jQuery(window).on("scroll", function () {
+//     if (jQuery(this).scrollTop() < pos) {
+//       nav.slideDown();
+//     } else {
+//       nav.slideUp();
+//     }
+
+//     pos = jQuery(this).scrollTop();
+//   });
+// });
+
 jQuery(function () {
   let pos = 0;
   let nav = jQuery("#js-h-nav");
 
   jQuery(window).on("scroll", function () {
     if (jQuery(this).scrollTop() < pos) {
-      nav.slideDown();
+      nav.removeClass("is-hide");
     } else {
-      nav.slideUp();
+      nav.addClass("is-hide");
     }
 
     pos = jQuery(this).scrollTop();
@@ -136,55 +151,43 @@ jQuery(function () {
 ========================================================= */
 gsap.registerPlugin(ScrollTrigger);
 
-ScrollTrigger.create({
-  trigger: ".area1",
-  start: "top center",
-  end: "bottom top",
-  onEnter: () => {
-    document.querySelector(".s1").classList.add("is-active");
-  },
-  onLeave: () => {
-    document.querySelector(".s1").classList.remove("is-active");
-  },
-  onEnterBack: () => {
-    document.querySelector(".s1").classList.add("is-active");
-  },
-  onLeaveBack: () => {
-    document.querySelector(".s1").classList.remove("is-active");
-  },
-  // markers: true, // デバッグ用
-});
-ScrollTrigger.create({
-  trigger: ".area2",
-  start: "top center",
-  end: "bottom top",
-  onEnter: () => {
-    document.querySelector(".s2").classList.add("is-active");
-  },
-  onLeave: () => {
-    document.querySelector(".s2").classList.remove("is-active");
-  },
-  onEnterBack: () => {
-    document.querySelector(".s2").classList.add("is-active");
-  },
-  onLeaveBack: () => {
-    document.querySelector(".s2").classList.remove("is-active");
-  },
-});
-ScrollTrigger.create({
-  trigger: ".area3",
-  start: "top center",
-  end: "bottom top",
-  onEnter: () => {
-    document.querySelector(".s3").classList.add("is-active");
-  },
-  onLeave: () => {
-    document.querySelector(".s3").classList.remove("is-active");
-  },
-  onEnterBack: () => {
-    document.querySelector(".s3").classList.add("is-active");
-  },
-  onLeaveBack: () => {
-    document.querySelector(".s3").classList.remove("is-active");
-  },
-});
+const area1 = document.querySelector(".area1");
+const area2 = document.querySelector(".area2");
+const area3 = document.querySelector(".area3");
+const step1 = document.querySelector(".s1");
+const step2 = document.querySelector(".s2");
+const step3 = document.querySelector(".s3");
+
+if (area1 && step1) {
+  ScrollTrigger.create({
+    trigger: area1,
+    start: "top center",
+    end: "bottom top",
+    onEnter: () => step1.classList.add("is-active"),
+    onLeave: () => step1.classList.remove("is-active"),
+    onEnterBack: () => step1.classList.add("is-active"),
+    onLeaveBack: () => step1.classList.remove("is-active"),
+  });
+}
+if (area2 && step2) {
+  ScrollTrigger.create({
+    trigger: area2,
+    start: "top center",
+    end: "bottom top",
+    onEnter: () => step2.classList.add("is-active"),
+    onLeave: () => step2.classList.remove("is-active"),
+    onEnterBack: () => step2.classList.add("is-active"),
+    onLeaveBack: () => step2.classList.remove("is-active"),
+  });
+}
+if (area3 && step3) {
+  ScrollTrigger.create({
+    trigger: area3,
+    start: "top center",
+    end: "bottom top",
+    onEnter: () => step3.classList.add("is-active"),
+    onLeave: () => step3.classList.remove("is-active"),
+    onEnterBack: () => step3.classList.add("is-active"),
+    onLeaveBack: () => step3.classList.remove("is-active"),
+  });
+}

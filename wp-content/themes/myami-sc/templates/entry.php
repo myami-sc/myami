@@ -12,6 +12,36 @@
     <?php if (have_posts()): while (have_posts()): the_post(); ?>
             <div class="page-body">
                 <div class="p-inner">
+                    <div class="entry-info">
+                        <h2 class="subheading">EVENT NEWS</h2>
+                        <div class="marquee">
+                            <div class="marquee__track">
+
+                                <?php
+                                $args = array(
+                                    'post_type' => 'e-info',
+                                    'posts_per_page' => 1
+                                );
+
+                                $the_query = new WP_Query($args);
+
+                                if ($the_query->have_posts()) :
+                                    while ($the_query->have_posts()) : $the_query->the_post();
+                                ?>
+
+                                        <a href="<?php the_permalink(); ?>" class="marquee__item">
+                                            <?php the_title(); ?>（<?php echo get_the_date('Y年n月j日'); ?>）
+                                        </a>
+
+                                <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                endif;
+                                ?>
+
+                            </div>
+                        </div>
+                    </div>
                     <section class="entry-upper">
                         <div class="left">
                             <h2 class="entry-title"><span class="sub">催事・イベントに関するお問い合わせ</span>ENTRY</h2>
@@ -32,7 +62,6 @@
                     </section>
                     <section class="entry-lower">
                         <?php the_content() ?>
-
                     </section>
                 </div>
             </div>

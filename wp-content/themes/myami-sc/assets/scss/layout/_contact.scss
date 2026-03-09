@@ -1,0 +1,166 @@
+.page-contact {
+  .c-block {
+    .guide-area {
+      &.--bg-color {
+        background-color: #eee;
+
+        a {
+          .button {
+            &:before {
+              border-top: solid 2px #fff;
+              border-right: solid 2px #fff;
+            }
+
+            &:after {
+              background: #333;
+            }
+
+            span {
+              color: #333;
+            }
+          }
+
+          &::before {
+            content: none;
+          }
+
+          &:hover {
+            color: initial;
+
+            .button {
+              &:before {
+                border-top: solid 2px #fff;
+                border-right: solid 2px #fff;
+              }
+              &:after {
+                background: #333;
+              }
+              span {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+
+      a {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 150px 80px;
+        z-index: 1;
+        transition: 0.3s;
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          background: #00c295;
+          transform-origin: 50% 0%;
+          transform: scaleY(0);
+          transition: transform ease 0.3s;
+        }
+
+        .button {
+          position: relative;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 100%;
+          margin-left: auto;
+          max-width: 300px;
+          padding: 10px 0px 10px 25px;
+          transition: 0.3s ease-in-out;
+          font-size: 30px;
+          font-weight: 600;
+          letter-spacing: 0.2rem;
+
+          &:before,
+          &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 50%;
+          }
+
+          &:before {
+            width: 1.5rem;
+            height: 1.5rem;
+            left: 1.5rem;
+            border-top: solid 2px #fff;
+            border-right: solid 2px #fff;
+            z-index: 2;
+            transform: translateY(-50%) rotate(45deg);
+            transition: all 0.3s;
+          }
+
+          &:after {
+            left: 0;
+            background: #00c295;
+            z-index: 1;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 4rem;
+            transform: translateY(-50%);
+            transition: all 0.5s;
+          }
+
+          span {
+            color: #00c295;
+            position: relative;
+            transition: all 0.3s;
+            z-index: 3;
+          }
+        }
+
+        &:hover {
+          color: #fff;
+
+          &::before {
+            transform-origin: 50% 100%;
+            transform: scaleY(1);
+          }
+
+          .button {
+            &:before {
+              left: 2rem;
+              border-top: solid 2px #00c295;
+              border-right: solid 2px #00c295;
+            }
+            &:after {
+              right: 0;
+              width: 100%;
+              background: #fff;
+            }
+
+            span {
+              color: #00c295;
+            }
+          }
+        }
+      }
+
+      &__wrap {
+        display: flex;
+        align-items: center;
+      }
+
+      &__title {
+        font-size: 100px;
+        font-weight: 600;
+        letter-spacing: 0.2rem;
+        margin-bottom: 50px;
+      }
+
+      &__description {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
