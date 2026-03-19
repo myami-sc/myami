@@ -32,11 +32,12 @@
 
             <?php echo '<' . $html_tag . ' class="l-header-logo">'; ?>
             <a href="<?php echo esc_url(home_url('/')); ?>" class="l-header-logo__link">
-                <img src="<?php echo esc_url(get_theme_file_uri('assets/images/logo.png')); ?>" class="l-header-logo__img img" alt="マイアミショッピングセンターロゴ">
+                <img src="<?php echo esc_url(get_theme_file_uri('assets/images/logo.png')); ?>" class="l-header-logo__img --l-default img" alt="マイアミショッピングセンターロゴ">
+                <img src="<?php echo esc_url(get_theme_file_uri('assets/images/logo_w.png')); ?>" class="l-header-logo__img --l-white img" alt="マイアミショッピングセンターロゴ">
             </a>
             <?php echo '</' . $html_tag . '>'; ?>
             <?php if (is_front_page()) : ?>
-                <div class="l-header__news">
+                <div class="l-header__news js-h-nav">
                     <h2 class="subheading">NEWS</h2>
                     <div class="marquee">
                         <div class="marquee__track">
@@ -71,7 +72,7 @@
 
             <div class="l-header__menu">
 
-                <nav class="l-header-nav" id="js-h-nav">
+                <nav class="l-header-nav js-h-nav --pc">
                     <ul class="l-header-nav__list">
 
                         <li class="l-header-nav__item">

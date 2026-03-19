@@ -1,3 +1,5 @@
+@use "../config/mixins" as *;
+
 .btn {
   margin-top: auto;
 
@@ -46,6 +48,7 @@
   margin: 20px auto 0;
   border: solid 1px #333;
   border-radius: 50px;
+  color: #333;
 
   a {
     display: block;
@@ -62,7 +65,7 @@
   height: 20px;
   transition: all 0.5s;
   cursor: pointer;
-  z-index: 3;
+  z-index: 10000 !important;
 
   span {
     display: block;
@@ -72,6 +75,10 @@
     height: 1px;
     background-color: #333;
     border-radius: 4px;
+
+    @include mq(sp) {
+      background-color: #fff;
+    }
 
     &:nth-child(1) {
       top: 1px;
@@ -103,6 +110,10 @@
 
       span {
         background-color: #fff;
+
+        @include mq(sp) {
+          background-color: #333;
+        }
 
         &:nth-child(1) {
           -webkit-transform: translateY(5px) rotate(-45deg);

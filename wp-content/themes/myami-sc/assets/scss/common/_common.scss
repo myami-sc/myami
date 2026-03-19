@@ -1,3 +1,5 @@
+@use "../config/mixins" as *;
+
 body {
   color: #333;
 }
@@ -118,5 +120,19 @@ body {
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+.--pc {
+  @include mq(sp) {
+    display: none !important;
+  }
+}
+
+.--sp {
+  display: none !important;
+
+  @include mq(sp) {
+    display: block !important;
   }
 }

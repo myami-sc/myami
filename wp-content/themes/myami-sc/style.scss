@@ -5,6 +5,7 @@ config
 -------------------------------------------------------------- */
 @use "assets/scss/config/reset" as *;
 @use "assets/scss/config/variables" as *;
+@use "assets/scss/config/mixins" as *;
 
 /* --------------------------------------------------------------
 common

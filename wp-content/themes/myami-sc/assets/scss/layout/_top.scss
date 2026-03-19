@@ -1,8 +1,18 @@
+@use "../config/mixins" as *;
+
 .main {
   padding-top: 80px;
 
+  @include mq(sp) {
+    padding-top: 0;
+  }
+
   .t-kv {
     margin-bottom: 200px;
+
+    @include mq(sp) {
+      margin-bottom: 0;
+    }
 
     .kv {
       position: relative;
@@ -14,6 +24,12 @@
       bottom: 20%;
       writing-mode: vertical-rl;
       z-index: 2;
+
+      @include mq(sp) {
+        bottom: 20%;
+        left: 15px;
+        color: #fff;
+      }
 
       &::before {
         animation: scroll 2s infinite;
@@ -68,12 +84,33 @@
     gap: 20px;
     margin: 100px 0;
 
+    @include mq(sp) {
+      margin: 0;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .m-v-img {
       position: relative;
       overflow: hidden;
 
       &:nth-of-type(1) {
         grid-area: 1 / 1 / 3 / 3;
+
+        @include mq(sp) {
+          grid-area: 1 / 1 / 2 / 3;
+        }
+      }
+
+      &:nth-of-type(2) {
+        @include mq(sp) {
+          grid-area: 2 / 1 / 3 / 2;
+        }
+      }
+
+      &:nth-of-type(3) {
+        @include mq(sp) {
+          grid-area: 2 / 2 / 3 / 3;
+        }
       }
 
       a {
@@ -101,6 +138,11 @@
           letter-spacing: 0.2rem;
           z-index: 1;
           transition: 0.3s;
+
+          @include mq(sp) {
+            padding: 10px;
+            font-size: 12px;
+          }
 
           &::before {
             content: "";
@@ -145,16 +187,28 @@
 }
 
 .section {
+  position: relative;
+
   &.--overlap {
     position: relative;
     background-color: #fff;
-    margin-top: -150px;
+    z-index: 2;
+    transform: translateY(80px);
+    opacity: 0.9;
+
+    @include mq(sp) {
+      padding-top: 50px;
+    }
   }
 
   .s-title {
     font-size: 100px;
     font-weight: 600;
     letter-spacing: 0.2rem;
+
+    @include mq(sp) {
+      font-size: 50px;
+    }
   }
 
   .s-item {
@@ -165,29 +219,55 @@
 
     &.--slider {
       margin-left: 30%;
+
+      @include mq(sp) {
+        margin-left: 0;
+      }
     }
 
     &.--news {
       display: flex;
       align-items: flex-start;
 
+      @include mq(sp) {
+        flex-direction: column-reverse;
+      }
+
       .s-title {
         text-align: left;
         margin-top: 0;
         margin-bottom: 30px;
+
+        @include mq(sp) {
+          font-size: 35px;
+          margin-bottom: 0;
+        }
       }
 
       .news-pickup {
         width: 40%;
         margin-right: 50px;
 
+        @include mq(sp) {
+          width: 100%;
+          margin-right: 0;
+        }
+
         .n-p-link {
           display: block;
           border: solid 2px #b6bcb6;
           border-radius: 30px;
 
+          @include mq(sp) {
+            border: 0;
+          }
+
           .thumbnail {
             overflow: hidden;
+
+            @include mq(sp) {
+              height: 150px;
+            }
           }
 
           img {
@@ -208,20 +288,39 @@
         .n-p-card {
           padding: 30px 30px 80px;
 
+          @include mq(sp) {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px 0px 30px;
+          }
+
           .description {
             padding-top: 30px;
             text-align: left;
+
+            @include mq(sp) {
+              padding-top: 20px;
+            }
 
             .title {
               font-size: 30px;
               font-weight: 600;
               letter-spacing: 0.2rem;
               margin-bottom: 30px;
+
+              @include mq(sp) {
+                font-size: 18px;
+                margin-bottom: 20px;
+              }
             }
 
             .date {
               font-size: 20px;
               letter-spacing: 0.2rem;
+
+              @include mq(sp) {
+                font-size: 14px;
+              }
             }
           }
         }
@@ -231,12 +330,22 @@
           display: flex;
           align-items: center;
           justify-content: center;
+
+          @include mq(sp) {
+            margin-top: 50px;
+            margin-bottom: 50px;
+          }
         }
       }
 
       .news-wrap {
         width: 60%;
         margin-bottom: 100px;
+
+        @include mq(sp) {
+          width: 100%;
+          margin-bottom: 50px;
+        }
 
         .subheading {
           margin-top: 0;
@@ -248,10 +357,19 @@
             margin-bottom: 50px;
             border-bottom: solid 1px #b6bcb6;
 
+            @include mq(sp) {
+              padding-bottom: 20px;
+              margin-bottom: 20px;
+            }
+
             .date {
               display: inline-block;
               font-size: 18px;
               margin-bottom: 30px;
+
+              @include mq(sp) {
+                margin-bottom: 20px;
+              }
             }
           }
 
@@ -259,15 +377,23 @@
             display: block;
             overflow: hidden;
             color: transparent;
-            text-shadow: 0 -1.5em 0 #000, 0 0 0 #000;
+            text-shadow:
+              0 -1.5em 0 #000,
+              0 0 0 #000;
             transition: text-shadow 0.3s;
             font-size: 30px;
             font-weight: 600;
             letter-spacing: 0.2rem;
             transition-duration: 0.2s;
 
+            @include mq(sp) {
+              font-size: 18px;
+            }
+
             &:hover {
-              text-shadow: 0 0 0 #000, 0 1.5em 0 #000;
+              text-shadow:
+                0 0 0 #000,
+                0 1.5em 0 #000;
             }
           }
         }
@@ -279,13 +405,21 @@
       grid-template-columns: 45% 1fr;
       gap: 10px;
       align-items: flex-start;
-      margin: 90px 0 60px;
+      margin: 100px 0 60px;
+
+      @include mq(sp) {
+        margin-top: 0;
+        grid-template-columns: 1fr;
+      }
 
       &__box {
         &:first-child {
           position: sticky;
           top: 150px;
-          left: 0;
+
+          @include mq(sp) {
+            position: static;
+          }
         }
 
         #sb_instagram #sbi_images {
@@ -298,20 +432,35 @@
         font-weight: 600;
         letter-spacing: 0.2rem;
         margin-bottom: 50px;
+
+        @include mq(sp) {
+          font-size: 50px;
+          margin-bottom: 20px;
+        }
       }
 
       .sns-icon {
         width: 80px;
         height: 80px;
         margin-bottom: 100px;
+
+        @include mq(sp) {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 30px;
+        }
       }
 
       .sns-belt {
         max-width: 300px;
         padding-bottom: 20px;
 
+        @include mq(sp) {
+          max-width: 200px;
+        }
+
         a {
-          background-color: #00c295;
+          background-color: #333;
           display: block;
           padding: 30px 10px;
           position: relative;
@@ -328,7 +477,7 @@
             &:nth-child(1) {
               top: 50%;
               transform: translateY(-50%);
-              color: #dbe9e6;
+              color: #eee;
             }
             &:nth-child(2) {
               top: -100%;
@@ -375,9 +524,14 @@
 
   .parallax-box {
     position: relative;
+    overflow: hidden;
 
-    .simpleParallax {
-      height: 850px;
+    img {
+      transform: scale(1.2);
+
+      @include mq(sp) {
+        height: 350px;
+      }
     }
   }
 
@@ -431,6 +585,10 @@
       padding: 150px 80px;
       z-index: 1;
       transition: 0.3s;
+
+      @include mq(sp) {
+        padding: 75px 40px;
+      }
 
       &::before {
         content: "";
@@ -528,6 +686,14 @@
     &__wrap {
       display: flex;
       align-items: center;
+
+      @include mq(sp) {
+        flex-direction: column;
+      }
+    }
+
+    &__left {
+      width: 100%;
     }
 
     &__title {
@@ -535,6 +701,10 @@
       font-weight: 600;
       letter-spacing: 0.2rem;
       margin-bottom: 50px;
+
+      @include mq(sp) {
+        font-size: 50px;
+      }
     }
 
     &__description {

@@ -12,7 +12,7 @@
         <ul class="news-list__tab">
             <li class="news-list__tab-item"><a href="<?php echo esc_url(home_url('news-list')); ?>" class="news-list__tab-link">すべて</a></li>
             <li class="news-list__tab-item --current"><a href="<?php echo esc_url(home_url('news-list/news')); ?>" class="news-list__tab-link">ニュース</a></li>
-            <li class="news-list__tab-item"><a href="<?php echo esc_url(home_url('news-list/shop-news')); ?>" class="news-list__tab-link">ショップニュース</a></li>
+            <li class="news-list__tab-item"><a href="<?php echo esc_url(home_url('news-list/shop-news')); ?>" class="news-list__tab-link"><span class="--pc">ショップニュース</span><span class="--sp">ショップ</span></a></li>
         </ul>
         <div class="news-list__body">
             <?php
@@ -39,7 +39,7 @@
                                 }
                                 ?>
                             </div>
-                            <div class="content">
+                            <div class="content --news">
                                 <?php
                                 $cats = get_the_category();
                                 if ($cats) {

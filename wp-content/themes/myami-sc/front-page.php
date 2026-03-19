@@ -18,65 +18,123 @@
 					<h2 class="s-title">Topics</h2>
 					<div class="s-contents">
 						<div class="s-item --slider">
-							<h3 class="subheading">EVENT</h3>
+							<h3 class="subheading">EVENT - イベント -</h3>
 							<?php get_template_part(slug: "parts/swiper/topics-swiper"); ?>
 						</div>
 					</div>
 				</div>
 				<div class="s-inner">
 					<div class="s-contents">
-						<div class="s-item --news">
-							<div class="news-pickup">
-								<h2 class="s-title js-fade-in">Pick Up</h2>
-								<?php
-								$args = array(
-									'post_type' => 'post',
-									'posts_per_page' => 1,
-									'category_name' => 'pick-up'
-								);
-								$the_query = new WP_Query($args);
-								if ($the_query->have_posts()) :
-									echo '<a href="' . get_permalink() . '" class="n-p-link">';
-									while ($the_query->have_posts()) : $the_query->the_post();
-										echo '<div class="n-p-card js-fade-in"><div class="thumbnail">';
+						<div class="--pc">
+							<div class="s-item --news">
+								<div class="news-pickup">
+									<h2 class="s-title js-fade-in">Pick Up</h2>
+									<?php
+									$args = array(
+										'post_type' => 'post',
+										'posts_per_page' => 1,
+										'category_name' => 'pick-up'
+									);
+									$the_query = new WP_Query($args);
+									if ($the_query->have_posts()) :
+										echo '<a href="' . get_permalink() . '" class="n-p-link">';
+										while ($the_query->have_posts()) : $the_query->the_post();
+											echo '<div class="n-p-card js-fade-in"><div class="thumbnail">';
 
-										if (has_post_thumbnail()) {
-											the_post_thumbnail('thumbnail', array('class' => 'img'));
-										} else {
-											echo '<img src="' . esc_url(get_theme_file_uri('assets/images/logo.png')) . '" class="img" alt="画像">';
-										}
+											if (has_post_thumbnail()) {
+												the_post_thumbnail('thumbnail', array('class' => 'img'));
+											} else {
+												echo '<img src="' . esc_url(get_theme_file_uri('assets/images/logo.png')) . '" class="img" alt="画像">';
+											}
 
-										echo '</div><div class="description"><p class="title">' . get_the_title() . '</p><p class="date">' . get_the_date('Y.n.j') . '</p></div></div></a>';
-									endwhile;
-									echo '</ul>';
-									wp_reset_postdata();
-								endif;
-								?>
-								<div class="btn"><a href="<?php echo esc_url(home_url('news-list')); ?>"><span>一覧を見る</span></a></div>
+											echo '</div><div class="description"><p class="title">' . get_the_title() . '</p><p class="date">' . get_the_date('Y.n.j') . '</p></div></div></a>';
+										endwhile;
+										echo '</ul>';
+										wp_reset_postdata();
+									endif;
+									?>
+									<div class="btn"><a href="<?php echo esc_url(home_url('news-list')); ?>"><span>一覧を見る</span></a></div>
+								</div>
+								<div class="news-wrap">
+									<h3 class="subheading">NEWS - ニュース -</h3>
+									<?php
+									$args = array(
+										'post_type' => 'post',
+										'posts_per_page' => 5,
+										'post_status' => 'publish',
+										'orderby' => 'date',
+										'order' => 'DESC',
+									);
+									$the_query = new WP_Query($args);
+
+									if ($the_query->have_posts()) :
+										echo '<ul class="n-list">';
+										while ($the_query->have_posts()) : $the_query->the_post();
+											echo '<li class="n-list-item"><span class="date">' . get_the_date('Y.n.j') . '</span><a href="' . get_permalink() . '" class="n-list-link">' . get_the_title() . '</a></li>';
+										endwhile;
+										echo '</ul>';
+										wp_reset_postdata();
+									else :
+										echo '投稿が見つかりませんでした';
+									endif;
+									?>
+								</div>
 							</div>
-							<div class="news-wrap">
-								<h3 class="subheading">NEWS　最新のお知らせ</h3>
-								<?php
-								$args = array(
-									'post_type' => 'post',
-									'posts_per_page' => 5,
-									'post_status' => 'publish',
-									'orderby' => 'date',
-									'order' => 'DESC',
-								);
-								$the_query = new WP_Query($args);
+						</div>
+						<div class="--sp">
+							<div class="s-item --news">
+								<div class="news-pickup">
+									<h2 class="s-title js-fade-in">Pick Up</h2>
+									<?php
+									$args = array(
+										'post_type' => 'post',
+										'posts_per_page' => 1,
+										'category_name' => 'pick-up'
+									);
+									$the_query = new WP_Query($args);
+									if ($the_query->have_posts()) :
+										echo '<a href="' . get_permalink() . '" class="n-p-link">';
+										while ($the_query->have_posts()) : $the_query->the_post();
+											echo '<div class="n-p-card js-fade-in"><div class="thumbnail">';
 
-								if ($the_query->have_posts()) :
-									echo '<ul class="n-list">';
-									while ($the_query->have_posts()) : $the_query->the_post();
-										echo '<li class="n-list-item"><span class="date">' . get_the_date('Y.n.j') . '</span><a href="' . get_permalink() . '" class="n-list-link">' . get_the_title() . '</a></li>';
-									endwhile;
-									echo '</ul>';
-									wp_reset_postdata();
-								else :
-									echo '投稿が見つかりませんでした';
-								endif;
-								?>
+											if (has_post_thumbnail()) {
+												the_post_thumbnail('thumbnail', array('class' => 'img'));
+											} else {
+												echo '<img src="' . esc_url(get_theme_file_uri('assets/images/logo.png')) . '" class="img" alt="画像">';
+											}
+
+											echo '</div><p class="date">' . get_the_date('Y.n.j') . '</p><p class="title">' . get_the_title() . '</p></div></a>';
+										endwhile;
+										echo '</ul>';
+										wp_reset_postdata();
+									endif;
+									?>
+									<div class="btn"><a href="<?php echo esc_url(home_url('news-list')); ?>"><span>一覧を見る</span></a></div>
+								</div>
+								<div class="news-wrap">
+									<h3 class="subheading">NEWS - ニュース -</h3>
+									<?php
+									$args = array(
+										'post_type' => 'post',
+										'posts_per_page' => 3,
+										'post_status' => 'publish',
+										'orderby' => 'date',
+										'order' => 'DESC',
+									);
+									$the_query = new WP_Query($args);
+
+									if ($the_query->have_posts()) :
+										echo '<ul class="n-list">';
+										while ($the_query->have_posts()) : $the_query->the_post();
+											echo '<li class="n-list-item"><span class="date">' . get_the_date('Y.n.j') . '</span><a href="' . get_permalink() . '" class="n-list-link">' . get_the_title() . '</a></li>';
+										endwhile;
+										echo '</ul>';
+										wp_reset_postdata();
+									else :
+										echo '投稿が見つかりませんでした';
+									endif;
+									?>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -84,14 +142,14 @@
 			</section>
 			<section class="section">
 				<div class="parallax-box">
-					<video class="js-parallax img" src="<?php echo esc_url(get_theme_file_uri('assets/images/video/tbgv03.mp4')); ?>" autoplay muted loop playsinline></video>
+					<img class="js-parallax img" src="<?php echo esc_url(get_theme_file_uri('assets/images/background/bk_top01.png')); ?>">
 				</div>
 			</section>
 			<section class="section --overlap">
 				<div class="s-inner">
 					<div class="s-contents">
 						<div class="main-visual">
-							<div class="m-v-img js-fade-up">
+							<div class="m-v-img">
 								<a href="">
 									<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
 									<div class="wrap">
@@ -131,7 +189,7 @@
 				<div class="s-inner">
 					<div class="s-contents">
 						<div class="main-visual">
-							<div class="m-v-img js-fade-up">
+							<div class="m-v-img">
 								<a href="">
 									<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
 									<div class="wrap">
@@ -168,14 +226,14 @@
 			</section>
 			<section class="section">
 				<div class="parallax-box">
-					<video class="js-parallax-2 img" src="<?php echo esc_url(get_theme_file_uri('assets/images/video/tbgv02.mp4')); ?>" autoplay muted loop playsinline></video>
+					<img class="js-parallax-2 img" src="<?php echo esc_url(get_theme_file_uri('assets/images/background/bk_top02.png')); ?>">
 				</div>
 			</section>
 			<section class="section --overlap">
 				<div class="s-inner">
 					<div class="s-contents">
 						<div class="main-visual">
-							<div class="m-v-img js-fade-up">
+							<div class="m-v-img">
 								<a href="">
 									<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
 									<div class="wrap">
@@ -210,11 +268,11 @@
 					</div>
 				</div>
 			</section>
-			<section class="section --overlap">
+			<section class="section">
 				<div class="s-inner">
 					<div class="s-contents">
 						<div class="main-visual">
-							<div class="m-v-img js-fade-up">
+							<div class="m-v-img">
 								<a href="">
 									<img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
 									<div class="wrap">
@@ -251,7 +309,7 @@
 			</section>
 			<section class="section">
 				<div class="parallax-box">
-					<video class="js-parallax-3 img" src="<?php echo esc_url(get_theme_file_uri('assets/images/video/tbgv01.mp4')); ?>" autoplay muted loop playsinline></video>
+					<img class="js-parallax-3 img" src="<?php echo esc_url(get_theme_file_uri('assets/images/background/bk_top03.png')); ?>">
 				</div>
 			</section>
 			<section class="section --overlap">

@@ -4,43 +4,35 @@ gsap.config({
 
 /* parallax
 ========================================================= */
-const image = document.getElementsByClassName("js-parallax");
-new SimpleParallax(image, {
-  delay: 3,
-  orientation: "down",
-  scale: 1.5,
-});
+const isSP = window.innerWidth < 768;
 
-const image2 = document.getElementsByClassName("js-parallax-2");
-new SimpleParallax(image2, {
-  delay: 2.3,
-  orientation: "down",
-  scale: 1.5,
-});
+function createParallax(selector, delay, scale) {
+  const el = document.querySelectorAll(selector);
+  if (!el.length) return;
 
-const image3 = document.getElementsByClassName("js-parallax-3");
-new SimpleParallax(image3, {
-  delay: 2.3,
-  orientation: "down",
-  scale: 1.5,
-});
+  new SimpleParallax(el, {
+    delay: isSP ? 0.6 : delay,
+    scale: isSP ? 1.2 : scale,
+    orientation: "down",
+    overflow: true,
+  });
+}
 
-const image4 = document.getElementsByClassName("js-parallax-4");
-new SimpleParallax(image4, {
-  delay: 1,
-  transition: "cubic-bezier(0,0,0,.1)",
-});
+createParallax(".js-parallax", 3, 1.5);
+createParallax(".js-parallax-2", 2.3, 1.5);
+createParallax(".js-parallax-3", 2.3, 1.5);
+createParallax(".js-parallax-4", 1, 1.3);
 
 /* scroll
 ========================================================= */
-const lenis = new Lenis();
+// const lenis = new Lenis();
 
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
+// function raf(time) {
+//   lenis.raf(time);
+//   requestAnimationFrame(raf);
+// }
 
-requestAnimationFrame(raf);
+// requestAnimationFrame(raf);
 
 /* fade
 ========================================================= */
@@ -89,16 +81,39 @@ gsap.from(".js-fade-card", {
   delay: 0.4,
 });
 
+/* overlap scroll
+========================================================= */
+gsap.utils.toArray(".section.--overlap").forEach((section) => {
+  gsap.to(section, {
+    y: 0,
+    opacity: 1,
+    scrollTrigger: {
+      trigger: section,
+      start: "top 85%",
+      end: "top 40%",
+    },
+  });
+});
+
 /* loop
 ========================================================= */
 const track = document.querySelector(".marquee__track");
-track.innerHTML += track.innerHTML;
 
-const itemsWidth = track.scrollWidth / 2;
+if (track) {
+  track.innerHTML += track.innerHTML;
 
-gsap.to(track, {
-  x: -itemsWidth,
-  duration: 7,
-  ease: "none",
-  repeat: -1,
+  const itemsWidth = track.scrollWidth / 2;
+
+  gsap.to(track, {
+    x: -itemsWidth,
+    duration: 7,
+    ease: "none",
+    repeat: -1,
+  });
+}
+
+/* ScrollTrigger refresh
+========================================================= */
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
 });

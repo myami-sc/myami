@@ -1,3 +1,5 @@
+@use "../config/mixins" as *;
+
 .l-footer {
   &__contact {
     position: relative;
@@ -27,6 +29,10 @@
           margin-bottom: 20px;
           font-size: 30px;
           font-weight: 700;
+
+          @include mq(sp) {
+            font-size: 20px;
+          }
         }
         .address {
           font-size: 14px;
@@ -84,11 +90,21 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include mq(sp) {
+          flex-wrap: wrap;
+        }
       }
 
       &__item {
         padding: 2px 30px;
         border-right: solid 1px #b6bcb6;
+
+        @include mq(sp) {
+          width: calc(50% - 10px / 2);
+          padding: 5px 30px;
+          border-right: none;
+        }
 
         &:last-child {
           border-right: none;

@@ -1,19 +1,37 @@
+@use "../config/mixins" as *;
+
 .inner {
   padding: 0 90px;
+
+  @include mq(sp) {
+    padding: 0;
+  }
 }
 
 // section
 .s-inner {
   padding: 20px 90px;
+
+  @include mq(sp) {
+    padding: 20px 15px;
+  }
 }
 
 .s-slider-inner {
   padding: 20px 0 20px 20px;
+
+  @include mq(sp) {
+    padding: 15px;
+  }
 }
 
 // menu
 .m-inner {
   padding: 50px;
+
+  @include mq(sp) {
+    padding: 50px 0;
+  }
 }
 
 // page

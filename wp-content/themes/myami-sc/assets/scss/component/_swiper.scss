@@ -1,31 +1,49 @@
 /* --------------------------------------------------------------
 swiper
 -------------------------------------------------------------- */
+@use "../config/mixins" as *;
+
 /* main
 ========================================================= */
 .main-swiper {
   position: relative;
   border-radius: 30px;
+  min-width: 0;
   overflow: initial !important;
+
+  @include mq(sp) {
+    border-radius: 0;
+    overflow: hidden !important;
+  }
 
   .swiper-wrapper {
     .swiper-slide {
-      height: calc(100vh - 160px) !important;
+      height: calc(100dvh - 160px);
+
+      @include mq(sp) {
+        height: 100dvh;
+      }
 
       .img {
-        border: solid 2px#00c295;
+        border: solid 2px #00c295;
         border-radius: 30px;
+        max-width: 100%;
+
+        @include mq(sp) {
+          border-radius: 0;
+        }
       }
     }
   }
 
-  .swiper-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal,
-  .swiper-pagination-custom,
   .swiper-pagination-fraction {
     left: auto;
     right: 0;
     bottom: -40px;
+
+    @include mq(sp) {
+      bottom: 0;
+    }
   }
 
   .swiper-pagination-fraction {
@@ -41,12 +59,22 @@ swiper
     padding: 40px 0;
     background-color: #eee;
 
+    @include mq(sp) {
+      justify-content: end;
+      background-color: initial;
+      padding: 10px 0;
+    }
+
     .border {
       width: 220px;
       height: 2px;
       margin: 0 8px;
       background-color: #ddd;
       position: relative;
+
+      @include mq(sp) {
+        width: 90px;
+      }
 
       span {
         position: absolute;
@@ -59,6 +87,10 @@ swiper
         transform: scaleX(0);
         transform-origin: left center;
         transition-timing-function: linear;
+
+        @include mq(sp) {
+          background-color: #fff;
+        }
       }
     }
   }
@@ -68,13 +100,19 @@ swiper
     &-total {
       font-size: 20px;
       margin: 0 20px;
+
+      @include mq(sp) {
+        font-size: 13px;
+        margin: 0 10px;
+        color: #fff;
+      }
     }
 
     &.is-active {
       .border {
         span {
           transform: scaleX(1);
-          transition: transform 3.85s linear;
+          transition: transform 4s linear;
         }
       }
     }
@@ -90,6 +128,11 @@ swiper
   padding-bottom: 15px;
   margin-bottom: 150px;
 
+  @include mq(sp) {
+    padding-bottom: 0;
+    margin-bottom: 100px;
+  }
+
   .swiper-scrollbar {
     background: #eee;
     height: 2px !important;
@@ -97,6 +140,10 @@ swiper
     bottom: -50px !important;
     left: 0 !important;
     width: 50% !important;
+
+    @include mq(sp) {
+      bottom: -20px !important;
+    }
 
     &-drag {
       background: #00c295;
@@ -122,6 +169,10 @@ swiper
     width: 50px !important;
     height: 50px !important;
     z-index: 2 !important;
+
+    @include mq(sp) {
+      bottom: calc(-50px + 5px);
+    }
 
     &::after {
       content: "";
@@ -158,18 +209,31 @@ swiper
     .swiper-slide {
       width: 400px !important;
 
+      @include mq(sp) {
+        width: 280px !important;
+      }
+
       .link {
-        border: solid 2px#b6bcb6;
+        border: solid 2px #b6bcb6;
         border-radius: 20px;
         padding: 20px 20px 30px;
         display: inline-block;
         width: 100%;
         height: 100%;
 
+        @include mq(sp) {
+          border: 0;
+          border-radius: 0;
+        }
+
         .thumbnail {
           width: 100%;
           height: 250px !important;
           overflow: hidden;
+
+          @include mq(sp) {
+            height: 150px !important;
+          }
 
           img {
             width: 100%;

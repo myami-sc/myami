@@ -3,6 +3,7 @@
 
   .parallax-box {
     position: relative;
+    overflow: hidden;
 
     .simpleParallax {
       height: 100vh;

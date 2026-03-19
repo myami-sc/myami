@@ -5,6 +5,7 @@ swiper
 ========================================================= */
 const mainSwiper = new Swiper(".main-swiper", {
   loop: true,
+  loopAdditionalSlides: 1,
   effect: "fade",
   fadeEffect: {
     crossFade: true,
@@ -64,7 +65,13 @@ const mainSwiper = new Swiper(".main-swiper", {
 ========================================================= */
 const topicsSwiper = new Swiper(".topics-swiper", {
   slidesPerView: "auto",
-  spaceBetween: 50,
+  spaceBetween: 20, // SP
+
+  breakpoints: {
+    768: {
+      spaceBetween: 50, // PC
+    },
+  },
   navigation: {
     nextEl: ".topics-next",
     prevEl: ".topics-prev",
@@ -77,7 +84,13 @@ const topicsSwiper = new Swiper(".topics-swiper", {
 });
 const topicsSwiperFashion = new Swiper(".topics-swiper-fashion", {
   slidesPerView: "auto",
-  spaceBetween: 50,
+  spaceBetween: 20, // SP
+
+  breakpoints: {
+    768: {
+      spaceBetween: 50, // PC
+    },
+  },
   navigation: {
     nextEl: ".topics-fashion-next",
     prevEl: ".topics-fashion-prev",
@@ -90,7 +103,13 @@ const topicsSwiperFashion = new Swiper(".topics-swiper-fashion", {
 });
 const topicsSwiperFood = new Swiper(".topics-swiper-food", {
   slidesPerView: "auto",
-  spaceBetween: 50,
+  spaceBetween: 20, // SP
+
+  breakpoints: {
+    768: {
+      spaceBetween: 50, // PC
+    },
+  },
   navigation: {
     nextEl: ".topics-food-next",
     prevEl: ".topics-food-prev",
@@ -103,7 +122,13 @@ const topicsSwiperFood = new Swiper(".topics-swiper-food", {
 });
 const topicsSwiperEnjoy = new Swiper(".topics-swiper-enjoy", {
   slidesPerView: "auto",
-  spaceBetween: 50,
+  spaceBetween: 20, // SP
+
+  breakpoints: {
+    768: {
+      spaceBetween: 50, // PC
+    },
+  },
   navigation: {
     nextEl: ".topics-enjoy-next",
     prevEl: ".topics-enjoy-prev",
@@ -116,7 +141,13 @@ const topicsSwiperEnjoy = new Swiper(".topics-swiper-enjoy", {
 });
 const topicsSwiperLifestyle = new Swiper(".topics-swiper-lifestyle", {
   slidesPerView: "auto",
-  spaceBetween: 50,
+  spaceBetween: 20, // SP
+
+  breakpoints: {
+    768: {
+      spaceBetween: 50, // PC
+    },
+  },
   navigation: {
     nextEl: ".topics-lifestyle-next",
     prevEl: ".topics-lifestyle-prev",
