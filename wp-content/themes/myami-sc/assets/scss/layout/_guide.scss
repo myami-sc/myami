@@ -1,10 +1,23 @@
+@use "../config/mixins" as *;
+
 .page-guide {
+  .p-inner {
+    @include mq(sp) {
+      padding-bottom: 100px;
+    }
+  }
+
   .sticky-element {
     position: sticky;
     top: 200px;
     left: 30px;
     width: 50%;
-    z-index: 100;
+    z-index: 2;
+
+    @include mq(sp) {
+      top: 150px;
+      left: 10px;
+    }
 
     .step-item {
       margin-bottom: 25px;
@@ -40,9 +53,18 @@
     width: 1050px;
     margin: 0 auto;
 
+    @include mq(sp) {
+      width: 100%;
+    }
+
     .p-title {
       font-size: 50px;
       padding: 4rem 0;
+
+      @include mq(sp) {
+        font-size: 30px;
+        padding: 2rem 0;
+      }
     }
 
     .area-content {
@@ -51,18 +73,34 @@
       margin: 0 auto;
       padding: 4rem 0;
 
+      @include mq(sp) {
+        flex-direction: column-reverse;
+      }
+
       &.--reverse {
         flex-direction: row-reverse;
+
+        @include mq(sp) {
+          flex-direction: column-reverse;
+        }
       }
 
       &.--grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
+
+        @include mq(sp) {
+          grid-template-columns: 1fr;
+        }
       }
 
       .content-box {
         width: 40%;
+
+        @include mq(sp) {
+          width: 100%;
+        }
 
         &.--line {
           width: 100%;
@@ -74,6 +112,11 @@
           width: 180px;
           height: 150px;
           margin: 0 auto 80px;
+
+          @include mq(sp) {
+            width: 100%;
+            margin-bottom: 0;
+          }
 
           img {
             object-fit: contain;
@@ -128,6 +171,12 @@
       .content-img {
         height: 400px;
         width: 50%;
+
+        @include mq(sp) {
+          height: 150px;
+          width: 100%;
+          margin-bottom: 20px;
+        }
       }
     }
 
@@ -135,12 +184,25 @@
       display: flex;
       padding: 4rem 0;
 
+      @include mq(sp) {
+        flex-direction: column;
+        padding-bottom: 30px;
+      }
+
       .left {
         width: 50%;
+
+        @include mq(sp) {
+          width: 100%;
+        }
 
         .title {
           font-size: 30px;
           margin-bottom: 20px;
+
+          @include mq(sp) {
+            font-size: 23px;
+          }
         }
 
         .text {
@@ -151,6 +213,10 @@
       .right {
         width: 50%;
         max-width: 600px;
+
+        @include mq(sp) {
+          width: 100%;
+        }
 
         dt {
           position: relative;

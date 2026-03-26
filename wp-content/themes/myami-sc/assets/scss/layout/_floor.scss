@@ -1,6 +1,12 @@
+@use "../config/mixins" as *;
+
 .page-floor {
   .floor-container {
     padding: 100px 0;
+
+    @include mq(sp) {
+      padding-bottom: 0;
+    }
 
     .floor-item {
       margin-bottom: 80px;
@@ -27,6 +33,10 @@
         max-width: 900px;
         height: 450px;
         margin: 0 auto;
+
+        @include mq(sp) {
+          height: 350px;
+        }
 
         .img {
           object-fit: contain;

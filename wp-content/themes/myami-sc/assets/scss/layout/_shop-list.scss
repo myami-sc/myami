@@ -1,17 +1,35 @@
+@use "../config/mixins" as *;
+
 .shop-list-page {
   padding-top: 300px;
+
+  @include mq(sp) {
+    padding-top: 150px;
+  }
 
   .shop-list {
     display: flex;
     align-items: flex-start;
 
+    @include mq(sp) {
+      flex-direction: column;
+    }
+
     .title {
       font-size: xx-large;
       margin-bottom: 80px;
+
+      @include mq(sp) {
+        margin-bottom: 50px;
+      }
     }
 
     .tab {
       max-width: 300px;
+
+      @include mq(sp) {
+        max-width: 100%;
+      }
 
       &-wrap {
         border-top: solid 1px #333;
@@ -23,6 +41,9 @@
         color: #999;
         position: relative;
         border-bottom: solid 1px #333;
+
+        @include mq(sp) {
+        }
 
         &.active {
           color: #333;
@@ -37,6 +58,10 @@
             left: 0;
             transform: translateY(-50%);
             background-color: #f13f79;
+
+            @include mq(sp) {
+              height: 3px;
+            }
           }
         }
 
@@ -64,6 +89,12 @@
       padding: 0 6rem 0 3rem;
       width: 27%;
       margin-bottom: 50px;
+
+      @include mq(sp) {
+        position: static;
+        width: 100%;
+        padding: 0 10px;
+      }
     }
 
     &__body {
@@ -79,6 +110,11 @@
       padding-right: 30px;
       margin-bottom: 80px;
       float: left;
+
+      @include mq(sp) {
+        width: 100vw;
+        padding: 0 25px;
+      }
     }
 
     &__link {
@@ -95,6 +131,10 @@
       height: 21.222123vw;
       max-height: 250px;
       overflow: hidden;
+
+      @include mq(sp) {
+        height: 250px;
+      }
 
       img {
         position: absolute;

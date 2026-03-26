@@ -37,4 +37,8 @@
 // page
 .p-inner {
   padding: 150px 90px;
+
+  @include mq(sp) {
+    padding: 150px 10px;
+  }
 }

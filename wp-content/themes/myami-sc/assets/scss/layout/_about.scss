@@ -1,3 +1,5 @@
+@use "../config/mixins" as *;
+
 .page-about {
   position: relative;
 
@@ -5,7 +7,7 @@
     position: relative;
     overflow: hidden;
 
-    .simpleParallax {
+    .img {
       height: 100vh;
     }
 
@@ -23,6 +25,11 @@
     align-items: flex-start;
     padding: 80px 50px;
 
+    @include mq(sp) {
+      padding: 80px 10px;
+      flex-direction: column;
+    }
+
     &__left {
       position: sticky;
       top: 0;
@@ -30,16 +37,30 @@
       width: 50%;
       background-color: #fff;
 
+      @include mq(sp) {
+        position: static;
+        width: 100%;
+      }
+
       .p-inner {
         padding: 0;
         margin-top: 150px;
         margin-bottom: 80px;
+
+        @include mq(sp) {
+          margin-top: 100px;
+          margin-bottom: 10px;
+        }
       }
 
       .parallax-box {
         height: 350px;
 
-        .simpleParallax {
+        @include mq(sp) {
+          height: 200px;
+        }
+
+        .img {
           height: 100%;
         }
       }
@@ -48,8 +69,17 @@
     &__right {
       width: 70%;
 
+      @include mq(sp) {
+        width: 100%;
+        padding-top: 80px;
+      }
+
       ul {
         padding-left: 80px;
+
+        @include mq(sp) {
+          padding-left: 0;
+        }
 
         li {
           padding: 50px 0;
@@ -84,11 +114,19 @@
               font-size: 1.3rem;
               margin-right: 20px;
               font-weight: initial;
+
+              @include mq(sp) {
+                width: 40%;
+              }
             }
 
             dd {
               width: 70%;
               font-size: 1.3rem;
+
+              @include mq(sp) {
+                width: 60%;
+              }
             }
           }
         }
@@ -107,6 +145,10 @@
         padding: 150px 80px;
         z-index: 1;
         transition: 0.3s;
+
+        @include mq(sp) {
+          padding: 150px 20px 200px;
+        }
 
         &:last-child {
           border-top: dashed 1px #333;
@@ -135,6 +177,10 @@
       &__left {
         position: relative;
         width: 50%;
+
+        @include mq(sp) {
+          width: 65%;
+        }
       }
 
       &__right {
@@ -142,6 +188,10 @@
         top: 0;
         right: 0;
         text-align: right;
+
+        @include mq(sp) {
+          top: -40px;
+        }
       }
 
       &__title {
@@ -157,6 +207,21 @@
         letter-spacing: 0.2rem;
         margin: 0 auto;
         transition: 0.3s;
+
+        @include mq(sp) {
+          flex-direction: column;
+          font-size: 24px;
+          gap: 30px;
+        }
+
+        .sp-icon {
+          width: 30px;
+          height: 30px;
+
+          img {
+            object-fit: contain !important;
+          }
+        }
       }
 
       &__description {
@@ -168,6 +233,14 @@
         font-weight: 500;
         letter-spacing: 0.2rem;
         line-height: 1.5;
+
+        @include mq(sp) {
+          right: auto;
+          bottom: -100px;
+          left: 20px;
+          width: 300px;
+          font-size: 14px;
+        }
       }
 
       &__text {
@@ -181,20 +254,26 @@
           position: relative;
           z-index: 1;
           padding: 0 10px;
-        }
-        &.marker::before {
-          background: #fff;
-          content: "";
-          display: inline-block;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          transform: scale(0, 1);
-          transform-origin: right top;
-          transition: transform 0.3s;
-          z-index: -1;
+
+          @include mq(sp) {
+            display: inline-block;
+            padding: 0;
+          }
+
+          &::before {
+            background: #fff;
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: scale(0, 1);
+            transform-origin: right top;
+            transition: transform 0.3s;
+            z-index: -1;
+          }
         }
       }
     }
@@ -203,9 +282,25 @@
   .common-area {
     padding: 80px 50px 150px;
 
+    @include mq(sp) {
+      padding: 50px 10px 100px;
+    }
+
     .p-inner {
       padding: 0;
       margin-bottom: 80px;
+
+      @include mq(sp) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .mb {
+    margin-bottom: -75px;
+
+    @include mq(sp) {
+      margin-bottom: -50px;
     }
   }
 
@@ -224,9 +319,14 @@
       letter-spacing: 0.1em;
       color: #f2f6f5;
 
+      @include mq(sp) {
+        font-size: 75px;
+      }
+
       &:nth-child(odd) {
         animation: loop 40s linear -20s infinite;
-        color: #d2eee7;
+        color: #61cdb0;
+        color: hsla(166, 100%, 38%, 0.6);
       }
 
       &:nth-child(even) {
@@ -243,7 +343,8 @@
 
         &:nth-child(even) {
           animation: loop2 40s linear infinite reverse;
-          color: #d2eee7;
+          color: #e8aee8;
+          color: hsla(352, 100%, 73%, 0.6);
         }
       }
     }

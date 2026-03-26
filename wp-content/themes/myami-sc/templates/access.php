@@ -10,8 +10,6 @@
 
 <div class="page-access">
     <?php if (have_posts()): while (have_posts()): the_post(); ?>
-            <div class="a-bg">
-            </div>
             <section class="a-main">
                 <div class="a-main__left">
                     <h2 class="p-title">Access</h2>

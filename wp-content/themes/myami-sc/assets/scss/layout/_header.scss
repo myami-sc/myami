@@ -384,7 +384,7 @@ body {
               color: #333;
 
               @include mq(sp) {
-                display: block;
+                flex-direction: column;
               }
 
               &__item {

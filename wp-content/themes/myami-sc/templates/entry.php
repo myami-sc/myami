@@ -46,13 +46,13 @@
                         <div class="left">
                             <h2 class="entry-title"><span class="sub">催事・イベントに関するお問い合わせ</span>ENTRY</h2>
                             <p class="text">イベントのお問い合わせは、メールにて承っております。<br />
-                                <a href="<?php echo esc_url(home_url('events/guide')); ?>"><span>お問い合わせ方法</span></a>を必ずお読みいただいてから、お問い合わせください。<br />
+                                <a href="<?php echo esc_url(home_url('events/guide')); ?>"><span>ご利用方法</span></a>を必ずお読みいただいてから、お問い合わせください。<br />
                                 3営業日以内（土日祝日を除く）に、担当者よりメールにて返信させていただきます。<br />
                                 ※ご提供いただきましたお客様の個人情報は、お問い合わせの目的のみで利用します。
                             </p>
                             <div class="link-area">
-                                <button><a href="<?php echo esc_url(home_url('events/guide')); ?>"><span>お問い合わせ方法</span></a></button>
-                                <button><a href="<?php echo esc_url(home_url('events/space')); ?>"><span>募集スペース</span></a></button>
+                                <button><a href="<?php echo esc_url(home_url('events/guide')); ?>"><span>ご利用<br class="--sp">方法</span></a></button>
+                                <button><a href="<?php echo esc_url(home_url('events/space')); ?>"><span>募集<br class="--sp">スペース</span></a></button>
                                 <button><a href="<?php echo esc_url(home_url('events/file')); ?>"><span>申請書類</span></a></button>
                             </div>
                         </div>

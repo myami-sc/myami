@@ -23,17 +23,6 @@ createParallax(".js-parallax-2", 2.3, 1.5);
 createParallax(".js-parallax-3", 2.3, 1.5);
 createParallax(".js-parallax-4", 1, 1.3);
 
-/* scroll
-========================================================= */
-// const lenis = new Lenis();
-
-// function raf(time) {
-//   lenis.raf(time);
-//   requestAnimationFrame(raf);
-// }
-
-// requestAnimationFrame(raf);
-
 /* fade
 ========================================================= */
 // in

@@ -102,28 +102,28 @@
                         </div>
                     </div>
                 </section>
-                <section style="margin-bottom: -75px;">
+                <section class="mb">
                     <div class="flowing-ttl">
-                        <div class="flowing-ttl__item">MAYAMI SHOPING CENTER</div>
-                        <div class="flowing-ttl__item">MAYAMI SHOPING CENTER</div>
-                        <div class="flowing-ttl__item">MAYAMI SHOPING CENTER</div>
-                        <div class="flowing-ttl__item">MAYAMI SHOPING CENTER</div>
-                        <div class="flowing-ttl__item">MAYAMI SHOPING CENTER</div>
+                        <div class="flowing-ttl__item">MAYAMI</div>
+                        <div class="flowing-ttl__item">MAYAMI</div>
+                        <div class="flowing-ttl__item">MAYAMI</div>
+                        <div class="flowing-ttl__item">MAYAMI</div>
+                        <div class="flowing-ttl__item">MAYAMI</div>
                     </div>
                     <div class="flowing-ttl reverse">
-                        <div class="flowing-ttl__item">MAYAMI SHOPING CENTER</div>
-                        <div class="flowing-ttl__item">MAYAMI SHOPING CENTER</div>
-                        <div class="flowing-ttl__item">MAYAMI SHOPING CENTER</div>
-                        <div class="flowing-ttl__item">MAYAMI SHOPING CENTER</div>
-                        <div class="flowing-ttl__item">MAYAMI SHOPING CENTER</div>
+                        <div class="flowing-ttl__item">SHOPING CENTER</div>
+                        <div class="flowing-ttl__item">SHOPING CENTER</div>
+                        <div class="flowing-ttl__item">SHOPING CENTER</div>
+                        <div class="flowing-ttl__item">SHOPING CENTER</div>
+                        <div class="flowing-ttl__item">SHOPING CENTER</div>
                     </div>
                 </section>
                 <section class="ab-lower">
                     <div class="guide-area">
-                        <a href="">
+                        <a href="<?php echo esc_url(home_url('recruit')); ?>">
                             <div class="guide-area__wrap">
                                 <div class="guide-area__left">
-                                    <h2 class="guide-area__title">Recruit</h2>
+                                    <h2 class="guide-area__title">Recruit<span class="sp-icon --sp"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_arrow.png')); ?>" class="img" alt=""></span></h2>
                                     <p class="guide-area__description">人と街が集まる場所で、<br />
                                         毎日を支える仕事をしませんか。<br />
                                         <br />
@@ -133,24 +133,24 @@
                                     </p>
                                 </div>
                                 <div class="guide-area__right">
-                                    <span class="guide-area__text marker">「採用情報」<br />あなたの気配りが、<br />この場所の“心地よさ”になります。</span>
+                                    <span class="guide-area__text marker">「採用情報」<br />あなたの気配りが、<br />この場所の“心地よさ”に<br class="--sp">なります。</span>
                                 </div>
                             </div>
                         </a>
                         <a href="<?php echo esc_url(home_url('space#store')); ?>">
                             <div class="guide-area__wrap">
                                 <div class="guide-area__left">
-                                    <h2 class="guide-area__title">Opening a Store</h2>
-                                    <p class="guide-area__description">地域に根差したショッピングセンターとして、<br />
+                                    <h2 class="guide-area__title">Opening<br class="--sp"> a <br class="--sp">Store<span class="sp-icon --sp"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_arrow.png')); ?>" class="img" alt=""></span></h2>
+                                    <p class="guide-area__description">地域に根差したショッピングセンターとして、<br class="--pc">
                                         当施設では法人様の出店を広く募集しております。<br />
                                         <br />
                                         物販・サービス・催事など、<br />
-                                        さまざまな業種でご利用いただける環境を<br />
+                                        さまざまな業種でご利用いただける環境を<br class="--pc">
                                         ご用意しております。
                                     </p>
                                 </div>
                                 <div class="guide-area__right">
-                                    <span class="guide-area__text marker">「出店情報」<br />法人様を対象とした<br />出店事業者様を募集しております。</span>
+                                    <span class="guide-area__text marker">「出店情報」<br />法人様を対象とした<br />出店事業者様を募集して<br class="--sp">おります。</span>
                                 </div>
                             </div>
                         </a>

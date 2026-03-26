@@ -1,3 +1,5 @@
+@use "../config/mixins" as *;
+
 .event-single {
   &__title {
     margin-bottom: 40px;
@@ -9,6 +11,10 @@
 
   &__upper {
     padding: 150px 90px 0;
+
+    @include mq(sp) {
+      padding: 150px 10px 0;
+    }
 
     .wrap {
       font-size: 18px;
@@ -60,6 +66,10 @@
     padding: 50px 90px 150px;
     letter-spacing: 0.135em;
 
+    @include mq(sp) {
+      padding: 50px 10px 80px;
+    }
+
     .subheading {
       margin-bottom: 20px;
       font-weight: 600;
@@ -71,6 +81,7 @@
 
       .detail {
         width: 50%;
+        font-size: 14px;
 
         dl {
           margin-bottom: 20px;
@@ -86,6 +97,12 @@
             height: 200px;
             width: 200px;
             margin: 0 auto;
+
+            @include mq(sp) {
+              height: 150px;
+              width: 150px;
+              margin-right: 0;
+            }
           }
         }
       }
