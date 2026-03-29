@@ -618,6 +618,10 @@
         font-weight: 600;
         letter-spacing: 0.2rem;
 
+        @include mq(sp) {
+          padding-left: 70px;
+        }
+
         &:before,
         &:after {
           content: "";
@@ -711,6 +715,8 @@
       font-size: 18px;
       font-weight: 600;
       margin-bottom: 50px;
+      letter-spacing: 0.2em;
+      line-height: 1.5;
     }
   }
 }

@@ -17,8 +17,8 @@
                             <a href="<?php echo esc_url(home_url('recruit/r-form')); ?>">
                                 <div class="guide-area__wrap">
                                     <div class="guide-area__left">
-                                        <h2 class="guide-area__title">Recruit</h2>
-                                        <p class="guide-area__description">採用についてはこちら</p>
+                                        <h2 class="guide-area__title">Recruit Form</h2>
+                                        <p class="guide-area__description">採用についてのお問い合わせはこちら</p>
                                     </div>
                                     <div class="button">
                                         <span>recruit</span>
@@ -33,7 +33,7 @@
                                 <div class="guide-area__wrap">
                                     <div class="guide-area__left">
                                         <h2 class="guide-area__title">Event Entry</h2>
-                                        <p class="guide-area__description">イベント出店についてはこちら</p>
+                                        <p class="guide-area__description">イベント出店についてのお問い合わせはこちら</p>
                                     </div>
                                     <div class="button">
                                         <span>event</span>

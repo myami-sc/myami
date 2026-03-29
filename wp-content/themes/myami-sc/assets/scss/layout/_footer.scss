@@ -20,6 +20,13 @@
         height: 100%;
         color: #fff;
 
+        @include mq(sp) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+
         .logo {
           width: 150px;
           margin: 0 auto 30px;
@@ -72,10 +79,18 @@
       &__box {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        @include mq(sp) {
+          grid-template-columns: 1fr 1fr;
+        }
       }
 
       &__item {
         height: 300px;
+
+        @include mq(sp) {
+          height: 215px;
+        }
       }
     }
   }

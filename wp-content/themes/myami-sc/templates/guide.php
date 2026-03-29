@@ -32,9 +32,8 @@
                                 <p class="num">01</p>
                                 <h3 class="title">（ 空き状況の確認 ）</h3>
                                 <ul class="list">
-                                    <li>イベントカレンダーにて日付とイベントスペースのご利用状況をご確認ください。</li>
-                                    <li>予約可能催事の受付日程につきましては、3ヶ月後の末日までの予約が可能となります。</li>
-                                    <li><strong>例：1/15の場合、４月末まで予約が可能</strong></li>
+                                    <li>イベントカレンダーにてイベントスペースのご利用状況をご確認ください。<br /><br /><strong class="notice">※開催スペースにお間違いがないようご確認ください</strong></li>
+                                    <li>予約可能催事の受付日程につきましては、3ヶ月後の末日までの予約が可能となります。<br /><br /><strong class="notice">例：1/15の場合、４月末まで予約が可能</strong></li>
                                 </ul>
                                 <button class="btn"><a href="<?php echo esc_url(home_url('events')); ?>"><span>カレンダーを確認する</span></a></button>
                             </div>
@@ -45,9 +44,9 @@
                                 <p class="num">02</p>
                                 <h3 class="title">（ フォームの入力 ）</h3>
                                 <ul class="list">
-                                    <li>お問い合わせの種類をご選択後、各項目を入力ください。</li>
-                                    <li>新規申込みの場合は日程予約の前に事前に提出いただく書類がございます。</li>
-                                    <li>複数の日付を申込みの場合はその旨を確認事項にご記載ください。</li>
+                                    <li>お問い合わせの種類をご選択後、各項目をご入力ください。</li>
+                                    <li>新規でのお申込みの場合は日程予約の前に事前に提出いただく書類がございます。<br />書類については<a onclick="lenis.scrollTo('#ttl2'); return false;">新規申込について</a>をご覧ください。</li>
+                                    <li>日程が複数の場合の申込みは確認事項にその旨をご記載ください。</li>
                                 </ul>
                                 <button class="btn"><a href="<?php echo esc_url(home_url('events/entry')); ?>"><span>イベントフォームへ</span></a></button>
                             </div>
@@ -58,7 +57,7 @@
                                 <p class="num">03</p>
                                 <h3 class="title">（ 日程の確定 ）</h3>
                                 <ul class="list">
-                                    <li>正式に日程が確定した場合は確定メールをお送りしております。</li>
+                                    <li>申請書をお送りいただき、正式に日程が確定した場合は確定メールをお送りしております。</li>
                                     <li>カレンダーの更新タイミングによって既に予定が埋まってしまっている場合がございます。</li>
                                 </ul>
                             </div>
@@ -76,6 +75,17 @@
                                 </ul>
                             </div>
                             <div class="content-img"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_05.jpg')); ?>" class="img" alt=""></div>
+                        </div>
+                        <div class="area-content">
+                            <div class="content-box">
+                                <p class="num">05</p>
+                                <h3 class="title">（ キャンセルについて ）</h3>
+                                <ul class="list">
+                                    <li>①変更の届出<br />お申し込みのお手続きを頂いた後、利用者の都合により、利用期日、時間を変更される場合や申し込みを取消される場合は、すみやかにメールまたはお電話にてご連絡下さい。<br /><br /><strong class="notice">※利用期日、時間等の変更により、追加料金あるいは取消料金を申し受ける場合があります。</strong></li>
+                                    <li>②キャンセルによる使用料金等の取扱い<br />申込みの確定後、出店者様都合による取消の場合は下記の通りキャンセル料を申し受けます。<br /><br /><strong class="notice">○ご使用日の14日前以降のキャンセル ＝ 基本使用料金の全額</strong></li>
+                                </ul>
+                            </div>
+                            <div class="content-img"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_04.jpg')); ?>" class="img" alt=""></div>
                         </div>
                     </section>
                     <section class="guide-area area2">

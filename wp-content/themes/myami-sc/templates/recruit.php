@@ -24,8 +24,8 @@
                     </div>
                 </div>
                 <div class="recruit-middle">
-                    <h2 class="r-title">地域に愛される場所を、一緒につくる仲間を募集しています。</h2>
-                    <p class="description">お客様対応からご要望まで、柔軟に伺い、お客様満足度を高める。<br />そんな私たちの仲間を募集しています。みなさまのご応募、心よりお待ち致します。</p>
+                    <h2 class="r-title">地域に愛される場所を、<br class="--sp">一緒につくる仲間を<br class="--sp">募集しています。</h2>
+                    <p class="description">お客様対応からご要望まで、柔軟に伺い、<br class="--sp">お客様満足度を高める。<br />そんな私たちの仲間を募集しています。<br class="--sp">みなさまのご応募、心よりお待ち致します。</p>
                     <div class="r-link-list">
                         <div class="r-item --r01"><a href="<?php echo esc_url(home_url('recruit/essentials01')); ?>"><span>サービスカウンター</span></a></div>
                         <div class="r-item --r02"><a href="<?php echo esc_url(home_url('recruit/essentials02')); ?>"><span>施設警備員</span></a></div>

@@ -49,7 +49,7 @@ add_filter('eventorganiser_event_tooltip', function ($description) {
     $content = strip_shortcodes($content);
     $plain_text = strip_tags($content);
     $limit = 150;
-    $$venue_id = eo_get_venues();
+    $venue_id = eo_get_venues();
     $venue_name = eo_get_venue_name($venue_id);
     $venue = '<span class="location">' . $venue_name . '</span>';
 

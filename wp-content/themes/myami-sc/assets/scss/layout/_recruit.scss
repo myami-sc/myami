@@ -1,3 +1,5 @@
+@use "../config/mixins" as *;
+
 .page-recruit {
   .recruit-upper {
     position: relative;
@@ -10,8 +12,16 @@
       color: #fff;
       z-index: 1;
 
+      @include mq(sp) {
+        left: 5%;
+      }
+
       .en {
         font-size: 80px;
+
+        @include mq(sp) {
+          font-size: 60px;
+        }
       }
 
       .jp {
@@ -22,6 +32,11 @@
     .gallery {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      @include mq(sp) {
+        grid-template-columns: auto;
+        grid-template-rows: 25vh 25vh 25vh 25vh;
+      }
 
       &::before {
         content: "";
@@ -35,6 +50,10 @@
 
       .figure {
         height: 700px;
+
+        @include mq(sp) {
+          height: auto;
+        }
       }
     }
   }
@@ -45,6 +64,11 @@
       text-align: center;
       letter-spacing: 0.2em;
       padding: 150px 20px 20px;
+
+      @include mq(sp) {
+        font-size: 25px;
+        padding: 100px 10px 50px;
+      }
     }
 
     .description {
@@ -53,6 +77,12 @@
       letter-spacing: 0.2em;
       line-height: 1.5;
       margin-bottom: 150px;
+
+      @include mq(sp) {
+        font-size: 14px;
+        padding: 0 10px;
+        margin-bottom: 100px;
+      }
     }
 
     .r-link-list {
@@ -62,13 +92,33 @@
       width: 950px;
       margin: 0 auto;
 
+      @include mq(sp) {
+        width: 100%;
+        gap: 10px;
+        padding: 0 10px;
+      }
+
       &.--full {
         display: block;
         margin: 50px auto;
 
+        @include mq(sp) {
+          margin: 10px auto;
+        }
+
+        &:last-child {
+          @include mq(sp) {
+            margin-bottom: 100px;
+          }
+        }
+
         .r-item {
           width: 100%;
           height: 400px;
+
+          @include mq(sp) {
+            height: 165px;
+          }
         }
       }
 
@@ -77,6 +127,11 @@
         width: 450px;
         height: 650px;
         transition: 0.3s ease;
+
+        @include mq(sp) {
+          height: 250px;
+          width: 100%;
+        }
 
         &::before {
           content: "";
@@ -133,11 +188,20 @@
           width: 100%;
           height: 100%;
 
+          @include mq(sp) {
+            font-size: 14px;
+          }
+
           span {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+
+            @include mq(sp) {
+              width: 100%;
+              text-align: center;
+            }
           }
         }
       }

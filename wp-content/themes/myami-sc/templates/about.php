@@ -93,7 +93,7 @@
                                 </a>
                             </article>
                             <article>
-                                <a href="">
+                                <a href="<?php echo esc_url(home_url('contact')); ?>">
                                     <figure class="list-img"><img class="img" src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_05.jpg')); ?>" autoplay muted loop playsinline></img></figure>
                                     <h3 class="list-title">お問い合わせ</h3>
                                     <span class="arrow"></span>

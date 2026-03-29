@@ -10,10 +10,6 @@ body {
   width: 100%;
   z-index: 3;
 
-  &.--top {
-    background: transparent;
-  }
-
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -556,6 +552,51 @@ body {
             }
             &:last-child {
               display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // top page
+  &.--top {
+    background: transparent;
+
+    .l-header__inner {
+      @include mq(sp) {
+        position: relative;
+        border-bottom: 1px solid #fff;
+        background: rgba(255, 255, 255, 0.34);
+        margin: 8px;
+        transition:
+          background 0.4s ease,
+          margin 0.4s ease,
+          backdrop-filter 0.4s ease;
+
+        &.--scrolled {
+          background: rgba(0, 0, 0, 0.8) !important;
+          backdrop-filter: blur(10px);
+          margin: 0 !important;
+          border-bottom: none;
+        }
+      }
+    }
+
+    .toggle-btn {
+      span {
+        @include mq(sp) {
+          background-color: #fff;
+        }
+      }
+    }
+
+    .hamburger {
+      &.--open {
+        .toggle-btn {
+          span {
+            @include mq(sp) {
+              background-color: #333;
             }
           }
         }

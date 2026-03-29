@@ -161,7 +161,7 @@
       padding: 10px 16px;
 
       @include mq(sp) {
-        padding: 2px;
+        padding: 5px;
       }
 
       .fc-time {
@@ -183,7 +183,7 @@
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
-          max-width: 8em;
+          max-width: 12em;
         }
       }
     }
@@ -259,4 +259,33 @@
       }
     }
   }
+}
+
+.eo-fullcalendar .fc-header-toolbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* 会場を上に */
+.eo-fullcalendar .fc-header-toolbar > .fc-toolbar-chunk:last-child {
+  order: -1;
+  margin-bottom: 10px;
+}
+
+/* 下段 */
+.eo-fullcalendar .fc-header-toolbar > .fc-toolbar-chunk {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 日付左 */
+.eo-fullcalendar .fc-toolbar-title {
+  margin-right: 20px;
+}
+
+/* ボタン右 */
+.eo-fullcalendar .fc-header-toolbar > .fc-toolbar-chunk:first-child {
+  margin-left: auto;
 }

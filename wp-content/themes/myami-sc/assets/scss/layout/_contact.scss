@@ -1,3 +1,5 @@
+@use "../config/mixins" as *;
+
 .page-contact {
   .c-block {
     .guide-area {
@@ -51,6 +53,10 @@
         z-index: 1;
         transition: 0.3s;
 
+        @include mq(sp) {
+          padding: 75px 40px;
+        }
+
         &::before {
           content: "";
           width: 100%;
@@ -78,6 +84,10 @@
           font-size: 30px;
           font-weight: 600;
           letter-spacing: 0.2rem;
+
+          @include mq(sp) {
+            padding-left: 70px;
+          }
 
           &:before,
           &:after {
@@ -147,6 +157,14 @@
       &__wrap {
         display: flex;
         align-items: center;
+
+        @include mq(sp) {
+          flex-direction: column;
+        }
+      }
+
+      &__left {
+        width: 100%;
       }
 
       &__title {
@@ -154,12 +172,18 @@
         font-weight: 600;
         letter-spacing: 0.2rem;
         margin-bottom: 50px;
+
+        @include mq(sp) {
+          font-size: 50px;
+        }
       }
 
       &__description {
         font-size: 18px;
         font-weight: 600;
         margin-bottom: 50px;
+        letter-spacing: 0.2em;
+        line-height: 1.5;
       }
     }
   }
