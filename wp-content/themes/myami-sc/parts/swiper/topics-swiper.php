@@ -20,7 +20,7 @@
                                 if (has_post_thumbnail()) {
                                     the_post_thumbnail('thumbnail', array('class' => 'img'));
                                 } else {
-                                    echo '<img src="' . esc_url(get_theme_file_uri('assets/images/logo.png')) . '" class="img">';
+                                    echo '<img src="' . esc_url(get_theme_file_uri('assets/images/logo.png')) . '" class="img" alt="トピックスイメージ">';
                                 }
                                 ?>
                             </div>

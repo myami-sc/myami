@@ -37,7 +37,7 @@
                                 </ul>
                                 <button class="btn"><a href="<?php echo esc_url(home_url('events')); ?>"><span>カレンダーを確認する</span></a></button>
                             </div>
-                            <div class="content-img"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_03.jpg')); ?>" class="img" alt=""></div>
+                            <div class="content-img"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/guide/guide_img_01.png')); ?>" class="img" alt="イベント申込みイメージ"></div>
                         </div>
                         <div class="area-content --reverse">
                             <div class="content-box">
@@ -50,7 +50,7 @@
                                 </ul>
                                 <button class="btn"><a href="<?php echo esc_url(home_url('events/entry')); ?>"><span>イベントフォームへ</span></a></button>
                             </div>
-                            <div class="content-img"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_02.jpg')); ?>" class="img" alt=""></div>
+                            <div class="content-img"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/guide/guide_img_02.png')); ?>" class="img" alt="イベント申込みイメージ"></div>
                         </div>
                         <div class="area-content">
                             <div class="content-box">
@@ -61,7 +61,7 @@
                                     <li>カレンダーの更新タイミングによって既に予定が埋まってしまっている場合がございます。</li>
                                 </ul>
                             </div>
-                            <div class="content-img"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_04.jpg')); ?>" class="img" alt=""></div>
+                            <div class="content-img"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/guide/guide_img_03.png')); ?>" class="img" alt="イベント申込みイメージ"></div>
                         </div>
                         <div class="area-content --reverse">
                             <div class="content-box">
@@ -71,10 +71,10 @@
                                     <li>搬入口にある防災センターにて受付をお願い致します。</li>
                                     <li>事前に搬入経路をご確認いただき、搬入口から店内へ持ち込みをお願い致します。</li>
                                     <li>使用備品の貸出しは当日警備員にお申し付けください。</li>
-                                    <li>物販の場合は、営業終了後、サービスカウンターにて日報をご記載ください。</li>
+                                    <li>物販の場合は、営業終了後、サービスカウンターにて日報をご記載ください。そちらを３F事務所までお持ちいただき当日精算となります。</li>
                                 </ul>
                             </div>
-                            <div class="content-img"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_05.jpg')); ?>" class="img" alt=""></div>
+                            <div class="content-img"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_05.jpg')); ?>" class="img" alt="イベント申込みイメージ"></div>
                         </div>
                         <div class="area-content">
                             <div class="content-box">
@@ -85,7 +85,7 @@
                                     <li>②キャンセルによる使用料金等の取扱い<br />申込みの確定後、出店者様都合による取消の場合は下記の通りキャンセル料を申し受けます。<br /><br /><strong class="notice">○ご使用日の14日前以降のキャンセル ＝ 基本使用料金の全額</strong></li>
                                 </ul>
                             </div>
-                            <div class="content-img"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_04.jpg')); ?>" class="img" alt=""></div>
+                            <div class="content-img"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/guide/guide_img_05.jpg')); ?>" class="img" alt="イベント申込みイメージ"></div>
                         </div>
                     </section>
                     <section class="guide-area area2">
@@ -115,13 +115,13 @@
                         <button class="btn"><a href="<?php echo esc_url(home_url('events/file')); ?>"><span>申請書類はこちら</span></a></button>
                         <div class="area-content --grid">
                             <div class="content-box --line">
-                                <div class="figure"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_notice03.png')); ?>" class="img" alt=""></div>
+                                <div class="figure"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_notice03.png')); ?>" class="img" alt="告知アイコン"></div>
                                 <h3 class="title">事前告知について</h3>
                                 <p class="text">弊社SNSやHPにて掲載可能な画像を複数枚お送りください。</p>
                                 <p class="text">PRポイントなど告知の文書に指定がございましたら、メールまたは資料にてお送りください。</p>
                             </div>
                             <div class="content-box --line">
-                                <div class="figure"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_bnr.png')); ?>" class="img" alt=""></div>
+                                <div class="figure"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_bnr.png')); ?>" class="img" alt="広告アイコン"></div>
                                 <h3 class="title">広告バナー掲載について</h3>
                                 <p class="text">当HPのメニュー内に広告用のバナーを設置いただけます。</p>
                                 <p class="text">指定したリンク先への遷移も可能となります。</p>
@@ -134,28 +134,28 @@
                         <h2 id="ttl3" class="p-title">催事申請書について</h2>
                         <div class="area-content --grid">
                             <div class="content-box --line">
-                                <div class="figure"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_schedule02.png')); ?>" class="img" alt=""></div>
+                                <div class="figure"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_schedule02.png')); ?>" class="img" alt="カレンダーアイコン"></div>
                                 <h3 class="title">日時</h3>
                                 <p class="text">搬入、搬出を含めた時間を記載ください。</p>
                                 <p class="text">搬入は原則当日となります。規模により前日搬入をご希望の場合はご相談下さい。</p>
                             </div>
                             <div class="content-box --line">
-                                <div class="figure"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_lending02.png')); ?>" class="img" alt=""></div>
+                                <div class="figure"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_lending02.png')); ?>" class="img" alt="貸出用品アイコン"></div>
                                 <h3 class="title">貸出用品</h3>
                                 <p class="text">１日ごとに料金が発生致します。貸出品ごとの料金につきましては申請書事務処理欄の貸出用品料金をご覧ください。</p>
                                 <p class="text">搬入は原則当日となります。規模により前日搬入をご希望の場合はご相談下さい。</p>
                             </div>
                             <div class="content-box --line">
-                                <div class="figure"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_conditions04.png')); ?>" class="img" alt=""></div>
+                                <div class="figure"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_conditions04.png')); ?>" class="img" alt="使用条件アイコン"></div>
                                 <h3 class="title">使用条件</h3>
-                                <p class="text">売上歩合：ご利用を希望されているスペースごとに％が異なります。物販を希望されている場合はこちらとなります。</p>
-                                <p class="text">固定料金：ご利用を希望されているスペースごとに金額が異なります。物販以外はこちらとなります。</p>
+                                <p class="text">[売上歩合]：ご利用を希望されているスペースごとに％が異なります。物販を希望されている場合はこちらとなります。</p>
+                                <p class="text">[固定料金]：ご利用を希望されているスペースごとに金額が異なります。物販以外はこちらとなります。</p>
                             </div>
                             <div class="content-box --line">
-                                <div class="figure"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_pay.png')); ?>" class="img" alt=""></div>
+                                <div class="figure"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_pay.png')); ?>" class="img" alt="精算方法アイコン"></div>
                                 <h3 class="title">精算方法</h3>
-                                <p class="text">現金精算：使用条件が売上歩合の場合は、当日３F事務所にてご精算となります。詳しくは当日サービスカウンターにてご確認ください。</p>
-                                <p class="text">請求書発行銀行振込精算：後日、メールにてご請求をお送りいたしますので翌月末までにお支払いお願いいたします。</p>
+                                <p class="text">[現金精算]：使用条件が売上歩合の場合は、当日３F事務所にてご精算となります。詳しくは当日３F事務所またはサービスカウンターにてご確認ください。</p>
+                                <p class="text">[請求書発行銀行振込精算]：後日、メールにてご請求をお送りいたしますので翌月末までにお支払いお願いいたします。</p>
                                 <p class="text">※振込手数料は貴社ご負担にて、請求金額全額をご入金くださいますようお願い申し上げます。</p>
                             </div>
                         </div>

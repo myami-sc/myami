@@ -23,20 +23,31 @@
             </div>
         </div>
         <div id="tabbody" class="tabbody">
-            <div class="tabbody-elem" id="tab-page1">
+            <div class="tabbody-elem is-show" id="tab-page1">
                 <div class="shop-list__body">
-                    <?php if (have_posts()) : ?>
-                        <?php while (have_posts()) : the_post(); ?>
+                    <?php
+                    $args_all = array(
+                        'post_type' => 'shop',
+                        'posts_per_page' => -1,
+                    );
+                    $query_all = new WP_Query($args_all);
+
+                    if ($query_all->have_posts()) :
+                        while ($query_all->have_posts()) : $query_all->the_post(); ?>
                             <div class="shop-list__item">
                                 <a class="shop-list__link" href="<?php the_permalink(); ?>">
                                     <div class="shop-list__img">
-                                        <?php if (has_post_thumbnail()) {
-                                            the_post_thumbnail('full');
-                                        } ?>
+                                        <?php if (has_post_thumbnail()) the_post_thumbnail('full', array('data-no-lazy' => '1')); ?>
                                     </div>
                                 </a>
                                 <div class="shop-list__content">
                                     <h3 class="subheading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                    <p class="time">
+                                        <?php $time = get_field('time');
+                                        if ($time): ?>
+                                            <?php echo $time; ?>
+                                        <?php endif; ?>
+                                    </p>
                                     <p class="category">
                                         <?php
                                         $terms = get_the_terms($post->ID, 'shop_cate');
@@ -59,14 +70,11 @@
                                     <a href="<?php the_permalink(); ?>" class="detail">店舗詳細を見る<span class="icon">→</span></a>
                                 </div>
                             </div>
-                        <?php endwhile; ?>
-
-                        <?php the_posts_navigation(); ?>
-
-                    <?php else : ?>
+                        <?php endwhile;
+                        wp_reset_postdata();
+                    else : ?>
                         <p>現在、テナントはありません。</p>
                     <?php endif; ?>
-
                 </div>
             </div>
             <div class="tabbody-elem" id="tab-page2">
@@ -97,6 +105,12 @@
                             </a>
                             <div class="shop-list__content">
                                 <h3 class="subheading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                <p class="time">
+                                    <?php $time = get_field('time');
+                                    if ($time): ?>
+                                        <?php echo $time; ?>
+                                    <?php endif; ?>
+                                </p>
                                 <p class="category">
                                     <?php
                                     $terms = get_the_terms($post->ID, 'shop_cate');
@@ -155,6 +169,12 @@
                             </a>
                             <div class="shop-list__content">
                                 <h3 class="subheading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                <p class="time">
+                                    <?php $time = get_field('time');
+                                    if ($time): ?>
+                                        <?php echo $time; ?>
+                                    <?php endif; ?>
+                                </p>
                                 <p class="category">
                                     <?php
                                     $terms = get_the_terms($post->ID, 'shop_cate');
@@ -213,6 +233,12 @@
                             </a>
                             <div class="shop-list__content">
                                 <h3 class="subheading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                <p class="time">
+                                    <?php $time = get_field('time');
+                                    if ($time): ?>
+                                        <?php echo $time; ?>
+                                    <?php endif; ?>
+                                </p>
                                 <p class="category">
                                     <?php
                                     $terms = get_the_terms($post->ID, 'shop_cate');
@@ -271,6 +297,12 @@
                             </a>
                             <div class="shop-list__content">
                                 <h3 class="subheading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                <p class="time">
+                                    <?php $time = get_field('time');
+                                    if ($time): ?>
+                                        <?php echo $time; ?>
+                                    <?php endif; ?>
+                                </p>
                                 <p class="category">
                                     <?php
                                     $terms = get_the_terms($post->ID, 'shop_cate');

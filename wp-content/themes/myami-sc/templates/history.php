@@ -287,6 +287,18 @@
                                 </p>
                             </dd>
                         </dl>
+                        <dl>
+                            <dt>
+                                <span class="ad">2025</span>
+                                <span class="jc">年（令和 7年）</span>
+                            </dt>
+                            <dd>
+                                <p>
+                                    <span class="month">11月</span>
+                                    <span class="text">1F売場に「サンドラッグ」OPEN</span>
+                                </p>
+                            </dd>
+                        </dl>
                     </div>
                 </div>
             </div>

@@ -50,12 +50,8 @@
   }
 
   .guide-area {
-    width: 1050px;
+    max-width: 1050px;
     margin: 0 auto;
-
-    @include mq(sp) {
-      width: 100%;
-    }
 
     .p-title {
       font-size: 50px;
@@ -188,7 +184,7 @@
         width: 50%;
 
         @include mq(sp) {
-          height: 150px;
+          height: 200px;
           width: 100%;
           margin-bottom: 20px;
         }
@@ -198,10 +194,12 @@
     .new-application {
       display: flex;
       padding: 4rem 0;
+      gap: 50px;
 
       @include mq(sp) {
         flex-direction: column;
         padding-bottom: 30px;
+        gap: 0;
       }
 
       .left {
@@ -238,18 +236,25 @@
           font-size: 20px;
           margin-bottom: 10px;
 
+          @include mq(sp) {
+            padding-left: 25px;
+          }
+
           &::before {
             content: "";
             position: absolute;
-            top: 50%;
+            top: 0;
             left: -30px;
-            transform: translateY(-50%);
             display: block;
             width: 20px;
             height: 20px;
             background-image: url(assets/images/icon/i_file.png);
             background-position: center;
             background-size: cover;
+
+            @include mq(sp) {
+              left: 0;
+            }
           }
         }
 
@@ -257,6 +262,10 @@
           padding-bottom: 30px;
           border-bottom: 1px solid #ccc;
           margin-bottom: 30px;
+
+          @include mq(sp) {
+            padding-left: 25px;
+          }
         }
       }
     }

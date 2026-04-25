@@ -9,19 +9,22 @@ swiper
   position: relative;
   border-radius: 30px;
   min-width: 0;
+  width: 100%;
+  height: 100%;
   overflow: initial !important;
 
   @include mq(sp) {
-    border-radius: 0;
     overflow: hidden !important;
+    border-radius: 0;
+    height: 100svh;
   }
 
   .swiper-wrapper {
     .swiper-slide {
-      height: calc(100dvh - 160px);
+      height: calc(100svh - 160px);
 
       @include mq(sp) {
-        height: 100dvh;
+        height: 100svh;
       }
 
       .img {
@@ -31,6 +34,7 @@ swiper
 
         @include mq(sp) {
           border-radius: 0;
+          height: 100svh !important;
         }
       }
     }

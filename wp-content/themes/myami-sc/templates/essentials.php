@@ -15,7 +15,7 @@
                     <div class="essentials-container">
                         <div class="essentials-content"><?php the_content(); ?></div>
                         <div class="essentials-bottom">
-                            <div class="btn"><a href="<?php echo esc_url(home_url('news-list')); ?>"><span>ENTRY</span></a></div>
+                            <div class="btn"><a href="<?php echo esc_url(home_url('contact/r-form')); ?>"><span>ENTRY</span></a></div>
                             <button class="btn02"><a href="<?php echo esc_url(home_url('recruit')); ?>"><span>一覧に戻る</span></a></button>
                         </div>
                     </div>

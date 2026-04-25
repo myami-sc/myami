@@ -40,7 +40,7 @@ add_filter('eventorganiser_event_properties', function ($args) {
 add_filter('eventorganiser_event_tooltip', function ($description) {
 
     $thumbnail_url = get_the_post_thumbnail_url();
-    $thumbnail = '<img  class="img" src="' . $thumbnail_url . '" alt="">';
+    $thumbnail = '<img  class="img" src="' . $thumbnail_url . '" alt="イベントイメージ">';
     $date_url = eo_get_the_start('Y - m - d');
     $date = '<span class="date">' . $date_url . '</span>';
     $time_url = eo_get_schedule_start('g:i') . ' - ' . eo_get_the_end('g:i');

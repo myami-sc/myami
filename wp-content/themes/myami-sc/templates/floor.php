@@ -28,14 +28,14 @@
 
                                     $floor = $index + 1;
                         ?>
-                                    <div class="floor-item">
+                                    <div class="floor-item js-fade-in">
                                         <h3 class="subheading">
                                             <span class="icon"><?php echo $floor; ?>F</span>Map
                                         </h3>
                                         <div class="figure">
                                             <img src="<?php echo esc_url($url); ?>" class="img colorbox-img" alt="<?php echo $floor; ?>F フロアマップ">
                                             <div class="figcaption">
-                                                <div class="guid-icon"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_full_screen02.png')); ?>" class="img" alt=""></div>
+                                                <div class="guid-icon"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_full_screen02.png')); ?>" class="img" alt="拡大アイコン"></div>
                                                 <p class="guid-txt">拡大する</p>
                                             </div>
                                         </div>

@@ -37,8 +37,12 @@
         border-color: transparent transparent rgb(217, 217, 217);
         text-align: center;
 
+        @include mq(tab) {
+          width: 100%;
+        }
+
         @include mq(sp) {
-          width: 33%;
+          width: 100%;
         }
 
         &.--current {

@@ -73,7 +73,7 @@
 
 @media screen and (max-width: 767px) {
   .cboxPhoto {
-    height: 100% !important;
+    height: 750px !important;
     width: 1000px !important;
   }
 }

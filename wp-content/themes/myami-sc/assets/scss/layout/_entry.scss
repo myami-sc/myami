@@ -30,6 +30,7 @@
     display: flex;
     align-items: flex-end;
     border-bottom: solid 1px #179342;
+    padding-top: 20px;
 
     @include mq(sp) {
       flex-direction: column;

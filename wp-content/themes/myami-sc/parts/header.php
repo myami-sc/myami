@@ -2,6 +2,11 @@
 <html lang="ja">
 
 <head>
+    <script>
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php bloginfo('name');
@@ -32,12 +37,12 @@
 
             <?php echo '<' . $html_tag . ' class="l-header-logo">'; ?>
             <a href="<?php echo esc_url(home_url('/')); ?>" class="l-header-logo__link">
-                <img src="<?php echo esc_url(get_theme_file_uri('assets/images/logo.png')); ?>" class="l-header-logo__img --l-default img" alt="マイアミショッピングセンターロゴ">
-                <img src="<?php echo esc_url(get_theme_file_uri('assets/images/logo_w.png')); ?>" class="l-header-logo__img --l-white img" alt="マイアミショッピングセンターロゴ">
+                <img src="<?php echo esc_url(get_theme_file_uri('assets/images/logo.png')); ?>" class="l-header-logo__img --l-default img" alt="マイアミショッピングセンターロゴ" data-no-lazy="1" data-skip-lazy="1">
+                <img src="<?php echo esc_url(get_theme_file_uri('assets/images/logo_w.png')); ?>" class="l-header-logo__img --l-white img" alt="マイアミショッピングセンターロゴ" data-no-lazy="1" data-skip-lazy="1">
             </a>
             <?php echo '</' . $html_tag . '>'; ?>
             <?php if (is_front_page()) : ?>
-                <div class="l-header__news js-h-nav">
+                <div class="l-header__news">
                     <h2 class="subheading">NEWS</h2>
                     <div class="marquee">
                         <div class="marquee__track">
@@ -119,10 +124,10 @@
                                         <h3 class="subheading"><span>こだわりを探す</span></h3>
 
                                         <div class="box">
-                                            <div class="box__item"><a href="#">ファッションにこだわる</a></div>
-                                            <div class="box__item"><a href="#">食べ物にこだわる</a></div>
-                                            <div class="box__item"><a href="#">使い方にこだわる</a></div>
-                                            <div class="box__item"><a href="#">遊びにこだわる</a></div>
+                                            <div class="box__item"><a href="<?php echo esc_url(home_url('/#t-fashion')); ?>">ファッションに<br class="--sp">こだわる</a></div>
+                                            <div class="box__item"><a href="<?php echo esc_url(home_url('/#t-food')); ?>">食べ物に<br class="--sp">こだわる</a></div>
+                                            <div class="box__item"><a href="<?php echo esc_url(home_url('/#t-enjoy')); ?>">使い方に<br class="--sp">こだわる</a></div>
+                                            <div class="box__item"><a href="<?php echo esc_url(home_url('/#t-lifestyle')); ?>">遊びに<br class="--sp">こだわる</a></div>
                                         </div>
 
                                         <h3 class="subheading">MENU</h3>
@@ -136,9 +141,9 @@
                                             <li><a href="<?php echo esc_url(home_url('access')); ?>">アクセス</a></li>
                                         </ul>
                                         <div class="bnr">
-                                            <div class="bnr__item"> <a href="" class="bnr__link"> <img src="<?php echo esc_url(get_theme_file_uri('assets/images/bnr/bnr_img_01.png')); ?>" class="img" alt=""> </a> </div>
-                                            <div class="bnr__item"> <a href="" class="bnr__link"> <img src="<?php echo esc_url(get_theme_file_uri('assets/images/bnr/bnr_img_01.png')); ?>" class="img" alt=""> </a> </div>
-                                            <div class="bnr__item"> <a href="" class="bnr__link"> <img src="<?php echo esc_url(get_theme_file_uri('assets/images/bnr/bnr_img_01.png')); ?>" class="img" alt=""> </a> </div>
+                                            <div class="bnr__item"><a href="https://ami-cac.org/" class="bnr__link"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/bnr/bnr_img_01.jpg')); ?>" class="img" alt="広告用バナー"></a></div>
+                                            <div class="bnr__item"><a href="https://ami-cac.org/" class="bnr__link"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/bnr/bnr_img_01.jpg')); ?>" class="img" alt="広告用バナー"></a></div>
+                                            <div class="bnr__item"><a href="https://ami-cac.org/" class="bnr__link"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/bnr/bnr_img_01.jpg')); ?>" class="img" alt="広告用バナー"></a></div>
                                         </div>
                                         <div class="btn02">
                                             <a href="<?php echo esc_url(home_url('contact')); ?>">お問合せ</a>
@@ -154,7 +159,7 @@
                                             <li class="list-sub__item">
                                                 <a href="https://www.instagram.com/myami__sc/" class="list-sub__link">
                                                     <div class="i-link">
-                                                        <img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_sns_in.png')); ?>" class="img" alt="">
+                                                        <img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_sns_in.png')); ?>" class="img" alt="インスタグラムアイコン">
                                                     </div>
                                                     <span class="i-link__text">Instagram</span>
                                                 </a>

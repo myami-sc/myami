@@ -3,6 +3,10 @@
 .inner {
   padding: 0 90px;
 
+  @include mq(tab) {
+    padding: 0 30px;
+  }
+
   @include mq(sp) {
     padding: 0;
   }
@@ -11,6 +15,10 @@
 // section
 .s-inner {
   padding: 20px 90px;
+
+  @include mq(tab) {
+    padding: 80px 30px;
+  }
 
   @include mq(sp) {
     padding: 20px 15px;
@@ -29,6 +37,10 @@
 .m-inner {
   padding: 50px;
 
+  @include mq(tab) {
+    padding: 50px 0;
+  }
+
   @include mq(sp) {
     padding: 50px 0;
   }
@@ -37,6 +49,10 @@
 // page
 .p-inner {
   padding: 150px 90px;
+
+  @include mq(tab) {
+    padding: 150px 20px;
+  }
 
   @include mq(sp) {
     padding: 150px 10px;

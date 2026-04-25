@@ -25,17 +25,17 @@ createParallax(".js-parallax-4", 1, 1.3);
 
 /* fade
 ========================================================= */
-// in
-gsap.to(".js-fade-in", {
-  scrollTrigger: {
-    trigger: ".js-fade-in",
-    start: "top 80%",
-    end: "top 30%",
-    scrub: true,
-  },
-  opacity: 1,
-  scaleX: 1,
-  duration: 1,
+gsap.utils.toArray(".js-fade-in").forEach((el) => {
+  gsap.to(el, {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: el,
+      start: "top 90%",
+      once: true,
+    },
+    duration: 1.2,
+    ease: "power2.out",
+  });
 });
 
 // up

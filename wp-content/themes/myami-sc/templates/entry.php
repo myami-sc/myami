@@ -57,7 +57,7 @@
                             </div>
                         </div>
                         <div class="right">
-                            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_e_contact.png')); ?>" class="img fluffy" alt="">
+                            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_e_contact.png')); ?>" class="img fluffy" alt="イベントイメージアイコン">
                         </div>
                     </section>
                     <section class="entry-lower">

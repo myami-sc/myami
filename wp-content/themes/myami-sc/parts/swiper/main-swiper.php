@@ -1,25 +1,25 @@
 <div class="swiper main-swiper swiper-fade">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_06.jpg')); ?>" class="img" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_06.jpg')); ?>" class="img" alt="スライダーイメージ">
         </div>
         <div class="swiper-slide">
-            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_08.jpg')); ?>" class="img" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_08.jpg')); ?>" class="img" alt="スライダーイメージ">
         </div>
         <div class="swiper-slide">
-            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_07.jpg')); ?>" class="img" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_07.jpg')); ?>" class="img" alt="スライダーイメージ">
         </div>
         <div class="swiper-slide">
-            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_04.jpg')); ?>" class="img" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_04.jpg')); ?>" class="img" alt="スライダーイメージ">
         </div>
         <div class="swiper-slide">
-            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_04.jpg')); ?>" class="img" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_05.jpg')); ?>" class="img" alt="スライダーイメージ">
         </div>
         <div class="swiper-slide">
-            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="スライダーイメージ">
         </div>
         <div class="swiper-slide">
-            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_04.jpg')); ?>" class="img" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_03.jpg')); ?>" class="img" alt="スライダーイメージ">
         </div>
     </div>
     <div class="swiper-pagination"></div>

@@ -2,19 +2,21 @@
 ========================================================= */
 document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll(".l-header-nav__item");
-
   const contents = document.querySelectorAll(".content");
 
-  tabs.forEach((tab, index) => {
-    tab.addEventListener("click", () => {
-      tabs.forEach((tab) => tab.classList.remove("active"));
+  if (tabs.length > 0 && contents.length > 0) {
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((t) => t.classList.remove("active"));
+        contents.forEach((c) => c.classList.remove("active"));
 
-      contents.forEach((content) => content.classList.remove("active"));
-
-      tab.classList.add("active");
-      contents[index].classList.add("active");
+        if (tab) tab.classList.add("active");
+        if (contents[index]) {
+          contents[index].classList.add("active");
+        }
+      });
     });
-  });
+  }
 });
 
 /* hamburger menu
@@ -23,20 +25,36 @@ jQuery(function () {
   let hbg = jQuery("#js-hamburger");
   let btn = jQuery(".toggle-btn");
   let mask = jQuery(".mask");
+  let navInner = jQuery(".hamburger-nav");
   let open = "--open";
-  btn.on("click", function () {
+
+  btn.on("click", function (e) {
+    e.preventDefault();
+
     if (!hbg.hasClass(open)) {
+      navInner.attr("data-lenis-prevent", "true");
+
       hbg.addClass(open);
+      jQuery("body").addClass("is-menu-open");
+
       if (typeof lenis !== "undefined") lenis.stop();
     } else {
-      hbg.removeClass(open);
-      if (typeof lenis !== "undefined") lenis.start();
+      closeMenu();
     }
   });
-  mask.on("click", function () {
+
+  mask.on("click", closeMenu);
+
+  function closeMenu() {
     hbg.removeClass(open);
+    jQuery("body").removeClass("is-menu-open");
+
+    setTimeout(() => {
+      navInner.removeAttr("data-lenis-prevent");
+    }, 400);
+
     if (typeof lenis !== "undefined") lenis.start();
-  });
+  }
 });
 
 /* modal
@@ -143,15 +161,6 @@ jQuery(document).ready(function () {
       maxHeight: "90%",
     });
     return false;
-  });
-});
-
-/* access hover item
-========================================================= */
-jQuery(function () {
-  jQuery(".js-hover-item").hover(function () {
-    jQuery(".js-hover-item").removeClass("--current");
-    jQuery(this).addClass("--current");
   });
 });
 

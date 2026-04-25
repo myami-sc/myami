@@ -1,6 +1,12 @@
 @use "../config/mixins" as *;
 
 .event-calendar {
+  .wp-block-heading {
+    @include mq(sp) {
+      font-size: 20px !important;
+    }
+  }
+
   .eo-fullcalendar {
     .fc-toolbar {
       @include mq(sp) {
@@ -161,7 +167,7 @@
       padding: 10px 16px;
 
       @include mq(sp) {
-        padding: 5px;
+        padding: 10px 8px;
       }
 
       .fc-time {

@@ -15,6 +15,7 @@
         display: flex;
         align-items: center;
         font-size: 30px;
+        margin-bottom: 30px;
 
         .icon {
           display: flex;
@@ -33,6 +34,8 @@
         max-width: 900px;
         height: 450px;
         margin: 0 auto;
+        border: solid 1px #d9d5d5;
+        background-color: #fff;
 
         @include mq(sp) {
           height: 350px;
@@ -44,8 +47,8 @@
 
         .figcaption {
           position: absolute;
-          top: 0;
-          right: 0;
+          top: 5px;
+          right: 5px;
           display: flex;
           align-items: center;
           pointer-events: none;

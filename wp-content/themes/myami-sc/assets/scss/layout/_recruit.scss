@@ -92,6 +92,10 @@
       width: 950px;
       margin: 0 auto;
 
+      @include mq(tab) {
+        width: 100%;
+      }
+
       @include mq(sp) {
         width: 100%;
         gap: 10px;
@@ -127,6 +131,10 @@
         width: 450px;
         height: 650px;
         transition: 0.3s ease;
+
+        @include mq(tab) {
+          width: 100%;
+        }
 
         @include mq(sp) {
           height: 250px;

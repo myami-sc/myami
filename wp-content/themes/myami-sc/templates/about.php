@@ -13,7 +13,7 @@
             <div class="page-body">
                 <section>
                     <div class="parallax-box">
-                        <img class="js-parallax-4 img" src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_05.jpg')); ?>" autoplay muted loop playsinline></img>
+                        <img class="js-parallax-4 img" src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_05.jpg')); ?>" alt="背景イメージ">
                         <div class="p-inner">
                             <h2 class="p-title js-fade-title">ABOUT US</h2>
                             <p class="p-subtitle js-fade-text">会社情報</p>
@@ -27,7 +27,7 @@
                             <p class="p-subtitle">会社概要</p>
                         </div>
                         <div class="parallax-box">
-                            <img class="js-parallax-4 img" src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_05.jpg')); ?>" autoplay muted loop playsinline></img>
+                            <img class="js-parallax-4 img" src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_06.jpg')); ?>" alt="会社概要イメージ">
                         </div>
                     </div>
                     <div class="ab-main__right">
@@ -87,14 +87,14 @@
                         <div class="grid-column-list">
                             <article>
                                 <a href="<?php echo esc_url(home_url('about/history')); ?>">
-                                    <figure class="list-img"><img class="img" src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_05.jpg')); ?>" autoplay muted loop playsinline></img></figure>
+                                    <figure class="list-img"><img class="img" src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_03.jpg')); ?>" alt="沿革イメージ"></figure>
                                     <h3 class="list-title">沿革</h3>
                                     <span class="arrow"></span>
                                 </a>
                             </article>
                             <article>
                                 <a href="<?php echo esc_url(home_url('contact')); ?>">
-                                    <figure class="list-img"><img class="img" src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_05.jpg')); ?>" autoplay muted loop playsinline></img></figure>
+                                    <figure class="list-img"><img class="img" src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_04.jpg')); ?>" alt="お問い合わせイメージ"></figure>
                                     <h3 class="list-title">お問い合わせ</h3>
                                     <span class="arrow"></span>
                                 </a>
@@ -123,7 +123,7 @@
                         <a href="<?php echo esc_url(home_url('recruit')); ?>">
                             <div class="guide-area__wrap">
                                 <div class="guide-area__left">
-                                    <h2 class="guide-area__title">Recruit<span class="sp-icon --sp"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_arrow.png')); ?>" class="img" alt=""></span></h2>
+                                    <h2 class="guide-area__title">Recruit<span class="sp-icon --sp"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_arrow.png')); ?>" class="img" alt="矢印アイコン"></span></h2>
                                     <p class="guide-area__description">人と街が集まる場所で、<br />
                                         毎日を支える仕事をしませんか。<br />
                                         <br />
@@ -140,7 +140,7 @@
                         <a href="<?php echo esc_url(home_url('space#store')); ?>">
                             <div class="guide-area__wrap">
                                 <div class="guide-area__left">
-                                    <h2 class="guide-area__title">Opening<br class="--sp"> a <br class="--sp">Store<span class="sp-icon --sp"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_arrow.png')); ?>" class="img" alt=""></span></h2>
+                                    <h2 class="guide-area__title">Opening<br class="--sp"> a <br class="--sp">Store<span class="sp-icon --sp"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_arrow.png')); ?>" class="img" alt="矢印アイコン"></span></h2>
                                     <p class="guide-area__description">地域に根差したショッピングセンターとして、<br class="--pc">
                                         当施設では法人様の出店を広く募集しております。<br />
                                         <br />
