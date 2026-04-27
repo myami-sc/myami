@@ -14,22 +14,38 @@
                 <div class="p-inner">
                     <h2 class="p-title">Floor Guide</h2>
                     <p class="p-subtitle">フロアガイド</p>
-                    <?php
-                    $page_id = 12;
-                    $page_content = get_the_content('', false, $page_id);
-                    $image_urls = array();
+                    <div class="floor-container">
+                        <?php
+                        $page = get_post(12);
 
-                    if (preg_match_all('/<img[^>]+src="([^"]+)"[^>]*>/i', $page_content, $matches)) {
-                        $image_urls = $matches[1];
-                    }
+                        if ($page) {
 
-                    foreach ($image_urls as $url) {
-                        echo '<div class="figure">';
-                        echo '<img src="' . esc_url($url) . '" class="img colorbox-img" alt="画像">';
-                        echo '</div>';
-                    }
+                            $page_content = apply_filters('the_content', $page->post_content);
 
-                    ?>
+                            if (preg_match_all('/<img[^>]+src="([^"]+)"[^>]*>/i', $page_content, $matches)) {
+
+                                foreach ($matches[1] as $index => $url) {
+
+                                    $floor = $index + 1;
+                        ?>
+                                    <div class="floor-item js-fade-in">
+                                        <h3 class="subheading">
+                                            <span class="icon"><?php echo $floor; ?>F</span>Map
+                                        </h3>
+                                        <div class="figure">
+                                            <img src="<?php echo esc_url($url); ?>" class="img colorbox-img" alt="<?php echo $floor; ?>F フロアマップ">
+                                            <div class="figcaption">
+                                                <div class="guid-icon"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_full_screen02.png')); ?>" class="img" alt="拡大アイコン"></div>
+                                                <p class="guid-txt">拡大する</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                        <?php
+                                }
+                            }
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
     <?php endwhile;

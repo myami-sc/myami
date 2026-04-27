@@ -1,3 +1,5 @@
+@use "../config/mixins" as *;
+
 .btn {
   margin-top: auto;
 
@@ -41,6 +43,25 @@
   }
 }
 
+.btn02 {
+  width: 250px;
+  margin: 20px auto 0;
+  border: solid 1px #333;
+  border-radius: 50px;
+  color: #333;
+
+  a {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+
+    &:hover {
+      letter-spacing: 0.15em;
+    }
+  }
+}
+
 // menu btn
 .toggle-btn {
   display: block;
@@ -49,7 +70,7 @@
   height: 20px;
   transition: all 0.5s;
   cursor: pointer;
-  z-index: 3;
+  z-index: 10000 !important;
 
   span {
     display: block;
@@ -90,6 +111,10 @@
 
       span {
         background-color: #fff;
+
+        @include mq(sp) {
+          background-color: #333;
+        }
 
         &:nth-child(1) {
           -webkit-transform: translateY(5px) rotate(-45deg);

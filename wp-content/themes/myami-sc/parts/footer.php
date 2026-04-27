@@ -5,7 +5,7 @@
                 <div class="l-footer-info">
                     <div class="l-footer-info__box">
                         <div class="logo">
-                            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/logo.png')); ?>" class="img" alt="">
+                            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/logo.png')); ?>" class="img" alt="マイアミショッピングセンターロゴ">
                         </div>
                         <div class="name"><span>マイアミショッピングセンター</span></div>
                         <div class="address">
@@ -17,10 +17,10 @@
                 </div>
                 <div class="l-footer-gallery">
                     <div class="l-footer-gallery__box">
-                        <div class="l-footer-gallery__item"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt=""></div>
-                        <div class="l-footer-gallery__item"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_02.jpg')); ?>" class="img" alt=""></div>
-                        <div class="l-footer-gallery__item"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_03.jpg')); ?>" class="img" alt=""></div>
-                        <div class="l-footer-gallery__item"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_04.jpg')); ?>" class="img" alt=""></div>
+                        <div class="l-footer-gallery__item"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="ショッピングセンターイメージ"></div>
+                        <div class="l-footer-gallery__item"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_02.jpg')); ?>" class="img" alt="ショッピングセンターイメージ"></div>
+                        <div class="l-footer-gallery__item"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_03.jpg')); ?>" class="img" alt="ショッピングセンターイメージ"></div>
+                        <div class="l-footer-gallery__item"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_04.jpg')); ?>" class="img" alt="ショッピングセンターイメージ"></div>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                             <a href="<?php echo esc_url(home_url('recruit')); ?>" class="l-footer-nav__link"><span class="l-footer-nav__text">採用情報</span></a>
                         </li>
                         <li class="l-footer-nav__item">
-                            <a href="<?php echo esc_url(home_url('event-recruitment')); ?>" class="l-footer-nav__link"><span class="l-footer-nav__text">イベント募集</span></a>
+                            <a href="<?php echo esc_url(home_url('events/entry')); ?>" class="l-footer-nav__link"><span class="l-footer-nav__text">イベント申込み</span></a>
                         </li>
                         <li class="l-footer-nav__item">
                             <a href="<?php echo esc_url(home_url('contact')); ?>" class="l-footer-nav__link"><span class="l-footer-nav__text">お問い合わせ</span></a>

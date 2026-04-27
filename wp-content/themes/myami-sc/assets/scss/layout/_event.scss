@@ -1,0 +1,163 @@
+@use "../config/mixins" as *;
+
+.event-single {
+  &__title {
+    margin-bottom: 40px;
+    letter-spacing: 0.135em;
+    text-align: center;
+    color: #94afaa;
+    font-weight: bold;
+  }
+
+  &__upper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 150px 90px 0;
+
+    @include mq(sp) {
+      padding: 150px 25px 0;
+    }
+
+    .wrap {
+      font-size: 18px;
+      margin: 0 auto 20px;
+      text-align: center;
+
+      &::before {
+        content: "";
+        display: block;
+        margin: 0 auto 25px;
+        height: 30px;
+        width: 1px;
+        background: #bccbc8;
+      }
+
+      span {
+        display: inline-block;
+      }
+
+      .date {
+        margin-right: 30px;
+      }
+
+      .location {
+        display: block;
+        margin: 30px 0;
+        color: #94afaa;
+        letter-spacing: 0.135em;
+        font-weight: 600;
+      }
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .thumbnail {
+      height: 500px;
+
+      @include mq(sp) {
+        height: 250px;
+      }
+
+      img {
+        object-fit: contain !important;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 90px;
+
+    @include mq(sp) {
+      padding: 30px 25px;
+    }
+  }
+
+  &__bottom {
+    border-top: solid 1px #bccbc8;
+    padding: 50px 90px 150px;
+    letter-spacing: 0.135em;
+
+    @include mq(sp) {
+      padding: 50px 10px 50px;
+    }
+
+    .bottom-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .subheading {
+      margin-bottom: 20px;
+      font-weight: 600;
+
+      @include mq(sp) {
+        padding-left: 15px;
+      }
+    }
+
+    .content {
+      display: flex;
+      align-items: flex-start;
+
+      @include mq(sp) {
+        flex-direction: column;
+      }
+
+      .detail {
+        @include mq(sp) {
+          padding: 0 15px;
+        }
+
+        &.--left {
+          width: 65%;
+
+          @include mq(sp) {
+            width: 100%;
+          }
+        }
+
+        &.--right {
+          width: 35%;
+
+          @include mq(sp) {
+            width: 100%;
+          }
+        }
+
+        dl {
+          margin-bottom: 20px;
+        }
+
+        dt {
+          font-weight: 300;
+          margin-bottom: 10px;
+          font-size: 14px;
+
+          @include mq(sp) {
+            font-size: 12px;
+          }
+        }
+
+        dd {
+          font-size: 18px;
+
+          img {
+            height: 200px;
+            width: 200px;
+            margin-left: auto;
+
+            @include mq(sp) {
+              height: 150px;
+              width: 150px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

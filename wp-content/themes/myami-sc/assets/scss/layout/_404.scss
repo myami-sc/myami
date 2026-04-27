@@ -1,0 +1,58 @@
+@use "../config/mixins" as *;
+
+.page-404 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  @include mq(sp) {
+    height: 100svh;
+  }
+
+  img {
+    height: 150px !important;
+    width: 500px !important;
+    object-fit: contain;
+    margin-top: 80px;
+
+    @include mq(sp) {
+      margin-top: 50px;
+      height: 100px !important;
+      width: 100vw !important;
+    }
+  }
+
+  h1 {
+    font-size: 100px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #00c295;
+
+    @include mq(sp) {
+      font-size: 35px;
+      margin-top: 20px;
+    }
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #00c295;
+  }
+
+  p {
+    line-height: 2;
+  }
+
+  .btn02 {
+    margin: 80px auto;
+
+    @include mq(sp) {
+      margin: 50px auto;
+    }
+  }
+}

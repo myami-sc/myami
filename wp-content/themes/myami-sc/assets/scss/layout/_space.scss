@@ -1,0 +1,9 @@
+.page-space {
+  .wp-block-table {
+    td {
+      &:first-child {
+        width: 30%;
+      }
+    }
+  }
+}

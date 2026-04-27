@@ -1,0 +1,187 @@
+@use "../config/mixins" as *;
+
+.page-entry {
+  .entry-info {
+    @include mq(sp) {
+      margin-bottom: 50px;
+    }
+
+    .subheading {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .marquee {
+      width: 320px;
+
+      &__track {
+        border-bottom: solid 1px #333;
+      }
+
+      &__item {
+        font-size: 13px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .entry-upper {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: solid 1px #179342;
+    padding-top: 20px;
+
+    @include mq(sp) {
+      flex-direction: column;
+    }
+
+    .left {
+      width: 50%;
+
+      @include mq(sp) {
+        width: 100%;
+      }
+
+      .entry-title {
+        display: block;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 1;
+        color: #179342;
+        letter-spacing: 0.2em;
+        margin-bottom: 2.5rem;
+
+        .sub {
+          display: block;
+          font-size: 18px;
+          line-height: 1;
+          margin-bottom: 20px;
+          letter-spacing: 1px;
+        }
+      }
+
+      .text {
+        max-width: 64rem;
+        text-align: justify;
+        color: #179342;
+        font-weight: 500;
+        line-height: 2.24625;
+        font-size: 14px;
+        margin-bottom: 1.5rem;
+
+        @include mq(sp) {
+          font-size: 13px;
+        }
+
+        a {
+          color: #0c4c9b;
+          text-decoration: underline;
+          transition: 0.3s;
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+
+      .link-area {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        button {
+          width: 200px;
+          margin-right: 20px;
+          text-align: center;
+          border: solid 1px #ccc;
+          border-radius: 30px;
+
+          @include mq(sp) {
+            height: 100px;
+            width: 100%;
+            margin-right: 10px;
+            border-radius: 15px;
+          }
+
+          a {
+            padding: 15px;
+            display: inline-block;
+            transition: 0.3s;
+            color: #179342;
+            line-height: 1.5;
+
+            &:hover {
+              letter-spacing: 0.12em;
+              text-indent: 0.12em;
+              color: #0bdb54;
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      width: 50%;
+
+      @include mq(sp) {
+        width: 100%;
+      }
+
+      img {
+        max-width: 650px;
+      }
+
+      .fluffy {
+        animation: fluffy 3s infinite;
+      }
+
+      @keyframes fluffy {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+    }
+  }
+
+  .entry-lower {
+    padding-top: 150px;
+
+    .scroll-text {
+      height: 200px;
+      overflow-y: scroll;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .regulation {
+      list-style-type: circle;
+
+      &__item {
+        margin-bottom: 30px;
+
+        ul {
+          list-style-type: disc;
+          padding-top: 10px;
+        }
+
+        li {
+          text-indent: -1rem;
+          padding-left: 1rem;
+          word-break: break-all;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .regulation-check {
+    .smf-placeholder {
+      text-align: center;
+    }
+  }
+}

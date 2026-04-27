@@ -1,3 +1,5 @@
+@use "../config/mixins" as *;
+
 body {
   color: #333;
 }
@@ -7,4 +9,159 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  font-family: "object-fit: cover;";
+}
+
+.grid-column {
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+
+    @include mq(tab) {
+      grid-template-columns: 1fr;
+    }
+
+    @include mq(sp) {
+      grid-template-columns: 1fr;
+    }
+
+    article {
+      max-width: 750px;
+    }
+
+    a {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      align-items: center;
+      position: relative;
+      border: 1px solid #333;
+      gap: 25px;
+      padding: 15px 70px 15px 15px;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: #00c295;
+        transform-origin: 50% 0%;
+        transform: scaleY(0);
+        transition: transform ease 0.3s;
+      }
+
+      figure {
+        overflow: hidden;
+        height: 120px;
+
+        img {
+          transition: 0.3s;
+        }
+      }
+
+      h3 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: 0.1em;
+      }
+
+      .arrow {
+        width: 46px;
+        height: 46px;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        border-radius: 50px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(51, 51, 51);
+
+        &::before {
+          content: "";
+          background-color: rgb(51, 51, 51);
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          mask: url("assets/images/icon/i_arrow.png") center center / contain
+            no-repeat;
+        }
+      }
+
+      &:hover {
+        color: #fff;
+
+        &::before {
+          transform-origin: 50% 100%;
+          transform: scaleY(1);
+        }
+
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+}
+
+.marquee__item {
+  white-space: nowrap;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.--pc {
+  @include mq(sp) {
+    display: none !important;
+  }
+}
+
+.--tab {
+  @include mq(tab) {
+    display: none !important;
+  }
+}
+
+.--sp {
+  display: none !important;
+
+  @include mq(sp) {
+    display: block !important;
+  }
+}
+
+.max-default-block {
+  max-width: 1100px !important;
+  margin: 0 auto !important;
+}
+
+.smf-radio-button-control__control,
+.smf-checkbox-control__control {
+  margin-top: 0 !important;
 }

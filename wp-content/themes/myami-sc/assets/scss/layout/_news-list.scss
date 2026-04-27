@@ -1,3 +1,5 @@
+@use "../config/mixins" as *;
+
 .news-list-page {
   padding-top: 150px;
 
@@ -7,10 +9,20 @@
     letter-spacing: 0.3em;
     margin-bottom: 80px;
     margin-left: 3rem;
+
+    @include mq(sp) {
+      font-size: 30px;
+      font-weight: 600;
+      margin-left: 0;
+    }
   }
 
   .news-list {
     padding: 0 3rem 3rem;
+
+    @include mq(sp) {
+      padding: 0 10px 3rem;
+    }
 
     &__tab {
       display: flex;
@@ -25,6 +37,14 @@
         border-color: transparent transparent rgb(217, 217, 217);
         text-align: center;
 
+        @include mq(tab) {
+          width: 100%;
+        }
+
+        @include mq(sp) {
+          width: 100%;
+        }
+
         &.--current {
           pointer-events: none;
           z-index: 1;
@@ -37,6 +57,11 @@
           display: block;
           padding: 2rem 1.5rem;
           transition-duration: 0.5s;
+
+          @include mq(sp) {
+            padding: 1.5rem 1rem;
+            font-weight: 700;
+          }
 
           &:hover {
             background-color: #00c295;
@@ -61,6 +86,12 @@
           display: inline-block;
           overflow: hidden;
 
+          @include mq(sp) {
+            width: 130px;
+            height: 100%;
+            margin-right: 20px;
+          }
+
           img {
             transition-duration: 0.5s;
             object-fit: contain;
@@ -68,6 +99,10 @@
         }
 
         .content {
+          @include mq(sp) {
+            width: 65%;
+          }
+
           .cate {
             display: inline-block;
             font-size: 10px;
@@ -82,6 +117,11 @@
           .date {
             line-height: 1.5;
             letter-spacing: 0.2em;
+
+            @include mq(sp) {
+              display: block;
+              margin-top: 10px;
+            }
           }
 
           .subheading {

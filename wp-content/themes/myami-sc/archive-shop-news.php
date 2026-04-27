@@ -12,7 +12,7 @@
         <ul class="news-list__tab">
             <li class="news-list__tab-item"><a href="<?php echo esc_url(home_url('news-list')); ?>" class="news-list__tab-link">すべて</a></li>
             <li class="news-list__tab-item"><a href="<?php echo esc_url(home_url('news-list/news')); ?>" class="news-list__tab-link">ニュース</a></li>
-            <li class="news-list__tab-item --current"><a href="<?php echo esc_url(home_url('news-list/shop-news')); ?>" class="news-list__tab-link">ショップニュース</a></li>
+            <li class="news-list__tab-item --current"><a href="<?php echo esc_url(home_url('news-list/shop-news')); ?>" class="news-list__tab-link"><span class="--pc">ショップニュース</span><span class="--sp">ショップ</span></a></li>
         </ul>
         <div class="news-list__body">
             <?php
@@ -35,11 +35,11 @@
                                 <?php if (has_post_thumbnail()) {
                                     the_post_thumbnail('thumbnail', array('class' => 'img'));
                                 } else {
-                                    echo '<img src="' . esc_url(get_theme_file_uri('assets/images/logo.png')) . '" class="img" alt="画像">';
+                                    echo '<img src="' . esc_url(get_theme_file_uri('assets/images/logo.png')) . '" class="img" alt="マイアミショッピングセンターロゴ">';
                                 }
                                 ?>
                             </div>
-                            <div class="content">
+                            <div class="content --shop-news">
                                 <?php
                                 $cats = get_the_category();
                                 if ($cats) {

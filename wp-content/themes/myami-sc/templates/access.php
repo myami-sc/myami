@@ -10,17 +10,15 @@
 
 <div class="page-access">
     <?php if (have_posts()): while (have_posts()): the_post(); ?>
-            <div class="a-bg">
-            </div>
             <section class="a-main">
                 <div class="a-main__left">
                     <h2 class="p-title">Access</h2>
                     <p class="p-subtitle">交通アクセス</p>
 
                     <ul class="anchor-link">
-                        <li><a href="#google" onclick="lenis.scrollTo('#google'); return false;">GoogleMap</a></li>
-                        <li><a href="#gallery" onclick="lenis.scrollTo('#gallery'); return false;">周辺イメージ</a></li>
-                        <li><a href="#others" onclick="lenis.scrollTo('#others'); return false;">電車・バス</a></li>
+                        <li><a onclick="lenis.scrollTo('#google'); return false;">GoogleMap</a></li>
+                        <li><a onclick="lenis.scrollTo('#gallery'); return false;">周辺イメージ</a></li>
+                        <li><a onclick="lenis.scrollTo('#others'); return false;">ご利用案内</a></li>
                     </ul>
                 </div>
                 <div class="a-main__right">
@@ -28,7 +26,7 @@
                         <figcaption>
                             <span>マイアミSCは、<br />東京や水戸から１時間。<br />ICからも近く、<br />アクセスのしやすい<br />場所にございます。</span>
                         </figcaption>
-                        <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+                        <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="マイアミショッピングセンターイメージ">
                     </figure>
                 </div>
             </section>
@@ -40,47 +38,48 @@
                     <img src="<?php echo esc_url(get_theme_file_uri('assets/images/logo.png')); ?>" class="logo img" alt="マイアミショッピングセンターロゴ">
                     <p class="logo-kana">マイアミショッピングセンター</p>
                     <p class="address"><span>&#8376;300-0331</span>茨城県稲敷郡阿見町阿見2222</p>
-                    <div class="btn"><a href="https://maps.app.goo.gl/orfqHzZt5Ux5U8rf6" target="_blank"><span class="icon"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_map_pin.png')); ?>" class="img" alt=""></span><span class="text">GoogleMapで見る</span></a></div>
+                    <div class="btn"><a href="https://maps.app.goo.gl/orfqHzZt5Ux5U8rf6" target="_blank"><span class="icon"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_map_pin.png')); ?>" class="img" alt="マップピンアイコン"></span><span class="text">GoogleMapで見る</span></a></div>
                 </div>
             </section>
             <section class="a-gallery" id="gallery">
                 <div class="area">
                     <figure class="b-img">
-                        <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+                        <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_06.jpg')); ?>" class="img" alt="駐車場イメージ">
                         <figcaption>
                             <span>駐車場入り口 &#9312;</span>
                         </figcaption>
                     </figure>
                     <figure class="s-img">
-                        <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+                        <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="駐車場イメージ">
                     </figure>
                     <figure class="s-img">
-                        <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+                        <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_07.jpg')); ?>" class="img" alt="駐車場イメージ">
                     </figure>
                 </div>
                 <div class="area">
                     <figure class="b-img">
-                        <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+                        <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_08.jpg')); ?>" class="img" alt="駐車場イメージ">
                         <figcaption>
                             <span>駐車場入り口 &#9313;</span>
                         </figcaption>
                     </figure>
                     <figure class="m-img">
-                        <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
+                        <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_09.jpg')); ?>" class="img" alt="駐車場イメージ">
                     </figure>
                 </div>
             </section>
             <section class="a-info" id="others">
-                <ul class="list">
-                    <li class="item js-hover-item --current">
-                        <div class="item-inner">
-                            <figure>
-                                <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_01.jpg')); ?>" class="img" alt="">
-                            </figure>
-                            <figcaption>車でお越しの場合</figcaption>
+                <div class="a-i-item">
+                    <div class="a-i-item-inner">
+                        <div class="l-box">
+                            <div class="parallax-box l-img">
+                                <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_10.jpg')); ?>" class="img js-parallax-4" alt="駐車場イメージ">
+                            </div>
+                        </div>
+                        <div class="r-box">
                             <div class="detail">
                                 <div class="wrap">
-                                    <p>駐車のご案内</p>
+                                    <p class="t-ttl">駐車のご案内</p>
                                     <dl>
                                         <dt><span class="icon">P</span>お客様用駐車場</dt>
                                         <dd>年中</dd>
@@ -98,38 +97,55 @@
                                     </dl>
                                 </div>
                             </div>
+                            <div class="promise">
+                                <h3><span class="icon"><img src="<?php echo esc_url(get_theme_file_uri('assets/images/icon/i_mark.png')); ?>" class="img" alt="身障者専用アイコン"></span>身障者専用駐車場</h3>
+                                <p class="txt">当駐車場は身体の不自由なお客様のための専用区画です。<br />
+                                    ご利用の際は<span class="red">身障者専用駐車場利用証</span>を必ずご提示ください。
+                                </p>
+                                <div class="s-img">
+                                    <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_08.jpg')); ?>" class="img" alt="身障者専用駐車場イメージ">
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                    <li class="item js-hover-item">
-                        <div class="item-inner">
-                            <figure>
-                                <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_03.jpg')); ?>" class="img" alt="">
-                            </figure>
-                            <figcaption>電車でお越し場合</figcaption>
+                    </div>
+                </div>
+                <div class="a-i-item">
+                    <div class="a-i-item-inner">
+                        <div class="l-box">
+                            <div class="parallax-box l-img">
+                                <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_09.jpg')); ?>" class="img js-parallax-4" alt="最寄り駅イメージ">
+                            </div>
+                        </div>
+                        <div class="r-box">
                             <div class="detail">
                                 <div class="wrap">
-                                    <p>最寄り駅のご案内</p>
+                                    <p class="t-ttl">最寄り駅のご案内</p>
                                     <dl>
                                         <dt>荒川沖駅</dt>
+                                        <dd>利用バス</dd>
                                         <dd><span class="decoration">１０分</span></dd>
                                     </dl>
                                     <dl>
                                         <dt>土浦駅</dt>
+                                        <dd>利用バス</dd>
                                         <dd><span class="decoration">１５分</span></dd>
                                     </dl>
                                 </div>
                             </div>
                         </div>
-                    </li>
-                    <li class="item js-hover-item">
-                        <div class="item-inner">
-                            <figure>
-                                <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_03.jpg')); ?>" class="img" alt="">
-                            </figure>
-                            <figcaption>バスでお越しの場合</figcaption>
+                    </div>
+                </div>
+                <div class="a-i-item">
+                    <div class="a-i-item-inner">
+                        <div class="l-box">
+                            <div class="parallax-box l-img">
+                                <img src="<?php echo esc_url(get_theme_file_uri('assets/images/slider/slider_img_02.jpg')); ?>" class="img js-parallax-4" alt="最寄りバス停イメージ">
+                            </div>
+                        </div>
+                        <div class="r-box">
                             <div class="detail">
                                 <div class="wrap">
-                                    <p>最寄りバス停のご案内</p>
+                                    <p class="t-ttl">最寄りバス停のご案内</p>
                                     <dl>
                                         <dt>バス停名</dt>
                                         <dd>徒歩</dd>
@@ -138,12 +154,12 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </section>
             <section>
-                <div class="parallax-box">
-                    <img class="js-parallax-4 img" src="<?php echo esc_url(get_theme_file_uri('assets/images/background/a-bgi02.JPG')); ?>" autoplay muted loop playsinline></img>
+                <div class="parallax-box js-fade-in">
+                    <img class="js-parallax-4 img" src="<?php echo esc_url(get_theme_file_uri('assets/images/background/a-bgi02.JPG')); ?>" alt="背景イメージ">
                     <p>みなさまのお越しを<br />心よりお待ちしております。<br />気をつけてお越しくださいませ。</p>
                 </div>
             </section>

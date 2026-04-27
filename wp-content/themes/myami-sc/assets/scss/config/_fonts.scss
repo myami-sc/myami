@@ -1,6 +1,18 @@
 @font-face {
-  font-family: "KikaiChokoku";
-  src: url("../../fonts/KikaiChokokuJIS-Md.otf") format("opentype");
+  font-family: "Montserrat";
+  src: url("assets/fonts/Montserrat-Light.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "WaonJoyo";
+  src: url("assets/fonts/WaonJoyo-R.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mamelon";
+  src: url("assets/fonts/Mamelon-4-Hi-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }

@@ -1,0 +1,29 @@
+@use "../config/mixins" as *;
+
+.page-essentials {
+  .essentials-container {
+    width: 1000px;
+    margin: 0 auto;
+
+    @include mq(sp) {
+      width: 100%;
+    }
+  }
+
+  .essentials-bottom {
+    .btn {
+      width: 500px;
+      margin: 0 auto 50px;
+
+      @include mq(sp) {
+        width: 100%;
+        margin-bottom: 80px;
+      }
+    }
+
+    .btn02 {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

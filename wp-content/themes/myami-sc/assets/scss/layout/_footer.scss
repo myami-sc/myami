@@ -1,3 +1,5 @@
+@use "../config/mixins" as *;
+
 .l-footer {
   &__contact {
     position: relative;
@@ -18,6 +20,13 @@
         height: 100%;
         color: #fff;
 
+        @include mq(sp) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+
         .logo {
           width: 150px;
           margin: 0 auto 30px;
@@ -27,6 +36,10 @@
           margin-bottom: 20px;
           font-size: 30px;
           font-weight: 700;
+
+          @include mq(sp) {
+            font-size: 20px;
+          }
         }
         .address {
           font-size: 14px;
@@ -66,10 +79,18 @@
       &__box {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        @include mq(sp) {
+          grid-template-columns: 1fr 1fr;
+        }
       }
 
       &__item {
         height: 300px;
+
+        @include mq(sp) {
+          height: 215px;
+        }
       }
     }
   }
@@ -84,11 +105,25 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include mq(sp) {
+          flex-wrap: wrap;
+        }
       }
 
       &__item {
         padding: 2px 30px;
         border-right: solid 1px #b6bcb6;
+
+        @include mq(tab) {
+          padding: 2px 20px;
+        }
+
+        @include mq(sp) {
+          width: calc(50% - 10px / 2);
+          padding: 5px 30px;
+          border-right: none;
+        }
 
         &:last-child {
           border-right: none;

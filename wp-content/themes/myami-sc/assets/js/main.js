@@ -2,19 +2,21 @@
 ========================================================= */
 document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll(".l-header-nav__item");
-
   const contents = document.querySelectorAll(".content");
 
-  tabs.forEach((tab, index) => {
-    tab.addEventListener("click", () => {
-      tabs.forEach((tab) => tab.classList.remove("active"));
+  if (tabs.length > 0 && contents.length > 0) {
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((t) => t.classList.remove("active"));
+        contents.forEach((c) => c.classList.remove("active"));
 
-      contents.forEach((content) => content.classList.remove("active"));
-
-      tab.classList.add("active");
-      contents[index].classList.add("active");
+        if (tab) tab.classList.add("active");
+        if (contents[index]) {
+          contents[index].classList.add("active");
+        }
+      });
     });
-  });
+  }
 });
 
 /* hamburger menu
@@ -23,20 +25,36 @@ jQuery(function () {
   let hbg = jQuery("#js-hamburger");
   let btn = jQuery(".toggle-btn");
   let mask = jQuery(".mask");
+  let navInner = jQuery(".hamburger-nav");
   let open = "--open";
-  btn.on("click", function () {
+
+  btn.on("click", function (e) {
+    e.preventDefault();
+
     if (!hbg.hasClass(open)) {
+      navInner.attr("data-lenis-prevent", "true");
+
       hbg.addClass(open);
-      lenis.stop();
+      jQuery("body").addClass("is-menu-open");
+
+      if (typeof lenis !== "undefined") lenis.stop();
     } else {
-      hbg.removeClass(open);
-      lenis.start();
+      closeMenu();
     }
   });
-  mask.on("click", function () {
+
+  mask.on("click", closeMenu);
+
+  function closeMenu() {
     hbg.removeClass(open);
-    lenis.start();
-  });
+    jQuery("body").removeClass("is-menu-open");
+
+    setTimeout(() => {
+      navInner.removeAttr("data-lenis-prevent");
+    }, 400);
+
+    if (typeof lenis !== "undefined") lenis.start();
+  }
 });
 
 /* modal
@@ -50,19 +68,54 @@ if (modal) {
   });
 }
 
+/* header scroll
+========================================================= */
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
 jQuery(function () {
   let pos = 0;
-  let nav = jQuery("#js-h-nav");
+  let nav = jQuery(".js-h-nav");
 
-  jQuery(window).on("scroll", function () {
-    if (jQuery(this).scrollTop() < pos) {
-      nav.slideDown();
-    } else {
-      nav.slideUp();
-    }
+  if (typeof lenis !== "undefined") {
+    lenis.on("scroll", ({ scroll }) => {
+      if (scroll < pos) {
+        nav.removeClass("is-hide");
+      } else {
+        nav.addClass("is-hide");
+      }
+      pos = scroll;
+    });
+  }
+});
 
-    pos = jQuery(this).scrollTop();
-  });
+jQuery(function ($) {
+  const $inner = $(".l-header__inner");
+  const $news = $(".l-header__news");
+  const $logo = $(".l-header-logo");
+  const $hbg = $("#js-hamburger");
+
+  if (typeof lenis !== "undefined") {
+    lenis.on("scroll", ({ scroll }) => {
+      if ($hbg.hasClass("--open")) return;
+
+      if (scroll > 10) {
+        $inner.addClass("--scrolled");
+        $news.addClass("--scrolled");
+        $logo.addClass("--scrolled");
+      } else {
+        $inner.removeClass("--scrolled");
+        $news.removeClass("--scrolled");
+        $logo.removeClass("--scrolled");
+      }
+    });
+  }
 });
 
 /* shop list tab
@@ -101,7 +154,6 @@ if (document.querySelector("#tab")) {
 ========================================================= */
 jQuery(document).ready(function () {
   jQuery(".colorbox-img").on("click", function () {
-    console.log();
     jQuery.colorbox({
       href: this.src,
       current: true,
@@ -112,23 +164,47 @@ jQuery(document).ready(function () {
   });
 });
 
-/* news list tab
+/* scroll action
 ========================================================= */
-jQuery(function () {
-  let tabs = jQuery("news-list__tab-item");
-  jQuery("news-list__tab-item").on("click", function () {
-    jQuery(".active").removeClass("active");
-    jQuery(this).addClass("active");
-    const index = tabs.index(this);
-    jQuery(".content").removeClass("show").eq(index).addClass("show");
-  });
-});
+gsap.registerPlugin(ScrollTrigger);
 
-/* access hover item
-========================================================= */
-jQuery(function () {
-  jQuery(".js-hover-item").hover(function () {
-    jQuery(".js-hover-item").removeClass("--current");
-    jQuery(this).addClass("--current");
+const area1 = document.querySelector(".area1");
+const area2 = document.querySelector(".area2");
+const area3 = document.querySelector(".area3");
+const step1 = document.querySelector(".s1");
+const step2 = document.querySelector(".s2");
+const step3 = document.querySelector(".s3");
+
+if (area1 && step1) {
+  ScrollTrigger.create({
+    trigger: area1,
+    start: "top center",
+    end: "bottom top",
+    onEnter: () => step1.classList.add("is-active"),
+    onLeave: () => step1.classList.remove("is-active"),
+    onEnterBack: () => step1.classList.add("is-active"),
+    onLeaveBack: () => step1.classList.remove("is-active"),
   });
-});
+}
+if (area2 && step2) {
+  ScrollTrigger.create({
+    trigger: area2,
+    start: "top center",
+    end: "bottom top",
+    onEnter: () => step2.classList.add("is-active"),
+    onLeave: () => step2.classList.remove("is-active"),
+    onEnterBack: () => step2.classList.add("is-active"),
+    onLeaveBack: () => step2.classList.remove("is-active"),
+  });
+}
+if (area3 && step3) {
+  ScrollTrigger.create({
+    trigger: area3,
+    start: "top center",
+    end: "bottom top",
+    onEnter: () => step3.classList.add("is-active"),
+    onLeave: () => step3.classList.remove("is-active"),
+    onEnterBack: () => step3.classList.add("is-active"),
+    onLeaveBack: () => step3.classList.remove("is-active"),
+  });
+}

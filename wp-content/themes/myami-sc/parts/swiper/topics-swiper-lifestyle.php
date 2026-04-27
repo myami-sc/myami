@@ -23,7 +23,7 @@
                                 <?php if (has_post_thumbnail()) {
                                     the_post_thumbnail('thumbnail', array('class' => 'img'));
                                 } else {
-                                    echo '<img src="' . esc_url(get_theme_file_uri('assets/images/logo.png')) . '" class="img" alt="画像">';
+                                    echo '<img src="' . esc_url(get_theme_file_uri('assets/images/logo.png')) . '" class="img" alt="トピックスライフスタイルイメージ">';
                                 }
                                 ?>
                             </div>
@@ -59,6 +59,6 @@
         </div>
     </div>
     <div class="swiper-scrollbar swiper-scrollbar-lifestyle"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev topics-lifestyle-prev"></div>
+    <div class="swiper-button-next topics-lifestyle-next"></div>
 </div>

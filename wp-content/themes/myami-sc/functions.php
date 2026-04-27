@@ -31,3 +31,35 @@ add_action('init', function () {
         'footerNav' => 'フッターナビゲーション',
     ]);
 });
+
+add_filter('eventorganiser_event_properties', function ($args) {
+    $args['show_in_rest'] = true;
+    return $args;
+});
+
+add_filter('eventorganiser_event_tooltip', function ($description) {
+
+    $thumbnail_url = get_the_post_thumbnail_url();
+    $thumbnail = '<img  class="img" src="' . $thumbnail_url . '" alt="イベントイメージ">';
+    $date_url = eo_get_the_start('Y - m - d');
+    $date = '<span class="date">' . $date_url . '</span>';
+    $time_url = eo_get_schedule_start('g:i') . ' - ' . eo_get_the_end('g:i');
+    $time = '<span class="time">' . $time_url . '</span>';
+    $content = get_the_content();
+    $content = strip_shortcodes($content);
+    $plain_text = strip_tags($content);
+    $limit = 150;
+    $venue_id = eo_get_venues();
+    $venue_name = eo_get_venue_name($venue_id);
+    $venue = '<span class="location">' . $venue_name . '</span>';
+
+    if (mb_strlen($plain_text, 'UTF-8') > $limit) {
+        $plain_text = mb_substr($plain_text, 0, $limit, 'UTF-8') . '[…]';
+    }
+
+    $text = '<p class="text">' . $plain_text . '</p>';
+
+    $description = '<div class="wrap">' . $date . $time . $thumbnail . $text . $venue . '</div>';
+
+    return $description;
+});

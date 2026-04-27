@@ -1,0 +1,218 @@
+@use "../config/mixins" as *;
+
+.page-recruit {
+  .recruit-upper {
+    position: relative;
+
+    .p-title {
+      position: absolute;
+      top: 50%;
+      left: 15%;
+      transform: translateY(-50%);
+      color: #fff;
+      z-index: 1;
+
+      @include mq(sp) {
+        left: 5%;
+      }
+
+      .en {
+        font-size: 80px;
+
+        @include mq(sp) {
+          font-size: 60px;
+        }
+      }
+
+      .jp {
+        font-size: 18px;
+      }
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      @include mq(sp) {
+        grid-template-columns: auto;
+        grid-template-rows: 25vh 25vh 25vh 25vh;
+      }
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(163, 143, 115, 0.35);
+      }
+
+      .figure {
+        height: 700px;
+
+        @include mq(sp) {
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .recruit-middle {
+    .r-title {
+      font-size: 30px;
+      text-align: center;
+      letter-spacing: 0.2em;
+      padding: 150px 20px 20px;
+
+      @include mq(sp) {
+        font-size: 25px;
+        padding: 100px 10px 50px;
+      }
+    }
+
+    .description {
+      font-size: 18px;
+      text-align: center;
+      letter-spacing: 0.2em;
+      line-height: 1.5;
+      margin-bottom: 150px;
+
+      @include mq(sp) {
+        font-size: 14px;
+        padding: 0 10px;
+        margin-bottom: 100px;
+      }
+    }
+
+    .r-link-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      width: 950px;
+      margin: 0 auto;
+
+      @include mq(tab) {
+        width: 100%;
+      }
+
+      @include mq(sp) {
+        width: 100%;
+        gap: 10px;
+        padding: 0 10px;
+      }
+
+      &.--full {
+        display: block;
+        margin: 50px auto;
+
+        @include mq(sp) {
+          margin: 10px auto;
+        }
+
+        &:last-child {
+          @include mq(sp) {
+            margin-bottom: 100px;
+          }
+        }
+
+        .r-item {
+          width: 100%;
+          height: 400px;
+
+          @include mq(sp) {
+            height: 165px;
+          }
+        }
+      }
+
+      .r-item {
+        position: relative;
+        width: 450px;
+        height: 650px;
+        transition: 0.3s ease;
+
+        @include mq(tab) {
+          width: 100%;
+        }
+
+        @include mq(sp) {
+          height: 250px;
+          width: 100%;
+        }
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: rgba(14, 13, 13, 0.35);
+        }
+
+        &:hover {
+          opacity: 0.85;
+        }
+
+        &.--r01 {
+          background-image: url(assets/images/slider/slider_img_01.jpg);
+          background-position: center;
+          background-size: cover;
+        }
+        &.--r02 {
+          background-image: url(assets/images/slider/slider_img_02.jpg);
+          background-position: center;
+          background-size: cover;
+        }
+        &.--r03 {
+          background-image: url(assets/images/slider/slider_img_03.jpg);
+          background-position: center;
+          background-size: cover;
+        }
+        &.--r04 {
+          background-image: url(assets/images/slider/slider_img_04.jpg);
+          background-position: center;
+          background-size: cover;
+        }
+        &.--r05 {
+          background-image: url(assets/images/slider/slider_img_05.jpg);
+          background-position: center;
+          background-size: cover;
+        }
+        &.--r06 {
+          background-image: url(assets/images/slider/slider_img_06.jpg);
+          background-position: center;
+          background-size: cover;
+        }
+
+        a {
+          position: relative;
+          display: block;
+          color: #fff;
+          font-size: 20px;
+          font-weight: 500;
+          letter-spacing: 0.2em;
+          width: 100%;
+          height: 100%;
+
+          @include mq(sp) {
+            font-size: 14px;
+          }
+
+          span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @include mq(sp) {
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

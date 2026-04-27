@@ -5,6 +5,7 @@ config
 -------------------------------------------------------------- */
 @use "assets/scss/config/reset" as *;
 @use "assets/scss/config/variables" as *;
+@use "assets/scss/config/mixins" as *;
 
 /* --------------------------------------------------------------
 common
@@ -45,6 +46,22 @@ layout
 ========================================================= */
 @use "assets/scss/layout/event" as *;
 
+/* event-calendar-page
+========================================================= */
+@use "assets/scss/layout/event-calendar" as *;
+
+/* entry-page
+========================================================= */
+@use "assets/scss/layout/entry" as *;
+
+/* guide-page
+========================================================= */
+@use "assets/scss/layout/guide" as *;
+
+/* space-page
+========================================================= */
+@use "assets/scss/layout/space" as *;
+
 /* floor-page
 ========================================================= */
 @use "assets/scss/layout/floor" as *;
@@ -72,3 +89,27 @@ layout
 /* news-list-page
 ========================================================= */
 @use "assets/scss/layout/news-list" as *;
+
+/* history-page
+========================================================= */
+@use "assets/scss/layout/history" as *;
+
+/* recruit-page
+========================================================= */
+@use "assets/scss/layout/recruit" as *;
+
+/* essentials-page
+========================================================= */
+@use "assets/scss/layout/essentials" as *;
+
+/* contact-page
+========================================================= */
+@use "assets/scss/layout/contact" as *;
+
+/* form-page
+========================================================= */
+@use "assets/scss/layout/form" as *;
+
+/* 404-page
+========================================================= */
+@use "assets/scss/layout/404" as *;

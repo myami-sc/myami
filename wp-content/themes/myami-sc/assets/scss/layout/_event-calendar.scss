@@ -1,0 +1,297 @@
+@use "../config/mixins" as *;
+
+.event-calendar {
+  .wp-block-heading {
+    @include mq(sp) {
+      font-size: 20px !important;
+    }
+  }
+
+  .eo-fullcalendar {
+    .fc-toolbar {
+      @include mq(sp) {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #d5d5d5;
+      }
+    }
+
+    .fc-left {
+      font-size: 28px !important;
+      line-height: 1.42 !important;
+      margin-right: 50px;
+
+      @include mq(sp) {
+        float: left !important;
+        text-align: left !important;
+      }
+    }
+
+    .fc-right {
+      float: left !important;
+
+      @include mq(sp) {
+        float: right !important;
+      }
+
+      .fc-button-group {
+        @include mq(sp) {
+          float: left !important;
+        }
+      }
+    }
+
+    .fc-prev-button,
+    .fc-next-button {
+      background-color: initial;
+      border: 0;
+      text-shadow: none;
+      box-shadow: none;
+    }
+
+    .fc-day-header {
+      border: 0;
+      letter-spacing: 0.135em;
+      color: #5d5d5d;
+      font-size: 18px;
+      font-weight: 500;
+
+      @include mq(sp) {
+        font-size: 14px;
+        font-weight: normal;
+      }
+
+      &.fc-mon {
+        &::before {
+          display: block;
+          content: "MON";
+          margin-bottom: 10px;
+        }
+      }
+      &.fc-tue {
+        &::before {
+          display: block;
+          content: "TUE";
+          margin-bottom: 10px;
+        }
+      }
+      &.fc-wed {
+        &::before {
+          display: block;
+          content: "WEB";
+          margin-bottom: 10px;
+        }
+      }
+      &.fc-thu {
+        &::before {
+          display: block;
+          content: "THU";
+          margin-bottom: 10px;
+        }
+      }
+      &.fc-fri {
+        &::before {
+          display: block;
+          content: "FRI";
+          margin-bottom: 10px;
+        }
+      }
+      &.fc-sat {
+        &::before {
+          display: block;
+          content: "SAT";
+          margin-bottom: 10px;
+        }
+      }
+      &.fc-sun {
+        &::before {
+          display: block;
+          content: "SUN";
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .fc-day-number {
+      font-size: 24px;
+      line-height: 1.42;
+      opacity: 0.6;
+      padding: 8px 16px !important;
+      text-align: left !important;
+
+      @include mq(sp) {
+        font-size: 16px;
+        padding: 8px 0 !important;
+        text-align: center !important;
+      }
+    }
+
+    .fc-view {
+      .fc-widget-header {
+        border: 0;
+      }
+
+      tbody {
+        @include mq(sp) {
+          td {
+            border-width: 0 !important;
+          }
+        }
+
+        .fc-row {
+          min-height: 168px;
+
+          @include mq(sp) {
+            min-height: 50px;
+          }
+        }
+      }
+
+      thead {
+        background: none;
+        border: 0;
+      }
+
+      th {
+        border: 0;
+        text-align: left;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+
+        @include mq(sp) {
+          text-align: center;
+        }
+      }
+    }
+
+    .fc-content {
+      padding: 10px 16px;
+
+      @include mq(sp) {
+        padding: 10px 8px;
+      }
+
+      .fc-time {
+        font-weight: initial !important;
+        display: block;
+        font-size: 14px;
+
+        @include mq(sp) {
+          display: none;
+        }
+      }
+
+      .fc-title {
+        font-size: 14px;
+
+        @include mq(sp) {
+          font-size: 12px;
+          display: block;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          max-width: 12em;
+        }
+      }
+    }
+
+    .fc-event {
+      border: 1px solid #bccbc8 !important;
+      background-color: rgb(215 217 223 / 31%) !important;
+      color: #94afaa !important;
+      border-radius: 8px;
+    }
+
+    &-reset {
+      .fc-today {
+        background: #e6e6e6 !important;
+      }
+    }
+  }
+}
+
+.qtip {
+  max-width: 300px;
+  min-width: 280px;
+  padding: 20px !important;
+  line-height: 1 !important;
+  // 表示用
+  // display: block !important;
+  // opacity: 1 !important;
+  // top: 750px !important;
+  // left: 750px !important;
+
+  &-titlebar {
+    background-color: #fff !important;
+    padding: 0 0 15px !important;
+    border-width: 0 !important;
+    font-weight: initial !important;
+  }
+
+  &-title {
+    font-size: 16px;
+  }
+
+  &-content {
+    padding: 0 !important;
+
+    .wrap {
+      .date {
+        display: inline-block;
+        font-size: 12px;
+        padding-right: 15px;
+      }
+
+      .time {
+        display: inline-block;
+        font-size: 12px;
+        margin-left: auto;
+      }
+
+      img {
+        padding: 15px 0;
+        height: 175px;
+      }
+
+      .text {
+        font-size: 13px;
+        line-height: 1.3;
+        overflow: hidden;
+      }
+
+      .location {
+        display: inline-block;
+        padding-top: 15px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.eo-fullcalendar .fc-header-toolbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* 会場を上に */
+.eo-fullcalendar .fc-header-toolbar > .fc-toolbar-chunk:last-child {
+  order: -1;
+  margin-bottom: 10px;
+}
+
+/* 下段 */
+.eo-fullcalendar .fc-header-toolbar > .fc-toolbar-chunk {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 日付左 */
+.eo-fullcalendar .fc-toolbar-title {
+  margin-right: 20px;
+}
+
+/* ボタン右 */
+.eo-fullcalendar .fc-header-toolbar > .fc-toolbar-chunk:first-child {
+  margin-left: auto;
+}

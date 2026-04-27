@@ -1,8 +1,71 @@
+@use "../config/mixins" as *;
+
 .page-floor {
-  .figure {
-    max-width: 900px;
-    padding: 80px;
-    margin: 0 auto 80px;
-    background-color: #e4eff9;
+  .floor-container {
+    padding: 100px 0;
+
+    @include mq(sp) {
+      padding-bottom: 0;
+    }
+
+    .floor-item {
+      margin-bottom: 80px;
+
+      .subheading {
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        margin-bottom: 30px;
+
+        .icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 80px;
+          height: 80px;
+          border: solid 1px #00c295;
+          border-radius: 50%;
+          margin-right: 20px;
+        }
+      }
+
+      .figure {
+        position: relative;
+        max-width: 900px;
+        height: 450px;
+        margin: 0 auto;
+        border: solid 1px #d9d5d5;
+        background-color: #fff;
+
+        @include mq(sp) {
+          height: 350px;
+        }
+
+        .img {
+          object-fit: contain;
+        }
+
+        .figcaption {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          display: flex;
+          align-items: center;
+          pointer-events: none;
+
+          .guid-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+          }
+
+          .guid-txt {
+            font-size: 18px;
+            line-height: 1.5;
+            border-bottom: solid 1px #333;
+          }
+        }
+      }
+    }
   }
 }
